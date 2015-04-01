@@ -1,0 +1,67 @@
+<style>
+
+  .active {
+    color: black !important;
+  }
+
+</style>
+
+<div flexible='{ "minWidth": 200, "maxWidth": 300, "minHeight": 130, "maxHeight": 230, "marginLeft": 10, "marginTop": 10 }'
+     length="300"
+     pages="departmentsPages"
+     limit="departmensLimit"
+     items-width="departmentWidth"
+     items-height="departmentHeight"
+     style="position: relative;">
+  <div class="wrapper-unit pdg-l-r-5 clear-fix">
+    <div class="pdg-l-10 grid-5">
+      <div class="wrap-pagination clear-fix">
+        <div class="pagination-off float-l"
+             ng-click="go()">
+          <div class="icon-base no-border float-l">
+            <div class="icon-1arl primary-icon"></div>
+          </div>
+          <div class="pagination-off-num float-l">
+            {{ $stateParams.page }}
+          </div>
+        </div>
+        <span class="pagination-caption">
+          из
+        </span>
+        <div class="pagination-on float-l"
+             ng-click="go(true)">
+          <div class="icon-base no-border float-r">
+            <div class="icon-1arr primary-icon"></div>
+          </div>
+          <span class="pagination-on-num float-r">
+            {{ departmentsPages }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper-unit-15 clear-fix flexible-container"
+       style="outline: 1px solid red; overflow: hidden;">
+    <div class="card-dstn-implex grid-3"
+         ng-click="changeSelect(department)"
+         ng-style="{ 'width': departmentWidth, 'height': departmentHeight }"
+         ng-repeat="department in departments"
+         style="background-color: white; margin: 5px;">
+      {{ department.name }}
+<!--       <div class="card-dstn-inner txt-l clear-fix">
+        <span class="icon-base">
+          <span class="icon-1primary_user primary-icon"></span>
+        </span>
+        <span class="card-dstn-title">Последнее используемое получателем</span>
+        <div class="card-dstn-city">
+          <span class="clr-4">Минск,</span>
+          <span class="clr-1">1214766</span>
+        </div>
+        <div class="card-dstn-info clr-4 float-l">
+          <p>ул. Гринченка 2/1, оф. 123</p>
+          <p>+380921239101</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>

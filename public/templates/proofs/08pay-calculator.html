@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.sass" type="text/css"/>
+		<link rel="stylesheet" href="css/font.css" type="text/css"/>
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<script src="js/libs/jquery/jquery.js"></script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+	</head>
+	<body>
+	<div class="left-side-bar">
+		<div class="nav-title">Transaction #:</div>
+		<div class="num-transaction">08376488-987</div>
+
+		<ul class="nav">
+			<li class="el-menu">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1menu_human primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="label-menu">Customer</span>
+							<span class="title-menu">Victor Victorenko</span>
+						</span>
+				</a>
+			</li>
+			<li class="el-menu active-nav">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1table primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="title-menu">Add Table</span>
+						</span>
+				</a>
+			</li>
+			<li class="el-menu">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1menu_product primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="title-menu">Add Product</span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<div class="fields-name clear-fix">
+			<span class="name-f">Name</span>
+			<span class="name-f">Q</span>
+			<span class="name-f">Price</span>
+		</div>
+		<div class="clear-fix checklist scrollbar mCustomScrollbar " id="smooth">
+			<div class="field hidden-field txt-l">
+				<span class="name txt-l"></span>
+				<span class="quantity txt-c"></span>
+				<span class="price txt-c"></span>
+			</div>
+			<div class="field">
+				<span class="name float-l">LLorem ipsum</span>
+				<span class="quantity float-l">25</span>
+				<span class="price float-l">125.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Dolor sit amet</span>
+				<span class="quantity float-l">3</span>
+				<span class="price float-l">45$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Consectetuer</span>
+				<span class="quantity float-l">7</span>
+				<span class="price float-l">1.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Lorem ipsum</span>
+				<span class="quantity float-l">25</span>
+				<span class="price float-l">125.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Dolor sit amet</span>
+				<span class="quantity float-l">3</span>
+				<span class="price float-l">45$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Consectetuer</span>
+				<span class="quantity float-l">7</span>
+				<span class="price float-l">1.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Dolor sit amet</span>
+				<span class="quantity float-l">3</span>
+				<span class="price float-l">45$</span>
+			</div>
+		</div>
+		<div class="checklist-total">
+			<span class="checklist-total-title">Total:</span>
+			<span id="checklist-total-price">170.00 $</span>
+		</div>
+		<div class="grid-2 btn-implex transaction-save">
+			<a href="" class="btn-inner btn-clr-1">Save order</a>
+		</div>
+		<div class="grid-2 btn-implex transaction-discount">
+			<a href="" class="btn-inner btn-clr-1">Discount</a>
+		</div>
+		<div class="grid-1 btn-implex transaction-pay">
+			<a href="" class="btn-inner btn-clr-4">Pay</a>
+		</div>
+	</div>
+
+	<header class="main-header">
+		<ul class="header-nav float-l">
+			<li>
+				<a href="menu.html">
+						<span class="icon-base">
+							<span class="icon-1home_1 primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1check primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1all_checks primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1reverse_link primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="header-nav float-r">
+			<li class="none-border">
+				<a href="#">
+						<span class="icon-base none-border">
+							<span class="icon-1cloud_1 diff-color primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1menu_settings primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="user-data">
+							<img class="user-ava"
+									 src="img/userFoto.png"
+									 alt="Accaunt Foto"/>
+							<span class="user-name">Ярослава Бондаренко</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="/">
+						<span class="icon-base">
+							<span class="icon-1logout primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+	</header>
+	<section class="main-content">
+		<div class="grid-1 pdg-l-r-5 calc-area">
+			<div class="calc-l-bl">
+				<div class="calc-display-area">
+					<div class="calc-small-bl calc-head">Order # 124354532-3454</div>
+					<div class="calc-small-bl">
+						<span class="calc-label">Total:</span>
+						<span class="display-sum">171.00 $</span>
+					</div>
+					<div class="calc-display">
+						<ul class="calc-info">
+							<li><span class="calc-inf-label">Cash:</span><span>50.00 $</span></li>
+							<li> <span class="calc-inf-label">Tips:</span><span>150.00 $</span></li>
+						</ul>
+						<a href="#" class="calc-add-tip"><span class="icon-1plus"></span>Add Tip</a>
+					</div>
+					<div class="calc-small-bl">
+						<span class="calc-label">Change:</span>
+						<span class="display-sum">171.00 $</span>
+					</div>
+					<div class="calc-big-bl">
+						<div class="calc-clear-btn">	
+							<a href="#" class="btn-inner btn-clr-1"><span class="icon-1trash"></span></a>
+						</div>
+						<div class="calc-clear-btn pdg-l-1">	
+							<a href="#" class="btn-inner btn-clr-1">Clear last</a>
+						</div>
+					</div>
+				</div>
+				<div class="calc-main-btns">
+					<div class="calc-main-btn pdg-r-05per">
+						<a href="#" class="btn-inner btn-clr-5">Cancel</a>
+					</div>
+					<div class="calc-main-btn pdg-l-05per">
+						<a href="#" class="btn-inner btn-clr-4">Pay</a>
+					</div>
+				</div>
+			</div>
+			<div class="calc-r-bl">
+				<div class="calc-btn-top"><span class="icon-1cashb"></span></div>
+				<div class="calc-btn-top active"><span class="icon-1wallet"></span></div>
+				<div class="calc-btn-top"><span class="icon-1payment"></span></div>
+				<div class="calc-btn">7</div>
+				<div class="calc-btn">8</div>
+				<div class="calc-btn">9</div>
+				<div class="calc-btn">4</div>
+				<div class="calc-btn">5</div>
+				<div class="calc-btn">6</div>
+				<div class="calc-btn">1</div>
+				<div class="calc-btn">2</div>
+				<div class="calc-btn">3</div>
+				<div class="calc-btn">0</div>
+				<div class="calc-btn">.</div>
+				<div class="calc-btn"> <span class="icon-1arrleft_4"></span></div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/libs/jquery/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="js/libs/jquery.mCustomScrollbar.min.js"></script>
+	<script src="js/knplink.js"></script>
+
+	<script>
+
+	</script>
+	
+	</body>
+</html>

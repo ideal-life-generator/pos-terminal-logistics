@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- knplink -->
+  <link rel="stylesheet" href="style/jquery.mCustomScrollbar.min.css" type="text/css"/>
+  <link rel="stylesheet" href="style/font.css" type="text/css"/>
+  <link rel="stylesheet" href="style/mclib.css" type="text/css"/>
+  <link rel="stylesheet" href="style/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="style/styles.css" type="text/css"/>
+  <link rel="stylesheet" href="style/grid.css" type="text/css"/>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+  <!--<script src="lib/knplink.js"></script>-->
+  <!-- -End- knplink -->
+  
+  <script src="lib/TweenLite.min.js"></script>
+  <script src="lib/EasePack.min.js"></script>
+  <script src="lib/CSSPlugin.min.js"></script>
+
+  <script src="lib/blowfish.js"></script>
+
+  <script src="lib/angular.js"></script>
+  <script src="lib/angular-animate.js"></script>
+  <script src="lib/angular-ui-router.js"></script>
+  <script src="lib/angular-ui-mask.js"></script>
+  <script src="lib/angular-ui-scroll.js"></script>
+  <script src="lib/angular-ui-scroll-jqlite.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/global/baseUrl.js"></script>
+  <script src="app/global/commander.js"></script>
+  <script src="app/global/connect.js"></script>
+  <script src="app/global/blowfish.js"></script>
+  <script src="app/global/flexible.js"></script>
+  <script src="app/global/basicDate.js"></script>
+  <script src="app/global/carousel.js"></script>
+  <script src="app/global/selectOnClick.js"></script>
+  <script src="app/global/breadcrumbs.js"></script>
+  <script src="app/global/scrollTo.js"></script>
+  <script src="app/auth/auth.js"></script>
+  <script src="app/outlet/outlet.js"></script>
+  <script src="app/menu/menu.js"></script>
+  <script src="app/home/home.js"></script>
+  <script src="app/client/client.js"></script>
+  <script src="app/customer/customer.js"></script>
+  <script src="app/destination/department/department.js"></script>
+  <script src="app/destination/door/door.js"></script>
+  <script src="app/destination/destination.js"></script>
+  <script src="app/packing/packing.js"></script>
+<style>
+
+  /* views */
+/*
+  .lvl-1 {
+    left: 50%;
+    transform: scale(1, 1);
+    height: 100%;
+    overflow: hidden;
+    perspective: 1300px;
+    transform-style: preserve-3d;
+    transition: all 0.3s;
+  }
+
+  .lvl-1.ng-leave {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+
+  .lvl-1.ng-leave-active {
+    transform: scale(0.6, 0.6);
+    opacity: 0;
+  }
+
+  .lvl-1.ng-enter {
+    transform: scale(0.6, 0.6);
+    opacity: 0;
+  }
+
+  .lvl-1.ng-enter-active {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+
+  .lvl-2 {
+    transition: 0.6s all;
+  }
+  
+  .lvl-2.ng-enter {
+    transform: translate3d(50%, 50%, 0) rotateY(90deg);
+    opacity: 0;
+  }
+
+  .lvl-2.ng-enter-active {
+    transform: translate3d(0, 0, 0) rotateY(0);
+    opacity: 1;
+  }
+
+  .lvl-2.ng-leave {
+    transform: translate3d(0, 0, 0) rotateY(0);
+    opacity: 1;
+  }
+
+  .lvl-2.ng-leave-active {
+    transform: translate3d(-50%, 50%, 0) rotateY(-90deg);
+    opacity: 0;
+  }
+
+  .lvl-3 {
+    transition: 0.6s all;
+  }
+  
+  .lvl-3.left.ng-enter {
+    transform: translate3d(-60%, 0, 100px) rotateY(60deg);
+    opacity: 0;
+  }
+
+  .lvl-3.left.ng-enter-active {
+    transform: translate3d(0, 0, 0) rotateY(0);
+    opacity: 1;
+  }
+
+  .lvl-3.left.ng-leave {
+    transform: translate3d(0, 0, 0) rotateY(0);
+    opacity: 1;
+  }
+
+  .lvl-3.left.ng-leave-active {
+    transform: translate3d(60%, 0, 100px) rotateY(-60deg);
+    opacity: 0;
+  }
+  
+  .lvl-3.right.ng-enter {
+    transform: translate3d(60%, 0, 100px) rotateY(-60deg);
+    opacity: 0;
+  }
+
+  .lvl-3.right.ng-enter-active {
+    transform: translate3d(0, 0, 0) rotateY(0);
+    opacity: 1;
+  }
+
+  .lvl-3.right.ng-leave {
+    transform: translate3d(0, 0, 0) rotateY(0);
+    opacity: 1;
+  }
+
+  .lvl-3.right.ng-leave-active {
+    transform: translate3d(-60%, 0, 100px) rotateY(60deg);
+    opacity: 0;
+  }*/
+
+  /* view elements */
+
+</style>
+</head>
+<body ng-app="pos-terminal"
+      style="overflow: hidden; perspective: 1300px; transform-style: preserve-3d;">
+
+  <div class="3d-fade-in ui-view"
+       style="height: 100%;"></div>
+
+</body>
+</html>

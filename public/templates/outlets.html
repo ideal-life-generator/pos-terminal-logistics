@@ -1,0 +1,39 @@
+<div class="outer-layout">
+  <div class="login-title">
+    Outlet chooser
+  </div>
+  <form id="login-form"
+        class="form-horizontal"
+        name="outletChoise"
+        novalidate>
+    <label>
+      <span ng-show="outletChoise.$submitted && outletChoise.outletActive.$invalid">
+        Выберите отделение
+      </span>
+      <br>
+      <select name="outletActive"
+              ng-options="outlet.business.name for outlet in outletsList"
+              ng-model="outletActive"
+              ng-class="{ 'error': outletChoise.$submitted && outletChoise.outletActive.$invalid }"
+              required
+              tabindex="1">
+        <option value="">
+          Choise outlet
+        </option>
+      </select>
+    </label>
+    <div class="form-group login-bt">
+      <button class="button-st dark-bt"
+              ng-click="logOut()"
+              tabindex="3">
+        Logout
+      </button>
+      <button class="button-st dark-bt"
+              type="submit"
+              ng-click="choose(outletActive)"
+              tabindex="2">
+        Go
+      </button>
+    </div>
+  </form>
+</div>

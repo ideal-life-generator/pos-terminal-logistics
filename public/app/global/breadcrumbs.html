@@ -1,0 +1,19 @@
+<div class="pdg-l-r-5 grid1 wrapper-unit">
+  <ul class="list-gradient">
+    <li ng-click="addCommand('topmenu.waybill.destination.switcher.door.usefull')">
+      <a>
+        <span class="icon-1beet primary-icon"></span>
+        <span>
+          root
+        </span>
+      </a>
+    </li>
+    <li class="view-anim"
+        ng-repeat="breadcrumb in breadcrumbs"
+        ng-click="goCrumbs($index, breadcrumb.state)">
+      <a>
+        {{ breadcrumb.name }}
+      </a>
+    </li>
+  </ul>
+</div>

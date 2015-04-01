@@ -1,0 +1,11 @@
+<li class="btn-implex pdg-0-5"
+    ng-click="selectTreatment(treatment)"
+    ng-repeat="treatment in treatments">
+  <a class="btn-inner"
+     title="{{ treatment.name }}">
+    <span class="icon-base no-border prc-brd
+          {{ ( $stateParams.treatments | arrayContain: treatment.id ) ? 'active' : '' }}">
+      <span class="{{ treatment.Icon }} primary-icon"></span>
+    </span>
+  </a>
+</li>

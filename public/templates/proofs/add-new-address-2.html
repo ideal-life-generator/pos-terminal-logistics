@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Location</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.sass" type="text/css"/>
+		<link rel="stylesheet" href="css/font.css" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<script src="/js/libs/jquery/jquery.js"></script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+	</head>
+	<body>
+	<div class="left-side-bar">
+		<div class="nav-title">Transaction #:</div>
+		<div class="num-transaction">08376488-987</div>
+
+		<ul class="nav">
+			<li class="el-menu">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1menu_human primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="label-menu">Customer</span>
+							<span class="title-menu">Victor Victorenko</span>
+						</span>
+				</a>
+			</li>
+			<li class="el-menu active-nav">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1table primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="title-menu">Add Table</span>
+						</span>
+				</a>
+			</li>
+			<li class="el-menu">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1menu_product primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="title-menu">Add Product</span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<div class="fields-name clear-fix">
+			<span class="name-f">Name</span>
+			<span class="name-f">Q</span>
+			<span class="name-f">Price</span>
+		</div>
+		<div class="clear-fix checklist scrollbar mCustomScrollbar " id="smooth">
+			<div class="field hidden-field txt-l">
+				<span class="name txt-l"></span>
+				<span class="quantity txt-c"></span>
+				<span class="price txt-c"></span>
+			</div>
+			<div class="field">
+				<span class="name float-l">LLorem ipsum</span>
+				<span class="quantity float-l">25</span>
+				<span class="price float-l">125.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Dolor sit amet</span>
+				<span class="quantity float-l">3</span>
+				<span class="price float-l">45$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Consectetuer</span>
+				<span class="quantity float-l">7</span>
+				<span class="price float-l">1.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Lorem ipsum</span>
+				<span class="quantity float-l">25</span>
+				<span class="price float-l">125.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Dolor sit amet</span>
+				<span class="quantity float-l">3</span>
+				<span class="price float-l">45$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Consectetuer</span>
+				<span class="quantity float-l">7</span>
+				<span class="price float-l">1.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Dolor sit amet</span>
+				<span class="quantity float-l">3</span>
+				<span class="price float-l">45$</span>
+			</div>
+		</div>
+		<div class="checklist-total">
+			<span class="checklist-total-title">Total:</span>
+			<span id="checklist-total-price">170.00 $</span>
+		</div>
+		<div class="grid-2 btn-implex transaction-save">
+			<a href="" class="btn-inner btn-clr-1">Save order</a>
+		</div>
+		<div class="grid-2 btn-implex transaction-discount">
+			<a href="" class="btn-inner btn-clr-1">Discount</a>
+		</div>
+		<div class="grid-1 btn-implex transaction-pay">
+			<a href="" class="btn-inner btn-clr-4">Pay</a>
+		</div>
+	</div>
+
+	<header class="main-header">
+		<ul class="header-nav float-l">
+			<li>
+				<a href="menu.html">
+						<span class="icon-base">
+							<span class="icon-1home_1 primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1check primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1all_checks primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1reverse_link primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="header-nav float-r">
+			<li class="none-border">
+				<a href="#">
+						<span class="icon-base none-border">
+							<span class="icon-1cloud_1 diff-color primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1menu_settings primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="user-data">
+							<img class="user-ava"
+									 src="img/userFoto.png"
+									 alt="Accaunt Foto"/>
+							<span class="user-name">Ярослава Бондаренко</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="/">
+						<span class="icon-base">
+							<span class="icon-1logout primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+	</header>
+
+		<section class="main-content">
+			<div class="pdg-l-r-5 grid1 location-title">
+				Location
+			</div>
+
+			<div class="pdg-l-r-5 grid1 wrapper-unit clear-fix">
+				<div class="option-radios">
+					<div class="radio-adress">
+						<input type="radio" id="adress" class="option-radio" name="option" checked="checked">
+						<label for="adress">
+						<span class="radio-name">
+							<i class="icon-1shipping primary-icon"></i>
+							<span class="radio-text">Shipping adress</span>
+						</span>
+						</label>
+					</div>
+					<div class="radio-pay">
+						<input type="radio" id="pay" class="option-radio" name="option">
+						<label for="pay" class="">
+						<span class="radio-name">
+							<i class="icon-1payment primary-icon"></i>
+							<span class="radio-text">Payment</span>
+						</span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="pdg-l-r-5 clear-fix">
+				<lable class="inp-caption">Location name</lable>
+				<div class="search-wrap grid-1 float-l clear-fix">
+					<input class="search-input one-icon" value type="text" placeholder="Enter location ..." />
+					<ul class="icon-box-r">
+						<li class="float-l">
+						<span class="icon-base">
+							<span class="icon-1menu_search primary-icon"></span>
+						</span>
+						</li>
+					</ul>
+				</div>
+				<div class="wrapper-dropdown">
+					<div class="select-drop">
+						<div class="drop-block1">
+							<ul>
+								<li><a href="#">Custom...</a></li>
+								<li><a href="#">Парковый <span class="from">Бизнец-центр, Киев</span></a></li>
+								<li><a href="#">Парковая улица <span class="from">Киев</span></a></li>
+								<li><a href="#">Парк Феофания <span class="from">Киев, город Киев</span></a></li>
+							</ul>
+						</div>
+						<span class="separator"></span>
+						<div class="drop-block2">
+							<ul>
+								<li><a href="#"><span class="icon-1postbox_big4"></span>БЦ Парковый</a></li>
+								<li><a href="#"><span class="icon-1postbox_big4"></span>ЖК Парковый</a></li>
+								<li><a href="#"><span class="icon-1postbox_big4"></span>ЖК Парковое</a></li>
+								<li><a href="#"><span class="icon-1postbox_big4"></span>ул Парковая, 12</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrapper-unit-15 clear-fix">
+				<div class="grid-4 pdg-l-5 pdg-r-2">
+					<lable class="inp-caption">Flat or office</lable>
+					<div class="search-wrap grid-1">
+						<input class="search-input one-icon" value type="text" />
+					</div>
+				</div>
+				<div class="grid-4 pdg-l-r-2">
+					<lable class="inp-caption">Block</lable>
+					<div class="search-wrap grid-1">
+						<input class="search-input one-icon" value type="text" />
+					</div>
+				</div>
+				<div class="grid-4 pdg-l-r-2">
+					<lable class="inp-caption">Floor</lable>
+					<div class="search-wrap grid-1">
+						<input class="search-input one-icon" value type="text" />
+					</div>
+				</div>
+				<div class="grid-4 pdg-l-2 pdg-r-5">
+					<lable class="inp-caption">Address code</lable>
+					<div class="search-wrap grid-1">
+						<input class="search-input one-icon" value type="text" />
+					</div>
+				</div>
+			</div>
+
+			<div class="location clear-fix">
+				<div class="btn-implex grid-4 pdg-l-r-5-2">
+					<a class="btn-inner btn-clr-5 clr-2">Back</a>
+				</div>
+				<div class="btn-implex grid-4 pdg-l-r-2">
+					<a class="btn-inner btn-clr-4 clr-2">Save</a>
+				</div>
+			</div>
+		</section>
+
+		<script src="/js/libs/jquery/jquery-ui-1.10.4.custom.min.js"></script>
+		<script src="/js/libs/jquery.mCustomScrollbar.min.js"></script>
+		<script src="/js/knplink.js"></script>
+	</body>
+</html>

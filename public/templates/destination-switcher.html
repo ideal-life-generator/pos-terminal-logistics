@@ -1,0 +1,22 @@
+<div class="change-dstn wrapper-unit-15 clear-fix">
+  <div class="btn-implex grid-2"
+       ng-class="{ 'active-change-dstn': currentState.slice(0, baseUrl.operator.waybill.destination.department.state.length) === baseUrl.operator.waybill.destination.department.state }"
+       ng-click="addCommand(baseUrl.operator.waybill.destination.department.state)">
+    <div class="btn-inner">
+      <span class="icon-base no-border dsp-inline-block table-d">
+        <span class="icon-1primary_user primary-icon"></span>
+      </span>
+      <span class="change-dstn-caption dsp-inline-block">Доставка до отделения</span>
+    </div>
+  </div>
+  <div class="btn-implex grid-2"
+       ng-class="{ 'active-change-dstn': currentTab === baseUrl.operator.waybill.destination.door.url }"
+       ng-click="addCommand(baseUrl.operator.waybill.destination.door.state)">
+    <div class="btn-inner">
+      <span class=" icon-base no-border dsp-inline-block table-d">
+        <span class="icon-1secondary_user primary-icon"></span>
+      </span>
+      <span class="change-dstn-caption dsp-inline-block">Доставка до двери</span>
+    </div>
+  </div>
+</div>  

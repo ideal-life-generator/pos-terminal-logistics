@@ -1,0 +1,34 @@
+<div class="search-wrap width-less float-l clear-fix"
+     style="overflow: visible;">
+  <form name="searchCityorPostOffice"
+        ng-submit="choiseCity()">
+    <match-search form="searchCityorPostOffice"
+                  cities="cities"
+                  post-office="postOffice"
+                  query='{
+                    "first": {
+                      "state": baseUrl.operator.waybill.destination.department.city.state,
+                      "data": cities
+                    },
+                    "second": {
+                      "state": baseUrl.operator.waybill.destination.department.postoffice.state,
+                      "data": postOffice
+                    }
+                  }'
+                  state-name="stateName"
+                  search-string="searchString"></match-search>
+<!--   {{ stateName }}
+  {{ searchString }} -->
+  </form>
+  <ul class="icon-box-r"
+      ng-click="searchCityOrDepartment(cityOrDepartment)">
+    <li class="float-l">
+    <span class="icon-base">
+      <span class="icon-1menu_search primary-icon"
+            ng-class="{ 'active': $stateParams.where }">
+      </span>
+    </span>
+    </li>
+  </ul>
+</div>
+<div class="clear-fix"></div>

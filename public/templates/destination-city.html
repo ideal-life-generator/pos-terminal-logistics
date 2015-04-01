@@ -1,0 +1,93 @@
+<style>
+
+  .active {
+    color: black !important;
+  }
+
+</style>
+
+<div flexible='{ "minWidth": 200, "maxWidth": 300, "minHeight": 45, "maxHeight": 60, "marginLeft": 10, "marginTop": 10 }'
+     length="300"
+     pages="cityPages"
+     limit="citiesLimit"
+     items-width="cityWidth"
+     items-height="cityHeight"
+     style="position: relative;">
+  <div class="pdg-l-r-5 clear-fix">
+    <div class="pdg-l-10 grid-5">
+      <div class="wrap-pagination clear-fix">
+        <div class="pagination-off float-l"
+             ng-click="go()">
+          <div class="icon-base no-border float-l">
+            <div class="icon-1arl primary-icon"></div>
+          </div>
+          <div class="pagination-off-num float-l">
+            {{ $stateParams.page }}
+          </div>
+        </div>
+        <span class="pagination-caption">
+          of
+        </span>
+        <div class="pagination-on float-l"
+             ng-click="go(true)">
+          <div class="icon-base no-border float-r">
+            <div class="icon-1arr primary-icon"></div>
+          </div>
+          <span class="pagination-on-num float-r">
+            {{ cityPages }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--   <div class="pdg-l-r-5 clear-fix">
+    <div class="pdg-l-10 grid-5"
+       style="position: absolute; right: 10px;">
+      <div class="wrap-pagination clear-fix">
+        <div class="pagination-off float-l"
+             ng-click="go()">
+          <div class="icon-base no-border float-l">
+            <div class="icon-1arl primary-icon"></div>
+          </div>
+          <div class="pagination-off-num float-l">
+            {{ $stateParams.page }}
+          </div>
+        </div>
+        <span class="pagination-caption">
+          из
+        </span>
+        <div class="pagination-on float-l"
+             ng-click="go(true)">
+          <div class="icon-base no-border float-r">
+            <div class="icon-1arr primary-icon"></div>
+          </div>
+          <span class="pagination-on-num float-r">
+            {{ cityPages }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="wrapper-unit-15 clear-fix">
+    <div class="categories-city-title">Categories</div>
+    <ul class="flexible-container"
+        style="outline: 1px solid red; overflow: hidden;">
+      <li style="background: white; float: left; margin: 5px;"
+          ng-style="{ 'width': cityWidth, 'height': cityHeight }"
+          ng-click="select(city.name)"
+          ng-repeat="city in cities">
+        <span>
+          {{ city.name }}
+        </span>
+      </li>
+<!--       <li class="btn-implex grid-4"
+          ng-style="{ 'width': cityWidth, 'height': cityHeight }"
+          ng-repeat="city in cities">
+        <span class="btn-inner btn-clr-1 clr-2">
+          {{ city.name }}
+        </span>
+      </li> -->
+    </ul>
+  </div>
+</div>
+

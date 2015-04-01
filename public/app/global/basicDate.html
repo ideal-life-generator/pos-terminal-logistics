@@ -1,0 +1,31 @@
+<ng-form name="basicDate">
+  <label class="new-cust-date">
+    <div class=" pdg-r-2 grid-3 table">
+      <div class="brd-clr-1 brd-r-3">
+        <select ng-model="day.value"
+                ng-options="day.value as day.label for day in labels.days">
+          <option value="">День</option>
+        </select>
+      </div>
+      <span class="popup-err" ng-show="basicDate.$invalid">
+        Данного числа нет в этом месяце
+      </span>
+    </div>
+    <div class="pdg-l-2 pdg-r-2 grid-3">
+      <div class="brd-clr-1 brd-r-3">
+        <select ng-model="month"
+                ng-options="month.value as month.label for month in labels.months">
+          <option value="">Месяц</option>
+        </select>
+      </div>
+    </div>
+    <div class="pdg-l-2 grid-3">
+      <div class="brd-clr-1 brd-r-3">
+        <select ng-model="year"
+                ng-options="year.value as year.label for year in labels.year">
+          <option value="">Год</option>
+        </select>
+      </div>
+    </div>
+  </label>
+</ng-form>

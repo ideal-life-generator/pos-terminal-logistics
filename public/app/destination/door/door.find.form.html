@@ -1,0 +1,57 @@
+<form name="formAddress"
+      ng-submit="submit(formAddress.$valid, form)"
+      novalidate>
+
+  <div class="anim-2 ui-view"></div>
+
+  <div class="grid-1 wrapper-unit float-l">
+    <div class="pdg-l-r-5 grid-4">
+      <div class="input-section">
+        <span ng-show="formAddress.flat_or_office.$error.required && formAddress.$submitted">
+          Данное поле является обязательным
+        </span>
+        <input type="text"
+               name="flat_or_office"
+               ng-model="form.address.flat_or_office"
+               placeholder="Квартира или офис"
+               required>
+      </div>
+    </div>
+    <div class="pdg-l-r-5 grid-4">
+      <div class="input-section">
+        <input type="text"
+               name="block"
+               ng-model="form.address.block"
+               placeholder="Блок">
+      </div>
+    </div>
+    <div class="pdg-l-r-5 grid-4">
+      <div class="input-section">
+        <input type="text"
+               name="floor"
+               ng-model="form.address.floor"
+               placeholder="Этаж">
+      </div>
+    </div>
+    <div class="pdg-l-r-5 grid-4">
+      <div class="input-section">
+        <input type="text"
+               name="access_code"
+               ng-model="form.address.access_code"
+               placeholder="Код доступа">
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-4 btn-implex backward-services"
+       ng-click="addCommand('menu.type.destination.switcher.door.find.result')">
+    <a class="btn-inner btn-clr-5">
+      Back
+    </a>
+  </div>
+  <input class="grid-4 btn-implex backward-services"
+         type="submit"
+         value="Применить">
+  </input>
+</form>
+<pre style="position: absolute; top: 0; right: 0;">{{ form | json }}</pre>

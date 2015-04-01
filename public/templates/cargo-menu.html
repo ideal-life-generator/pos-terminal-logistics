@@ -1,0 +1,52 @@
+<style>
+
+  .fosued-nav {
+    background: #f2f8f9 !important;
+    border-color: transparent;
+  }
+
+  .label-menu,
+  .title-menu {
+    display: none !important;
+  }
+  
+  .fosued-nav .label-menu {
+    display: table-cell !important;
+  }
+  
+  .filled-nav .label-menu,
+  .filled-nav .title-menu {
+    display: table-cell !important;
+  }
+
+</style>
+
+<div class="left-side-bar">
+  <div class="nav-title base-nav-title">Новый груз</div>
+  <ul class="nav">
+    <li class="el-menu small-menu base-menu">
+      <a class="nav-link"
+          ng-class="{ 'fosued-nav': currentState.slice(0, baseUrl.operator.cargo.destination.state.length) === baseUrl.operator.cargo.destination.state }"
+         ng-click="addCommand(baseUrl.operator.cargo.destination.state)">
+        <span class="icon">
+          <span class="icon-1map_4 primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+      </a>
+    </li>
+    <li class="el-menu small-menu base-menu">
+      <a class="nav-link"
+         ng-class="{ 'fosued-nav': currentState.slice(0, baseUrl.operator.cargo.packages.state.length) === baseUrl.operator.cargo.packages.state }"
+         ng-click="addCommand(baseUrl.operator.cargo.packages.state)">
+        <span class="icon">
+          <span class="icon-1medal_warehouse primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>

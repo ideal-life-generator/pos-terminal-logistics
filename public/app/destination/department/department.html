@@ -1,0 +1,167 @@
+<div style="display: table; height: 100%; width: 100%;">
+
+  <div style="display: table-row;">
+    <div style="display: table-cell;">
+      
+      <div style="display: table; width: 100%; height: 100%;">
+
+        <div style="display: table-row;">
+
+          <div style="display: table-cell; padding: 0 5px 10px 5px;">
+  
+            <div class="clear-fix"
+                 style="width: 100%; height: 7.8125vh; position: relative;">
+              <div style="width: inherit; height: 100%; position: absolute;">
+  
+                <style>
+  
+                  .breadcrumbs .breadcrumbs-container {
+                    transition: all 0.6s;
+                  }
+  
+                  .breadcrumbs.contain .breadcrumbs-container {
+                    width: 85% !important;
+                  }
+  
+                  .breadcrumbs .root-icon {
+                    transition: all 0.6s;
+                  }
+  
+                  .breadcrumbs .root-icon.ng-hide-remove {
+                    opacity: 0;
+                  }
+  
+                  .breadcrumbs .root-icon.ng-hide-remove-active {
+                    opacity: 1;
+                  }
+  
+                  .breadcrumbs .root-icon.ng-hide-add {
+                    opacity: 1;
+                  }
+  
+                  .breadcrumbs .root-icon.ng-hide-add-active {
+                    opacity: 0;
+                  }
+  
+                  .breadcrumbs .search-container {
+                    transition: all 0.6s;
+                  }
+  
+                  .breadcrumbs.search .search-container {
+/*                    border-right: solid 0px transparent !important;
+                    border-left: solid 0px transparent !important;*/
+                    width: 0px !important;
+                  }
+  
+                  .breadcrumbs .search-icon {
+                    transition: all 0.6s;
+                  }
+  
+                  .breadcrumbs.search .search-icon {
+                    color: white !important;
+                  }
+  
+                </style>
+  
+                <div class="wrapper-unit crumbs clear-fix breadcrumbs"
+                     ng-class="{ 'contain': breadcrumbs.length,
+                                 'search': !breadcrumbs.search }"
+                     style="position: absolute; left: 0; top: 0; width: 80%; height: 100%;">
+                  <div class="btn-implex grid-6"
+                       ng-click="root()"
+                       style="height: 100%; width: 15%;">
+                    <a class="btn-inner btn-clr-2">
+                      <span class="icon-base no-border root-icon"
+                            ng-show="!breadcrumbs.search">
+                        <span class="icon-1beet primary-icon"></span>
+                      </span>
+                      <span class="icon-base no-border root-icon"
+                            ng-show="breadcrumbs.length && breadcrumbs.search">
+                        ...
+                      </span>
+                    </a>
+                  </div>
+                  <div class="breadcrumbs-container"
+                       style="height: 100%; width: 100%; position: absolute; right: 0;">
+                    <div class="btn-implex grid-3"
+                         style="height: 100%; width: 100%;">
+                      <a class="btn-inner btn-clr-2"
+                         style="width: inherit;">
+                        <span class="crumbs-point">
+                          {{ "Город " + $stateParams.city }}
+                        </span>
+<!--                         <span class="icon-base">
+                          <span class="icon-1menu_search primary-icon"></span>
+                        </span> -->
+                      </a>
+                      <div class="search-wrap width-less float-l clear-fix search-container"
+                           style="position: absolute; width: 100%; right: 0; height: inherit; overflow: visible;">
+                        <form name="searchDepartment"
+                              ng-submit="choiseCity()">
+                          <input type="text"
+                                 ng-model="searchString"
+                                 ng-trim="false">
+                        </form>
+                        <ul class="icon-box-r"
+                            ng-click="searchActivator()">
+                          <li class="float-l">
+                          <span class="icon-base">
+                            <span class="icon-1menu_search primary-icon search-icon"
+                                  ng-class="{ 'active': $stateParams.where }"
+                                  style="color: rgb(127, 207, 224);">
+                            </span>
+                          </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdg-l-10 grid-5"
+                     style="position: absolute; top: 0; height: inherit; right: 0;">
+                  <div class="wrap-pagination clear-fix"
+                       style="height: inherit;">
+                    <div class="pagination-off float-l"
+                         ng-click="go()"
+                         style="height: inherit;">
+                      <div class="icon-base no-border float-l">
+                        <div class="icon-1arl primary-icon"></div>
+                      </div>
+                      <div class="pagination-off-num float-l">
+                        {{ $stateParams.page }}
+                      </div>
+                    </div>
+                    <span class="pagination-caption"
+                          style="height: inherit;">
+                      of
+                    </span>
+                    <div class="pagination-on float-l"
+                         ng-click="go(true)"
+                         style="height: inherit;">
+                      <div class="icon-base no-border float-r">
+                        <div class="icon-1arr primary-icon"></div>
+                      </div>
+                      <span class="pagination-on-num float-r">
+                        {{ count / limit | ceil }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div style="display: table-row;">
+          <div style="display: table-cell; width: 100%; height: 100%; position: relative;">
+            <div class="ui-view"
+                 style="position: absolute; height: 100%; width: 100%;"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

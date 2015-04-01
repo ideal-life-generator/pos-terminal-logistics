@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Product</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.sass" type="text/css"/>
+		<link rel="stylesheet" href="css/font.css" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<script src="/js/libs/jquery/jquery.js"></script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+	</head>
+	<body>
+	<div class="left-side-bar">
+		<div class="nav-title">Transaction #:</div>
+		<div class="num-transaction">08376488-987</div>
+
+		<ul class="nav">
+			<li class="el-menu">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1menu_human primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="label-menu">Customer</span>
+							<span class="title-menu">Victor Victorenko</span>
+						</span>
+				</a>
+			</li>
+			<li class="el-menu active-nav">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1table primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="title-menu">Add Table</span>
+						</span>
+				</a>
+			</li>
+			<li class="el-menu">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1menu_product primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="title-menu">Add Product</span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<div class="fields-name clear-fix">
+			<span class="name-f">Name</span>
+			<span class="name-f">Q</span>
+			<span class="name-f">Price</span>
+		</div>
+		<div class="clear-fix checklist scrollbar mCustomScrollbar " id="smooth">
+			<div class="field float-l hidden-field">
+				<span class="name"></span>
+				<span class="quantity"></span>
+				<span class="price"></span>
+			</div>
+			<div class="field float-l">
+				<span class="name">Lorem ipsum</span>
+				<span class="quantity">25</span>
+				<span class="price">125.00$</span>
+			</div>
+			<div class="field float-l">
+				<span class="name">Dolor sit amet</span>
+				<span class="quantity">3</span>
+				<span class="price">45$</span>
+			</div>
+			<div class="field float-l">
+				<span class="name">Consectetuer</span>
+				<span class="quantity">7</span>
+				<span class="price">1.00$</span>
+			</div>
+			<div class="field float-l">
+				<span class="name">Lorem ipsum</span>
+				<span class="quantity">25</span>
+				<span class="price">125.00$</span>
+			</div>
+			<div class="field float-l">
+				<span class="name">Dolor sit amet</span>
+				<span class="quantity">3</span>
+				<span class="price">45$</span>
+			</div>
+			<div class="field float-l">
+				<span class="name">Consectetuer</span>
+				<span class="quantity">7</span>
+				<span class="price">1.00$</span>
+			</div>
+			<div class="field float-l">
+				<span class="name">Dolor sit amet</span>
+				<span class="quantity">3</span>
+				<span class="price">45$</span>
+			</div>
+			<div class="field float-l">
+				<span class="name">Dolor sit amet</span>
+				<span class="quantity">3</span>
+				<span class="price">45$</span>
+			</div>
+			<div class="field float-l">
+				<span class="name">Dolor sit amet</span>
+				<span class="quantity">3</span>
+				<span class="price">45$</span>
+			</div>
+		</div>
+		<div class="checklist-total">
+			<span class="checklist-total-title">Total:</span>
+			<span id="checklist-total-price">170.00 $</span>
+		</div>
+		<div class="grid-2 btn-implex transaction-save">
+			<a href="" class="btn-inner btn-clr-1">Save order</a>
+		</div>
+		<div class="grid-2 btn-implex transaction-discount">
+			<div id="discount"
+				 class="btn-inner btn-clr-1">
+				Discount
+			</div>
+		</div>
+		<div class="grid-1 btn-implex transaction-pay">
+			<a href="" class="btn-inner btn-clr-4">Pay</a>
+		</div>
+	</div>
+
+	<header class="main-header">
+		<ul class="header-nav float-l">
+			<li>
+				<a href="menu.html">
+						<span class="icon-base">
+							<span class="icon-1home_1 primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1check primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1all_checks primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1reverse_link primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="header-nav float-r">
+			<li class="none-border">
+				<a href="#">
+						<span class="icon-base none-border">
+							<span class="icon-1cloud_1 diff-color primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1menu_settings primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="user-data">
+							<img class="user-ava"
+									 src="img/userFoto.png"
+									 alt="Accaunt Foto"/>
+							<span class="user-name">Ярослава Бондаренко</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="/">
+						<span class="icon-base">
+							<span class="icon-1logout primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+	</header>
+
+	<section class="main-content">
+
+		<div class="order returnered">
+			<div class="wrapper-unit brd-clr-1 brd-r-3">
+				<div class="title clr-2" id="title-order">Order #112234234</div>
+				<ul class="order-unit scrollbar mCustomScrollbar">
+					<li class="field txt-l clear-fix">
+						<span class="order-goods-data width-60 txt-l">
+							<span class="returned-icon txt-l">Returned</span>
+							21/10/2025
+						</span>
+						<span class="order-goods-data width-20">
+							3
+						</span>
+						<span class="order-goods-unit-price">
+							<span class="order-goods-price txt-c">12535.00$</span>
+							<span class="order-goods-discount-result txt-c">-12.50$</span>
+						</span>
+					</li>
+					<li class="field txt-l clear-fix">
+						<span class="order-goods-data width-60 txt-l">
+							21/10/2025
+						</span>
+						<span class="order-goods-data width-20">
+							5
+						</span>
+						<span class="order-goods-unit-price">
+							<span class="order-goods-price txt-c">12535.00$</span>
+							<span class="order-goods-discount-result txt-c">-12.50$</span>
+						</span>
+					</li>
+					<li class="field txt-l clear-fix">
+						<span class="order-goods-data width-60 txt-l">
+							21/10/2025
+						</span>
+						<span class="order-goods-data width-20">
+							7
+						</span>
+						<span class="order-goods-unit-price">
+							<span class="order-goods-price txt-c">12535.00$</span>
+							<span class="order-goods-discount-result txt-c">-12.50$</span>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="message-paid float-l col-2 pdg-l-5">
+			<div class="brd-clr-1 brd-r-3">
+				<span class="message-caption">Paid</span>
+				<div class="date txt-c grid-1">
+					<div class="table-d clr-1 txt-c">
+						12/12/2014 6:07 Pm <br> POS Customer
+					</div>
+				</div>
+				<div class="grid-1 clear-fix">
+					<div class="btn-implex grid-2">
+						<div class="btn-inner btn-clr-1">
+							<div class="icon">
+								<span class="icon-1print primary-icon"></span>
+							</div>
+							<div class="dsp-inline-block">Reprint receipt</div>
+						</div>
+					</div>
+					<div class="btn-implex grid-2">
+						<div class="btn-inner">Return</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="result float-r col-2">
+			<div class="wrap-row">
+				<div class="row clear-fix">
+					<div class="description col-2">Number of position:</div>
+					<div class="var-description col-2">2.00$</div>
+				</div>
+				<div class="row clear-fix">
+					<div class="description col-2">Commodity units:</div>
+					<div class="var-description col-2">3.00$</div>
+				</div>
+				<div class="row clear-fix">
+					<div class="description col-2">SUBTOTAL:</div>
+					<div class="var-description col-2">41.80$</div>
+				</div>
+				<div class="row clear-fix">
+					<div class="description col-2">Discount:</div>
+					<div class="var-description col-2">-12.50$</div>
+				</div>
+				<div class="row clear-fix">
+					<div class="description col-2">Tax:</div>
+					<div class="var-description col-2">9.20$</div>
+				</div>
+				<div class="dashed"></div>
+				<div class="row clear-fix">
+					<div class="desc-total col-2">Total:</div>
+					<div class="var-total col-2">51.00$</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+		<script src="/js/libs/jquery/jquery-ui-1.10.4.custom.min.js"></script>
+		<script src="/js/libs/jquery.mCustomScrollbar.min.js"></script>
+		<script src="/js/knplink.js"></script>
+	</body>
+</html>

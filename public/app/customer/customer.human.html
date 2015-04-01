@@ -1,0 +1,74 @@
+<ng-form class="grid-2"
+         name="childForm">
+
+  <div class="grid-2 pdg-l-5 pdg-b-5 pdg-r-2">
+    <div class="base-select">
+      <select class="slct-st grid-1"
+              name="title"
+              ng-model="human.title"
+              ng-options='title for title in labels.title'>
+      </select>
+    </div>
+  </div>
+
+  <div class="grid-2 pdg-l-2 pdg-r-5">
+    <div class="base-select">
+      <select class="slct-st grid-1"
+              name="gender"
+              ng-model="human.gender"
+              ng-options='gender for gender in labels.gender'>
+      </select>
+    </div>
+  </div>
+
+  <div class="pdg-l-r-5 pdg-b-5">
+    <label class="grid-1 base-input">
+      <input class="grid-1 in-st"
+             type="text"
+             name="first_name"
+             ng-model="human.first_name"
+             placeholder="Please enter First Name"
+             select-on-click
+             required>
+      <span class="popup-err"
+            ng-show="contactsForm.$submitted && childForm.first_name.$invalid">
+        Обязательное поле First
+      </span>
+    </label>
+  </div>
+
+  <div class="pdg-l-r-5 pdg-b-5">
+    <label class="grid-1 base-input">
+      <input class="grid-1 in-st"
+             type="text"
+             name="last_name"
+             ng-model="human.last_name"
+             placeholder="Please enter Last Name"
+             select-on-click
+             required>
+      <span class="popup-err"
+            ng-show="contactsForm.$submitted && childForm.last_name.$invalid">
+        Обязательное поле Last
+      </span>
+    </label>
+  </div>
+
+  <div style="width: 200%">
+    <div class="grid-2 pdg-l-r-5">
+      <div class="base-input">
+        <input class="in-st"
+               type="text"
+               name="middle_name"
+               ng-model="human.middle_name"
+               select-on-click
+               placeholder="Please enter Middle Name">
+      </div>
+    </div>
+    <div class="grid-2 pdg-l-r-5">
+      <div class="new-cust-inf birthday-caption">Birthday</div>
+      <basic-date name="birthday"
+                  date="human.birthday"></basic-date>
+    </div>
+  </div>
+
+</ng-form>

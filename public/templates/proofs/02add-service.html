@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add service</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.sass" type="text/css"/>
+		<link rel="stylesheet" href="css/font.css" type="text/css"/>
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<script src="js/libs/jquery/jquery.js"></script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+	</head>
+	<body>
+	<div class="left-side-bar">
+		<div class="nav-title">Transaction #:</div>
+		<div class="num-transaction">08376488-987</div>
+
+		<ul class="nav">
+			<li class="el-menu">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1menu_human primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="label-menu">Customer</span>
+							<span class="title-menu">Victor Victorenko</span>
+						</span>
+				</a>
+			</li>
+			<li class="el-menu active-nav">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1table primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="title-menu">Add Table</span>
+						</span>
+				</a>
+			</li>
+			<li class="el-menu">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1menu_product primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="title-menu">Add Product</span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<div class="fields-name clear-fix">
+			<span class="name-f">Name</span>
+			<span class="name-f">Q</span>
+			<span class="name-f">Price</span>
+		</div>
+		<div class="clear-fix checklist scrollbar mCustomScrollbar " id="smooth">
+			<div class="field hidden-field txt-l">
+				<span class="name txt-l"></span>
+				<span class="quantity txt-c"></span>
+				<span class="price txt-c"></span>
+			</div>
+			<div class="field">
+				<span class="name float-l">LLorem ipsum</span>
+				<span class="quantity float-l">25</span>
+				<span class="price float-l">125.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Dolor sit amet</span>
+				<span class="quantity float-l">3</span>
+				<span class="price float-l">45$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Consectetuer</span>
+				<span class="quantity float-l">7</span>
+				<span class="price float-l">1.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Lorem ipsum</span>
+				<span class="quantity float-l">25</span>
+				<span class="price float-l">125.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Dolor sit amet</span>
+				<span class="quantity float-l">3</span>
+				<span class="price float-l">45$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Consectetuer</span>
+				<span class="quantity float-l">7</span>
+				<span class="price float-l">1.00$</span>
+			</div>
+			<div class="field">
+				<span class="name float-l">Dolor sit amet</span>
+				<span class="quantity float-l">3</span>
+				<span class="price float-l">45$</span>
+			</div>
+		</div>
+		<div class="checklist-total">
+			<span class="checklist-total-title">Total:</span>
+			<span id="checklist-total-price">170.00 $</span>
+		</div>
+		<div class="grid-2 btn-implex transaction-save">
+			<a href="" class="btn-inner btn-clr-1">Save order</a>
+		</div>
+		<div class="grid-2 btn-implex transaction-discount">
+			<a href="" class="btn-inner btn-clr-1">Discount</a>
+		</div>
+		<div class="grid-1 btn-implex transaction-pay">
+			<a href="" class="btn-inner btn-clr-4">Pay</a>
+		</div>
+	</div>
+
+	<header class="main-header">
+		<ul class="header-nav float-l">
+			<li>
+				<a href="menu.html">
+						<span class="icon-base">
+							<span class="icon-1home_1 primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1check primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1all_checks primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1reverse_link primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="header-nav float-r">
+			<li class="none-border">
+				<a href="#">
+						<span class="icon-base none-border">
+							<span class="icon-1cloud_1 diff-color primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1menu_settings primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="user-data">
+							<img class="user-ava"
+									 src="img/userFoto.png"
+									 alt="Accaunt Foto"/>
+							<span class="user-name">Ярослава Бондаренко</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="/">
+						<span class="icon-base">
+							<span class="icon-1logout primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+	</header>
+	<section class="main-content">
+		<div class="pkg-tittle wrapper-unit-15 pdg-l-r-5 grid1">
+			Добавление услуг
+		</div>
+		<ul class="wrapper-unit-5 clear-fix service">
+			<li class="favorites-element">
+				<a class="add-goods" href="#">
+					<span class="opacity-ribbon"></span>
+					<span class="favorites-price-unit">
+						<span class="price">15$</span>
+						<span class="name-goods">Наложенный платёж</span>
+						<span style="display: none;" data-goods-id="1070" class="data-id"></span>
+					</span>
+				</a>
+				<a class="rm-goods" href="#">0</a>
+			</li>
+			<li class="favorites-element">
+				<a class="add-goods" href="#">
+					<span class="opacity-ribbon"></span>
+					<span class="favorites-price-unit">
+						<span class="price">15$</span>
+						<span class="name-goods">Обратная доставка</span>
+						<span style="display: none;" data-goods-id="1081" class="data-id"></span>
+					</span>
+				</a>
+				<a class="rm-goods" href="#">0</a>
+			</li>
+			<li class="favorites-element">
+				<a class="add-goods" href="#">
+					<span class="opacity-ribbon"></span>
+					<span class="favorites-price-unit">
+						<span class="price">15$</span>
+						<span class="name-goods">Подтверждение поставки</span>
+						<span style="display: none;" data-goods-id="1080" class="data-id"></span>
+					</span>
+				</a>
+				<a class="rm-goods" href="#">0</a>
+			</li>
+			<li class="favorites-element">
+				<a class="add-goods" href="#">
+					<span class="opacity-ribbon"></span>
+					<span class="favorites-price-unit">
+						<span class="price">15$</span>
+						<span class="name-goods">Подтверждение поставки</span>
+						<span style="display: none;" data-goods-id="1079" class="data-id"></span>
+					</span>
+				</a>
+				<a class="rm-goods" href="#">0</a>
+			</li>
+			<li class="favorites-element">
+				<a class="add-goods" href="#">
+					<span class="opacity-ribbon"></span>
+					<span class="favorites-price-unit">
+						<span class="price">15$</span>
+						<span class="name-goods">Наложенный платёж</span>
+						<span style="display: none;" data-goods-id="1070" class="data-id"></span>
+					</span>
+				</a>
+				<a class="rm-goods" href="#">0</a>
+			</li>
+			<li class="favorites-element">
+				<a class="add-goods" href="#">
+					<span class="opacity-ribbon"></span>
+					<span class="favorites-price-unit">
+						<span class="price">15$</span>
+						<span class="name-goods">Обратная доставка</span>
+						<span style="display: none;" data-goods-id="1081" class="data-id"></span>
+					</span>
+				</a>
+				<a class="rm-goods" href="#">0</a>
+			</li>
+			<li class="favorites-element">
+				<a class="add-goods" href="#">
+					<span class="opacity-ribbon"></span>
+					<span class="favorites-price-unit">
+						<span class="price">15$</span>
+						<span class="name-goods">Подтверждение поставки</span>
+						<span style="display: none;" data-goods-id="1080" class="data-id"></span>
+					</span>
+				</a>
+				<a class="rm-goods" href="#">0</a>
+			</li>
+			<li class="favorites-element">
+				<a class="add-goods" href="#">
+					<span class="opacity-ribbon"></span>
+					<span class="favorites-price-unit">
+						<span class="price">15$</span>
+						<span class="name-goods">Подтверждение поставки</span>
+						<span style="display: none;" data-goods-id="1079" class="data-id"></span>
+					</span>
+				</a>
+				<a class="rm-goods" href="#">0</a>
+			</li>
+			<li class="favorites-element">
+				<a class="add-goods" href="#">
+					<span class="opacity-ribbon"></span>
+					<span class="favorites-price-unit">
+						<span class="price">15$</span>
+						<span class="name-goods">Наложенный платёж</span>
+						<span style="display: none;" data-goods-id="1070" class="data-id"></span>
+					</span>
+				</a>
+				<a class="rm-goods" href="#">0</a>
+			</li>
+			<li class="favorites-element">
+				<a class="add-goods" href="#">
+					<span class="opacity-ribbon"></span>
+					<span class="favorites-price-unit">
+						<span class="price">15$</span>
+						<span class="name-goods">Обратная доставка</span>
+						<span style="display: none;" data-goods-id="1081" class="data-id"></span>
+					</span>
+				</a>
+				<a class="rm-goods" href="#">0</a>
+			</li>
+		</ul>
+
+
+
+
+		<div class="grid-4 btn-implex save-place">
+			<a href="#" class="btn-inner btn-clr-4">Перейти к оформлению</a>
+		</div>
+
+	</section>
+
+	<script src="js/libs/jquery/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="js/libs/jquery.mCustomScrollbar.min.js"></script>
+	<script src="js/knplink.js"></script>
+	<script>
+	    // init scrollbar
+                $(function () {
+                    var amount = Math.max.apply(Math, $(".packs-slider li").map(function () {
+                        return $(this).outerWidth(true);
+                    }).get());
+
+                    $(".packs-slider").mCustomScrollbar({
+                        axis: "x",
+                        advanced: {
+                            autoExpandHorizontalScroll: true
+                        },
+                        scrollButtons: {
+                            enable: true,
+                            scrollType: "stepped"
+                        },
+                        keyboard: {scrollType: "stepped"},
+                        snapAmount: amount,
+                        mouseWheel: {scrollAmount: amount}
+                    });
+                });
+	</script>
+	
+	</body>
+</html>

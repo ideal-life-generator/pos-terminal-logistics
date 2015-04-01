@@ -1,0 +1,45 @@
+<div class="pdg-l-r-5 grid1">
+  <h3 class="prc-type">
+    Location name
+  </h3>
+</div>
+<div class="pdg-l-r-5 grid1 wrapper-unit">
+  <ul class="list-gradient">
+    <li ng-click="addCommand('menu.type.destination.switcher.door.used')">
+      <a>
+        <span class="icon-1beet primary-icon"></span>
+      </a>
+    </li>
+    <li class="animation-crumbs"
+        ng-click="breadcrumb.onSuccess(); addCommand(breadcrumb.state)"
+        ng-repeat="breadcrumb in breadcrumbs">
+      <a>
+        {{ breadcrumb.title }}
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="pdg-l-r-5 grid-1 wrapper-unit">
+  <form name="searchForm"
+        ng-submit="onEnter(findParams.searchString)"
+        novalidate>
+    <div class="search-wrap grid-1 drop">
+      <input class="search-input one-icon"
+             type="text"
+             ng-model="findParams.searchString"
+             ng-disabled="$state.includes('menu.type.destination.switcher.door.find.form.street') || $state.includes('menu.type.destination.switcher.door.find.form.location')"
+             placeholder="Поиск"
+             select-on-click>
+      <ul class="icon-box-r"
+          ng-click="resultListActivator()">
+        <li class="float-l">
+          <span class="icon-base">
+            <span class="icon-1menu_search primary-icon"></span>
+          </span>
+        </li>
+      </ul>
+      <div class="anim-2 ui-view:find"></div>
+    </div>
+  </form>
+</div>
+<div class="anim-2 ui-view"></div>

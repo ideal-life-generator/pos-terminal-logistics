@@ -1,0 +1,36 @@
+<ng-form class="grid-2"
+         name="childForm"
+         novalidate>
+
+  <div class="pdg-l-r-5 pdg-b-5">
+    <label class="grid-1 base-input">
+      <input class="grid-1 in-st"
+             type="text"
+             name="full_name"
+             ng-model="business.full_name"
+             placeholder="Full Name"
+             select-on-click
+             required>
+      <span class="popup-err"
+            ng-show="contactsForm.$submitted && childForm.full_name.$invalid">
+        Обязательное поле Full Name
+      </span>
+    </label>
+  </div>
+
+  <div class="grid-1 pdg-l-2 pdg-r-5">
+    <label class="base-select">
+      <select class="slct-st grid-1"
+              name="legal_form"
+              ng-model="business.legal_form"
+              ng-options="legal.id as legal.name_short for legal in legalForm"
+              required>
+        <option value=""></option>
+      </select>
+      <span class="popup-err"
+            ng-show="contactsForm.$submitted && childForm.legal_form.$invalid">
+        Обязательное поле Full Name
+      </span>
+    </label>
+  </div>
+</ng-form>

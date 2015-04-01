@@ -1,0 +1,297 @@
+<style>
+
+  .fosued-nav {
+    background: #f2f8f9 !important;
+    border-color: transparent;
+  }
+
+  .label-menu,
+  .title-menu {
+    display: none !important;
+  }
+  
+  .fosued-nav .label-menu {
+    display: table-cell !important;
+  }
+  
+  .filled-nav .label-menu,
+  .filled-nav .title-menu {
+    display: table-cell !important;
+  }
+
+  .menu-header {
+    transition: 0.6s all;
+    overflow: hidden;
+  }
+
+  .menu-header.ng-hide-add {
+    height: 10.28646vh;
+    opacity: 1;
+  }
+
+  .menu-header.ng-hide-add-active {
+    height: 0;
+    opacity: 0;
+  }
+
+  .menu-header.ng-hide-remove {
+    height: 0;
+    opacity: 0;
+  }
+
+  .menu-header.ng-hide-remove-active {
+    height: 10.28646vh;
+    opacity: 1;
+  }
+
+  .menu-anim {
+    transition: 0.6s all;
+    overflow: hidden;
+  }
+
+  .menu-anim.ng-hide-add {
+    height: 18.75vh;
+    opacity: 1;
+  }
+
+  .menu-anim.ng-hide-add-active {
+    height: 0;
+    opacity: 0;
+  }
+
+  .menu-anim.ng-hide-remove {
+    height: 0;
+    opacity: 0;
+  }
+
+  .menu-anim.ng-hide-remove-active {
+    height: 18.75vh;
+    opacity: 1;
+  }
+
+</style>
+
+<div class="left-side-bar"
+     style="overflow: hidden;">
+  <div class="nav-title base-nav-title menu-header"
+       ng-show="$stateParams.type === 'waybill'">
+    Новая накладная
+  </div>
+  <div class="nav-title base-nav-title menu-header"
+       ng-show="$stateParams.type === 'cargo'">
+    Новый груз
+  </div>
+  <ul class="nav">
+    <li class="el-menu small-menu base-menu menu-anim"
+        ng-show="$stateParams.type === 'waybill'"
+        ng-click="addCommand('menu.type.client.parent.page', { client: 'sender', page: 1, lang: 'RUS' })"
+        ng-class="{ 'fosued-nav': $stateParams.client === 'sender',
+                    'filled-nav': Sender }">
+      <a class="nav-link">
+        <span class="icon">
+          <span class="icon-1menu_human primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+        <span class="descript-menu">
+          <span class="label-menu">
+            Отправитель
+          </span>
+          <span class="title-menu">
+            {{ Sender.first_name }}
+          </span>
+        </span>
+      </a>
+    </li>
+    <li class="el-menu small-menu base-menu menu-anim"
+        ng-show="$stateParams.type === 'waybill'"
+        ng-click="addCommand('menu.type.client.parent.page', { client: 'addressee', page: 1, lang: 'RUS' })"
+        ng-class="{ 'fosued-nav': $stateParams.client === 'addressee',
+                    'filled-nav': Addressee }">
+      <a class="nav-link">
+        <span class="icon">
+          <span class="icon-1menu_human primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+        <span class="descript-menu">
+          <span class="label-menu">
+            Получатель
+          </span>
+          <span class="title-menu">
+            {{ Addressee.first_name }}
+          </span>
+        </span>
+      </a>
+    </li>
+    <li class="el-menu small-menu base-menu menu-anim"
+        ng-show="$stateParams.type === 'waybill' || $stateParams.type === 'cargo'"
+        ng-click="addCommand('menu.type.destination.switcher.department.city.list', { page: 1 })"
+        ng-class="{ 'fosued-nav': $state.includes('menu.type.destination'),
+                    'filled-nav': Destination }">
+      <a class="nav-link">
+        <span class="icon">
+          <span class="icon-1map_4 primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+        <span class="descript-menu">
+          <span class="label-menu">
+            Пункт назначения
+          </span>
+          <span class="title-menu">
+            {{ Department.keeper_id }}
+          </span>
+        </span>
+      </a>
+    </li>
+    <li class="el-menu small-menu base-menu menu-anim"
+        ng-show="$stateParams.type === 'waybill' || $stateParams.type === 'cargo'"
+        ng-click="addCommand('menu.type.packing.treatments.flatrate', { treatments: '[ ]' })"
+        ng-class="{ 'fosued-nav': $state.includes('menu.type.packing'),
+                    'filled-nav': Packing }">
+      <a class="nav-link">
+        <span class="icon">
+          <span class="icon-1medal_warehouse primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+        <span class="descript-menu">
+          <span class="label-menu">
+            Грузовые места
+          </span>
+          <span class="title-menu">
+            {{ Department.keeper_id }}
+          </span>
+        </span>
+      </a>
+    </li>
+    <li class="el-menu small-menu base-menu menu-anim"
+        ng-show="$stateParams.type === 'waybill'">
+      <a class="nav-link">
+        <span class="icon">
+          <span class="icon-1emergency primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div style="width: 75%; height: 100%; position: absolute; left: 25%; display: table;">
+  <div style="display: table-row;">
+    <div style="display: table-cell; height: 10%;">
+      <header class="main-header"
+              style="width: 100%; ">
+        <ul class="header-nav float-l">
+          <li>
+            <a ng-click="addCommand('menu.type.home', { type: $stateParams.type })">
+              <span class="icon-base">
+                <span class="icon-1home_1 primary-icon"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="icon-base">
+                <span class="icon-1check primary-icon"></span>
+                <span class="wrap-icon">
+                  <span class="icon-1plus_in_c secondary-icon"></span>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon-base">
+                <span class="icon-1all_checks primary-icon"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a ng-click="commandBack()">
+              <span class="icon-base">
+                <span class="icon-1reverse_link primary-icon"></span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      
+        <style>
+      
+          .loaded {
+            color: #85cc27;
+          }
+      
+          .load {
+            color: lightblue;
+          }
+      
+          .offline {
+            color: lightyellow;
+          }
+      
+          .error {
+            color: red;
+          }
+      
+        </style>
+      
+        <ul class="header-nav float-r">
+          <li class="none-border">
+            <a href="#">
+              <span class="icon-base none-border">
+                <span class="icon-1cloud_1 primary-icon"
+                      ng-class="{
+                        'loaded': connect === 'loaded',
+                        'load': connect === 'load',
+                        'offline': connect === 'offline',
+                        'error': connect === 'error'
+                      }"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon-base">
+                <span class="icon-1menu_settings primary-icon"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="user-data">
+                <img class="user-ava"
+                     ng-src="{{ User.img_url }}"
+                     alt="Accaunt Foto">
+                <span class="user-name">{{ User.first_name + " " + User.second_name }}</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a ng-click="logOut()">
+              <span class="icon-base">
+                <span class="icon-1logout primary-icon"></span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </header>
+    </div>
+  </div>
+  
+  <div style="display: table-row;">
+    <div style="display: table-cell; height: 100%; padding-bottom: 10px;">
+      <div style="position: relative; height: inherit;">
+        <section class="3d-fade-out ui-view"
+                 style="position: absolute; width: 100%; height: 100%;"></section>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<style>
+
+  .search-inputTEST {
+    width: 0px;
+    background-color: white;
+  }
+
+  .backTEST {
+    width: 0px;
+  }
+
+  .crumbs-point {
+    width: 50px;
+  }
+
+  .active .search-inputTEST {
+    width: 630px;
+  }
+
+</style>
+<ul class="width-less float-l clear-fix"
+    style="position: relative;"
+    ng-class="{ 'active': active }">
+  <div class="btn-implex grid-6"
+       ng-click="goOrClose(active)">
+    <a class="btn-inner btn-clr-2">
+      {{ mainTitle }}
+<!--       <span class="icon-base no-border">
+        <span class="icon-1beet primary-icon"></span>
+      </span> -->
+    </a>
+  </div>
+  <div class="btn-implex grid-3"
+      ng-click="addCommand(crumb.state)"
+      ng-repeat="crumb in crumbs.middle">
+    <a class="btn-inner btn-clr-2">
+      {{ crumb.descriptor }}
+    </a>
+  </div>
+  <div>
+    <div class="btn-implex grid-3">
+      <div class="btn-inner btn-clr-2">
+        <span class="crumbs-point float-l">
+          Город Минск
+        </span>
+        <!--<span class="icon-base">
+          <span class="icon-1menu_search primary-icon"></span>
+        </span> -->
+      </div>
+    </div>
+    <div style="position: absolute; right: 0px;"
+         ng-click="searchActivator()">
+      <input class="search-inputTEST"
+             type="text"
+             ng-model="cityOrDepartment"
+             placeholder="Поиск отделения"
+             select-on-click>
+      <span class="icon-base"
+            ng-click="searchCityOrDepartment(cityOrDepartment)">
+        <span class="icon-1menu_search primary-icon"></span>
+      </span>
+    </div>
+  </div>
+</ul>

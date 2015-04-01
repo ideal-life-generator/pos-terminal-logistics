@@ -1,0 +1,163 @@
+<ng-form name="location">
+  <div class="grid-1 wrapper-unit float-l">
+    <div class="pdg-l-r-5 grid-2">
+      <div class="select-section">
+        <div class="select-block">
+          <input type="text"
+                 name="state"
+                 ng-model="state.name_local"
+                 ng-focus="stateActive = true;"
+                 ng-blur="stateActive = false;"
+                 ng-trim="false"
+                 placeholder="Регион">
+          <div ng-show="stateActive || !$stateParams.stateId"
+               style="height: 150px; position: absolute; left: 0; width: 100%; top: 100%; z-index: 10; background-color: white;">
+            <div style="height: 150px;">
+              <div style="width: 100%;"
+                   scroll-to='{ "list": "5", "inlist": "2", "maxlists": "2" }'
+                   collection="state"
+                   reset="form.location.name"
+                   params="citiesParams">
+                <div ng-click="selectState(state)"
+                     ng-repeat="state in states"
+                     style="height: 30px;">
+                  <span>
+                    {{ state.name_local }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pdg-l-r-5 grid-2">
+      <div class="select-section">
+        <div class="select-block"
+             style="position: relative;">
+          <span ng-show="location.city_id.$error.required && formAddress.$submitted">
+            Данное поле является обязательным
+          </span>
+
+          <style>
+    
+            .scroll-bar {
+              transition: all 0.6s ease-in-out;
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 10px;
+              height: 50px;
+              background-color: black;
+            }
+    
+          </style>
+
+          <input type="text"
+                 name="city_id"
+                 ng-model="form.location.city_id"
+                 placeholder="Город"
+                 required>
+<!--             <div ng-show="form.location.city_id"
+                 style="height: 150px; position: absolute; left: 0; width: 100%; top: 100%; z-index: 10; background-color: white;">
+              <div style="height: 150px;">
+                <div style="width: 100%;"
+                     scroll-to='{ "list": "5", "inlist": "2", "maxlists": "2" }'
+                     collection="city"
+                     reset="form.location.city_id"
+                     params="citiesParams">
+                  <div ng-click="selectCity(city)"
+                       ng-repeat="city in cities"
+                       style="height: 30px;">
+                    <span>
+                      {{ city.name_local }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+<!--             <div style="height: 150px; outline: 1px solid red; position: absolute; width: 100%; z-index: 10; background-color: white;">
+              <div style="width: 100%;"
+                   scroll-to='{ "list": "5", "inlist": "2", "maxlists": "2" }'
+                   collection="cities"
+                   params="citiesParams">
+                <div ng-click="selectStreet(street)"
+                     ng-repeat="city in cities"
+                     style="height: 30px;">
+                  <span>
+                    {{ city.name_local }}
+                  </span>
+                </div>
+              </div>
+            </div> -->
+  <!--         <div class="select-drop">
+            <div class="drop-block1">
+              <ul>
+                <li><a href="#">item1</a></li>
+                <li><a href="#">item2</a></li>
+                <li><a href="#">item3</a></li>
+                <li><a href="#">item4</a></li>
+                <li><a href="#">item5</a></li>
+                <li><a href="#">item6</a></li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-1 wrapper-unit float-l">
+    <div class="pdg-l-r-5 grid-2">
+      <div class="select-section">
+        <div class="select-block">
+          <input type="text"
+                 name="district_id"
+                 ng-model="form.location.district_id"
+                 placeholder="Район">
+        </div>
+      </div>
+    </div>
+    <div class="pdg-l-r-5 grid-4">
+      <div class="input-section">
+          <span ng-show="location.post_code.$error.required && formAddress.$submitted">
+            Данное поле является обязательным
+          </span>
+          <input type="text"
+                 name="post_code"
+                 ng-model="form.location.post_code"
+                 placeholder="Индекс"
+                 required>
+      </div>
+    </div>
+  </div>
+  <div class="grid-1 wrapper-unit float-l">
+    <div class="pdg-l-r-5 grid-2">
+      <div class="select-section">
+        <div class="select-block">
+          <span ng-show="location.street_id.$error.required && formAddress.$submitted">
+            Данное поле является обязательным
+          </span>
+          <input type="text"
+                 name="street_id"
+                 ng-model="form.location.street_id"
+                 placeholder="Улица"
+                 required>
+        </div>
+      </div>
+    </div>
+    <div class="pdg-l-r-5 grid-4">
+      <div class="select-section">
+        <div class="select-block">
+          <span ng-show="location.building.$error.required && formAddress.$submitted">
+            Данное поле является обязательным
+          </span>
+          <input type="text"
+                 name="building"
+                 ng-model="form.location.building"
+                 placeholder="Дом"
+                 required>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-form>

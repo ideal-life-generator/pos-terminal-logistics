@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Product Root</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.sass" type="text/css"/>
+		<link rel="stylesheet" href="css/font.css" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<script src="/js/libs/jquery/jquery.js"></script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+	</head>
+	<body>
+	<div class="left-side-bar">
+		<div class="nav-title">Transaction #:</div>
+		<div class="num-transaction">08376488-987</div>
+
+		<ul class="nav">
+			<li class="el-menu">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1menu_human primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="label-menu">Customer</span>
+							<span class="title-menu">Victor Victorenko</span>
+						</span>
+				</a>
+			</li>
+			<li class="el-menu active-nav">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1table primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="title-menu">Add Table</span>
+						</span>
+				</a>
+			</li>
+			<li class="el-menu">
+				<a href="#" class="nav-link">
+						<span class="icon">
+							<span class="icon-1menu_product primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+						<span class="descript-menu">
+							<span class="title-menu">Add Product</span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<div class="fields-name clear-fix">
+			<span class="name-f">Name</span>
+			<span class="name-f">Q</span>
+			<span class="name-f">Price</span>
+		</div>
+		<div class="clear-fix checklist scrollbar mCustomScrollbar " id="smooth">
+			<div class="field hidden-field">
+				<span class="name"></span>
+				<span class="quantity"></span>
+				<span class="price"></span>
+			</div>
+			<div class="field">
+				<span class="name">Lorem ipsum</span>
+				<span class="quantity">25</span>
+				<span class="price">125.00$</span>
+			</div>
+			<div class="field">
+				<span class="name">Dolor sit amet</span>
+				<span class="quantity">3</span>
+				<span class="price">45$</span>
+			</div>
+			<div class="field">
+				<span class="name">Consectetuer</span>
+				<span class="quantity">7</span>
+				<span class="price">1.00$</span>
+			</div>
+			<div class="field">
+				<span class="name">Lorem ipsum</span>
+				<span class="quantity">25</span>
+				<span class="price">125.00$</span>
+			</div>
+			<div class="field">
+				<span class="name">Dolor sit amet</span>
+				<span class="quantity">3</span>
+				<span class="price">45$</span>
+			</div>
+			<div class="field">
+				<span class="name">Consectetuer</span>
+				<span class="quantity">7</span>
+				<span class="price">1.00$</span>
+			</div>
+			<div class="field">
+				<span class="name">Dolor sit amet</span>
+				<span class="quantity">3</span>
+				<span class="price">45$</span>
+			</div>
+		</div>
+		<div class="checklist-total">
+			<span class="checklist-total-title">Total:</span>
+			<span id="checklist-total-price">170.00 $</span>
+		</div>
+		<div class="grid-2 btn-implex transaction-save">
+			<a href="" class="btn-inner btn-clr-1">Save order</a>
+		</div>
+		<div class="grid-2 btn-implex transaction-discount">
+			<a href="" class="btn-inner btn-clr-1">Discount</a>
+		</div>
+		<div class="grid-1 btn-implex transaction-pay">
+			<a href="" class="btn-inner btn-clr-4">Pay</a>
+		</div>
+	</div>
+
+	<header class="main-header">
+		<ul class="header-nav float-l">
+			<li>
+				<a href="menu.html">
+						<span class="icon-base">
+							<span class="icon-1home_1 primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1check primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1all_checks primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1reverse_link primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="header-nav float-r">
+			<li class="none-border">
+				<a href="#">
+						<span class="icon-base none-border">
+							<span class="icon-1cloud_1 diff-color primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1menu_settings primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="user-data">
+							<img class="user-ava"
+									 src="img/userFoto.png"
+									 alt="Accaunt Foto"/>
+							<span class="user-name">Ярослава Бондаренко</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="/">
+						<span class="icon-base">
+							<span class="icon-1logout primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+	</header>
+
+		<section class="main-content">
+			<ul class="wrapper-unit-15 crumbs clear-fix">
+				<li class="btn-implex grid-8">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						<span class="icon-base no-border">
+							<span class="icon-1beet primary-icon"></span>
+						</span>
+					</a>
+				</li>
+				<li class="btn-implex grid-16">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						1
+					</a>
+				</li>
+				<li class="btn-implex grid-16">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						2
+					</a>
+				</li>
+				<li class="btn-implex grid-16">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						3
+					</a>
+				</li>
+				<li class="btn-implex grid-16">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						4
+					</a>
+				</li>
+				<li class="btn-implex grid-8">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						Root
+					</a>
+				</li>
+				<li class="btn-implex grid-4">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						Medical
+					</a>
+				</li>
+				<li class="btn-implex grid-4">
+					<a class="btn-inner btn-clr-2 "
+						 href="#">
+						<span class="crumbs-point">
+							Accessories
+						</span>
+						<span class="icon-base">
+							<span class="icon-1menu_search primary-icon"></span>
+						</span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="wrapper-unit-15 pdg-l-r-5 clear-fix">
+				<div class="wrap-alphabet width-less">
+					<div class="alphabet-letters">all</div>
+					<div class="alphabet-letters">a-c</div>
+					<div class="alphabet-letters">d-g</div>
+					<div class="alphabet-letters">h-i</div>
+					<div class="alphabet-letters">j-k</div>
+					<div class="alphabet-letters">l</div>
+					<div class="alphabet-letters">m-p</div>
+					<div class="alphabet-letters">q</div>
+					<div class="alphabet-letters">r</div>
+					<div class="alphabet-letters">t-z</div>
+				</div>
+				<div class="pdg-l-10 grid-5">
+					<div class="wrap-pagination clear-fix">
+						<div class="pagination-off float-l">
+							<div class="icon-base no-border float-l">
+								<div class="icon-1arl primary-icon"></div>
+							</div>
+							<div class="pagination-off-num float-l">4</div>
+						</div>
+						<span class="pagination-caption">
+							of
+						</span>
+						<div class="pagination-on float-l">
+							<div class="icon-base no-border float-r">
+								<div class="icon-1arr primary-icon"></div>
+							</div>
+							<span class="pagination-on-num float-r">10</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<span class="title-favorites clr-1 pdg-l-r-5">Favorites</span>
+			<ul class="wrapper-favorites clear-fix">
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/products-clever.png" alt="products-clever" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1070" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/products-camomil.png" alt="products-camomil" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1081" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/products-puh.png" alt="products-puh" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1080" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/products-clever.png" alt="products-clever" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1079" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/" alt="" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1078" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/products-clever.png" alt="products-clever" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1077" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/products-camomil.png" alt="products-camomil" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1076" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/products-puh.png" alt="products-puh" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1075" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/products-clever.png" alt="products-clever" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1074" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/" alt="" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1073" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/products-clever.png" alt="products-clever" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1072" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+				<li class="favorites-element">
+					<a href="#" class="add-goods">
+						<img src="img/products-camomil.png" alt="products-camomil" class="img-products">
+						<span class="opacity-ribbon"></span>
+						<span class="favorites-price-unit">
+							<span class="price">15$</span>
+							<span class="name-goods">White Chare</span>
+							<span class="data-id" data-goods-id="1071" style="display: none;"></span>
+						</span>
+					</a>
+					<a href="#" class="rm-goods">0</a>
+				</li>
+			</ul>
+		</section>
+
+		<script src="/js/libs/jquery/jquery-ui-1.10.4.custom.min.js"></script>
+		<script src="/js/libs/jquery.mCustomScrollbar.min.js"></script>
+		<script src="/js/knplink.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var rgb = [0, 73, 127]; /*Basic color*/
+			var canRgb = [2, 9, 9]; /*Color concatonation*/
+			var actRgb = [0, 55, 109]; /*Color for active btn*/
+			var setRgb = []; /*Sets the color*/
+			var elements = document.querySelectorAll(".crumbs .btn-inner");
+
+			function color(val) {
+				return "rgb(" + val + ")";
+			}
+			function canColor(val) {
+				val.forEach(function (val, i, ar) {
+					setRgb[i] = ar[i] + canRgb[i];
+				});
+				return setRgb
+			}
+
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].style.backgroundColor = color(rgb);
+				rgb  = canColor(rgb);
+				var val;
+				elements[i].addEventListener("mousedown", function() {
+					val = this.style.backgroundColor;
+					this.style.backgroundColor = color(canColor(actRgb));
+					return val
+				});
+				elements[i].addEventListener("mouseup", function() {
+					this.style.backgroundColor = val;
+				});
+			}
+
+
+		});
+	</script>
+	</body>
+</html>

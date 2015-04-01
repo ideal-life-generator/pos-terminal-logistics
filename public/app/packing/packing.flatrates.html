@@ -1,0 +1,29 @@
+<ul class="clear-fix"
+    style="position: absolute; height: 100%; white-space: nowrap;"
+    carousel="flatrates:flatrate:150">
+  <li class="favorites-element carousel-item"
+      style="display: inline-block; float: none; outline: 1px solid black;"
+      ng-click="addFlatrate(flatrate)">
+    <a class="add-goods"
+       style="background: transparent;">
+      <img class="img-products"
+           alt="products-clever"
+           src="">
+      <span class="opacity-ribbon"></span>
+        <span class="favorites-price-unit">
+          <span class="price">
+            {{ flatrate.price.our_price }}
+          </span>
+          <span class="name-goods"
+                style="font-size: 1.6vh;">
+            {{ flatrate.product.name }}
+          </span>
+          <span style="display: none;" data-goods-id="1070" class="data-id"></span>
+        </span>
+    </a>
+    <a class="rm-goods"
+       ng-show="$stateParams.flatrateId === flatrate.flatRate.id"
+       style="display: inline-block;">
+    </a>
+  </li>
+</ul>

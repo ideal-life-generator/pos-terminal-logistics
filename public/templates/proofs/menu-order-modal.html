@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Order and Tables</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.sass" type="text/css"/>
+		<link rel="stylesheet" href="css/font.css" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<script src="/js/libs/jquery/jquery.js"></script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+	</head>
+	<body>
+		<div class="left-side-bar">
+			<div class="nav-title">Transaction #:</div>
+			<div class="num-transaction">08376488-987</div>
+
+			<ul class="nav">
+				<li class="el-menu">
+					<a href="#" class="nav-link">
+							<span class="icon">
+								<span class="icon-1menu_human primary-icon"></span>
+								<span class="wrap-icon">
+									<span class="icon-1plus_in_c secondary-icon"></span>
+								</span>
+							</span>
+							<span class="descript-menu">
+								<span class="label-menu">Customer</span>
+								<span class="title-menu">Victor Victorenko</span>
+							</span>
+					</a>
+				</li>
+				<li class="el-menu active-nav">
+					<a href="#" class="nav-link">
+							<span class="icon">
+								<span class="icon-1table primary-icon"></span>
+								<span class="wrap-icon">
+									<span class="icon-1plus_in_c secondary-icon"></span>
+								</span>
+							</span>
+							<span class="descript-menu">
+								<span class="title-menu">Add Table</span>
+							</span>
+					</a>
+				</li>
+				<li class="el-menu">
+					<a href="#" class="nav-link">
+							<span class="icon">
+								<span class="icon-1menu_product primary-icon"></span>
+								<span class="wrap-icon">
+									<span class="icon-1plus_in_c secondary-icon"></span>
+								</span>
+							</span>
+							<span class="descript-menu">
+								<span class="title-menu">Add Product</span>
+							</span>
+					</a>
+				</li>
+			</ul>
+			<div class="fields-name clear-fix">
+				<span class="name-f">Name</span>
+				<span class="name-f">Q</span>
+				<span class="name-f">Price</span>
+			</div>
+			<div class="clear-fix checklist scrollbar mCustomScrollbar " id="smooth">
+				<div class="field hidden-field txt-l">
+					<span class="name txt-l"></span>
+					<span class="quantity txt-c"></span>
+					<span class="price txt-c"></span>
+				</div>
+				<div class="field">
+					<span class="name float-l">LLorem ipsum</span>
+					<span class="quantity float-l">25</span>
+					<span class="price float-l">125.00$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Dolor sit amet</span>
+					<span class="quantity float-l">3</span>
+					<span class="price float-l">45$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Consectetuer</span>
+					<span class="quantity float-l">7</span>
+					<span class="price float-l">1.00$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Lorem ipsum</span>
+					<span class="quantity float-l">25</span>
+					<span class="price float-l">125.00$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Dolor sit amet</span>
+					<span class="quantity float-l">3</span>
+					<span class="price float-l">45$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Consectetuer</span>
+					<span class="quantity float-l">7</span>
+					<span class="price float-l">1.00$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Dolor sit amet</span>
+					<span class="quantity float-l">3</span>
+					<span class="price float-l">45$</span>
+				</div>
+			</div>
+			<div class="checklist-total">
+				<span class="checklist-total-title">Total:</span>
+				<span id="checklist-total-price">170.00 $</span>
+			</div>
+			<div class="grid-2 btn-implex transaction-save">
+				<a href="" class="btn-inner btn-clr-1">Save order</a>
+			</div>
+			<div class="grid-2 btn-implex transaction-discount">
+				<a href="" class="btn-inner btn-clr-1">Discount</a>
+			</div>
+			<div class="grid-1 btn-implex transaction-pay">
+				<a href="" class="btn-inner btn-clr-4">Pay</a>
+			</div>
+		</div>
+
+		<header class="main-header">
+		<ul class="header-nav float-l">
+			<li>
+				<a href="menu.html">
+						<span class="icon-base">
+							<span class="icon-1home_1 primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1check primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1all_checks primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1reverse_link primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="header-nav float-r">
+			<li class="none-border">
+				<a href="#">
+						<span class="icon-base none-border">
+							<span class="icon-1cloud_1 diff-color primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="icon-base">
+							<span class="icon-1menu_settings primary-icon"></span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+						<span class="user-data">
+							<img class="user-ava"
+									 src="img/userFoto.png"
+									 alt="Accaunt Foto"/>
+							<span class="user-name">Ярослава Бондаренко</span>
+						</span>
+				</a>
+			</li>
+			<li>
+				<a href="/">
+						<span class="icon-base">
+							<span class="icon-1logout primary-icon"></span>
+						</span>
+				</a>
+			</li>
+		</ul>
+	</header>
+
+		<section class="main-content orderV1V2 orderV2">
+			<div class="order orderWrap">
+				<div class="orderBox clear-fix">
+					<div class="orderHead">
+						<div class="boxImg float-l"><img src="img/boxImg.png" alt="boxImg"/></div>
+						<div class="orderInfo float-l">
+							<div class="orderNum">Order #121326</div>
+							<div class="orderPlace">Зал1/Table1</div>
+						</div>
+					</div>
+					<div class="customerName float-r">Pos Customer</div>
+					<div class="dateWrap float-r">
+						<div class="time">12:07 PM</div>
+						<div class="date">12/12/12</div>
+					</div>
+
+					<div class="checklistWrap clear-fix	">
+						<div class="fields-name clear-fix">
+							<span class="name-f float-l">Name</span>
+							<span class="name-f float-l">Q</span>
+							<span class="name-f float-l">Price</span>
+						</div>
+						<div class="checklist scrollbar mCustomScrollbar clear-fix" id="smooth">
+							<div class="field hidden-field">
+								<span class="name"></span>
+								<span class="quantity"></span>
+								<span class="price"></span>
+							</div>
+							<div class="field">
+								<span class="name">Lorem ipsum</span>
+								<span class="quantity">25</span>
+								<span class="price">125.00$</span>
+							</div>
+							<div class="field">
+								<span class="name">Dolor sit amet</span>
+								<span class="quantity">3</span>
+								<span class="price">45$</span>
+							</div>
+							<div class="field">
+								<span class="name">Consectetuer</span>
+								<span class="quantity">7</span>
+								<span class="price">1.00$</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="modal order">
+			<div class="wrapper-modal">
+				<div class="wrapper-modal-inner">
+					<div class="order-caption">
+						Order
+						<span class="num">
+							#1247898727-3479
+						</span>
+						was paid
+					</div>
+
+					<div class="total-caption">
+						Change:
+						<span class="num">
+							2.20$
+						</span>
+					</div>
+
+					<div>
+						<div class="btn-implex grid-2 pdg-r-1">
+							<div class="btn-inner">Print receipt</div>
+						</div>
+						<div class="btn-implex grid-2 pdg-l-1">
+							<div class="btn-inner">Ok</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/js/libs/jquery/jquery-ui-1.10.4.custom.min.js"></script>
+		<script src="/js/libs/jquery.mCustomScrollbar.min.js"></script>
+		<script src="/js/knplink.js"></script>
+	</body>
+</html>

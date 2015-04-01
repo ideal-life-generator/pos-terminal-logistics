@@ -1,0 +1,55 @@
+<div class="outer-layout">
+  <div class="login-title">
+    Log In
+  </div>
+  <form id="login-form"
+        class="form-horizontal"
+        name="authorizationForm"
+        ng-submit="login(authorizationForm.login.value, authorizationForm.password.value)"
+        novalidate>
+    <span style="position: absolute;"
+          ng-show="error">
+      Ошибка авторизации
+    </span>
+    <div>
+      <span style="position: absolute;"
+            ng-show="authorizationForm.$submitted && authorizationForm.login.$error.required">
+        Обязательное для заполнения
+      </span>
+      <br>
+      <input class="input-st"
+             type="text"
+             name="login"
+             ng-model="authorizationForm.login.value"
+             ng-class="{ 'error': authorizationForm.$submitted && authorizationForm.login.$error.required }"
+             placeholder="Login"
+             autocomplete="off"
+             tabindex="1"
+             required>
+    </div>
+    <div>
+      <span style="position: absolute;"
+            ng-show="authorizationForm.$submitted && authorizationForm.password.$error.required">
+        Обязательное для заполнения
+      </span>
+      <br>
+      <input class="input-st"
+             type="password"
+             name="password"
+             ng-model="authorizationForm.password.value"
+             ng-class="{ 'error': authorizationForm.$submitted && authorizationForm.password.$error.required }"
+             placeholder="Password"
+             autocomplete="off"
+             tabindex="2"
+             required>
+    </div>
+    <div class="form-group login-bt">
+      <button class="button-st dark-bt"
+              type="submit"
+              name="login-button"
+              tabindex="3">
+        Go
+      </button>
+    </div>
+  </form>
+</div>

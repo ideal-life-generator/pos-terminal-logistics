@@ -1,0 +1,9 @@
+<li style="padding: 5px; float: left;"
+    ng-repeat="city in cities">
+  <div ng-click="addCommand('menu.type.destination.switcher.department.incity.list', { page: 1, city: city.name })"
+       style="display: table; width: 100%; height: 100%;">
+    <div style="display: table-cell; width: inherit; height: inherit; background-color: rgb(127, 207, 224); border-radius: 3px; color: rgb(255,  255, 255); font-family: 'Ubuntu Condensed', Arial, Tahoma, sans-serif;text-align: center; vertical-align: middle;">
+      {{ city.name }}
+    </div>
+  </div>
+</li>

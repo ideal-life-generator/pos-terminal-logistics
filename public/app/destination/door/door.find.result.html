@@ -1,0 +1,64 @@
+<div class="select-drop"
+     style="margin-top: 3px;">
+  <div class="drop-block1">
+    <ul>
+      <li ng-click="newLocation()">
+        <a>
+          Custom...
+        </a>
+      </li>
+
+      <style>
+
+        .scroll-bar {
+          transition: all 0.6s ease-in-out;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 10px;
+          height: 50px;
+          background-color: black;
+        }
+
+      </style>
+
+      <div style="height: 150px;">
+        <div style="width: 100%;"
+             scroll-to='{ "list": "5", "inlist": "2", "maxlists": "2" }'
+             collection="streetsList"
+             reset="findParams.searchString"
+             params="streetParams">
+          <a ng-click="selectStreet(street)"
+             ng-repeat="street in streetsList"
+             style="height: 30px;">
+            <span>
+              {{ street.street }}
+            </span>
+            <span class="from">
+              {{ ", " + street.city }}
+            </span>
+          </a>
+        </div>
+      </div>
+    </ul>
+  </div>
+  <span class="separator"></span>
+  <div class="drop-block2">
+    <div style="height: 200px;">
+      <div style="width: 100%;"
+           scroll-to='{ "list": "4", "inlist": "2", "maxlists": "2" }'
+           collection="locationsList"
+           reset="findParams.searchString"
+           params="locationParams">
+        <a ng-click="selectLocation(location)"
+           ng-repeat="location in locationsList"
+           style="height: 50px;">
+          <span class="icon-1postbox_big4"></span>
+          <span>
+            {{ location.name }}
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

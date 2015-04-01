@@ -1,0 +1,117 @@
+<style>
+
+  .fosued-nav {
+    background: #f2f8f9 !important;
+    border-color: transparent;
+  }
+
+  .label-menu,
+  .title-menu {
+    display: none !important;
+  }
+  
+  .fosued-nav .label-menu {
+    display: table-cell !important;
+  }
+  
+  .filled-nav .label-menu,
+  .filled-nav .title-menu {
+    display: table-cell !important;
+  }
+
+</style>
+
+<div class="left-side-bar">
+  <div class="nav-title base-nav-title">
+    Новая накладная
+  </div>
+  <ul class="nav">
+    <li class="el-menu small-menu base-menu"
+        ng-class="{ 'fosued-nav': currentState.slice(0, baseUrl.operator.waybill.sender.state.length) === baseUrl.operator.waybill.sender.state,
+                    'filled-nav': Sender }"
+        ng-click="addCommand(baseUrl.operator.waybill.sender.state)">
+      <a class="nav-link">
+        <span class="icon">
+          <span class="icon-1menu_human primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+        <span class="descript-menu">
+          <span class="label-menu">
+            Отправитель
+          </span>
+          <span class="title-menu">
+            {{ Sender.keeper_id }}
+          </span>
+        </span>
+      </a>
+    </li>
+    <li class="el-menu small-menu base-menu"
+        ng-class="{ 'fosued-nav': currentState.slice(0, baseUrl.operator.waybill.addressee.state.length) === baseUrl.operator.waybill.addressee.state,
+                    'filled-nav': Addresser }"
+        ng-click="addCommand(baseUrl.operator.waybill.addressee.state)">
+      <a class="nav-link">
+        <span class="icon">
+          <span class="icon-1menu_human primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+        <span class="descript-menu">
+          <span class="label-menu">
+            Получатель
+          </span>
+          <span class="title-menu">
+            {{ Addresser.keeper_id }}
+          </span>
+        </span>
+      </a>
+    </li>
+    <li class="el-menu small-menu base-menu"
+        ng-class="{ 'fosued-nav': currentState.slice(0, baseUrl.operator.waybill.destination.state.length) === baseUrl.operator.waybill.destination.state,
+                    'filled-nav': Department }"
+        ng-click="addCommand(baseUrl.operator.waybill.destination.department.state)">
+      <a class="nav-link">
+        <span class="icon">
+          <span class="icon-1map_4 primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+        <span class="descript-menu">
+          <span class="label-menu">
+            Пункт назначения
+          </span>
+          <span class="title-menu">
+            {{ Department.keeper_id }}
+          </span>
+        </span>
+      </a>
+    </li>
+    <li class="el-menu small-menu base-menu"
+        ng-class="{ 'fosued-nav': currentState.slice(0, baseUrl.operator.waybill.packages.state.length) === baseUrl.operator.waybill.packages.state }"
+        ng-click="addCommand(baseUrl.operator.waybill.packages.state)">
+      <a class="nav-link">
+        <span class="icon">
+          <span class="icon-1medal_warehouse primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+      </a>
+    </li>
+    <li class="el-menu small-menu"
+        ng-class="{ 'fosued-nav': currentState.slice(0, baseUrl.operator.waybill.services.state.length) === baseUrl.operator.waybill.services.state }"
+        ng-click="addCommand(baseUrl.operator.waybill.services.state)">
+      <a class="nav-link">
+        <span class="icon">
+          <span class="icon-1emergency primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c"></span>
+          </span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>

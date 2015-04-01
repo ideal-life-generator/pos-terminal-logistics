@@ -1,0 +1,24 @@
+<li style="padding: 5px; float: left;"
+    ng-repeat="postoffice in postoffices">
+  <div style="display: table; width: 100%; height: 100%;">
+    <div class="card-dstn-inner txt-l clear-fix"
+         style="display: table-cell; width: inherit; height: inherit; border-radius: 3px; font-family: 'Ubuntu Condensed', Arial, Tahoma, sans-serif;text-align: center; vertical-align: middle;">
+      <span class="icon-base">
+        <span class="icon-1primary_user primary-icon"></span>
+      </span>
+      <span class="card-dstn-title">Последнее используемое получателем</span>
+      <div class="card-dstn-city">
+        <span class="clr-4">
+          {{ postoffice.name + "," }}
+        </span>
+        <span class="clr-1">
+          {{ postoffice.office_number }}
+        </span>
+      </div>
+      <div class="card-dstn-info clr-4 float-l">
+        <p>ул. Гринченка 2/1, оф. 123</p>
+        <p>+380921239101</p>
+      </div>
+    </div>
+  </div>
+</li>

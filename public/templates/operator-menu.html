@@ -1,0 +1,96 @@
+<div class="ui-view"></div>
+<header class="main-header">
+  <ul class="header-nav float-l">
+    <li>
+      <a ng-click="toHome()">
+        <span class="icon-base">
+          <span class="icon-1home_1 primary-icon"></span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon-base">
+          <span class="icon-1check primary-icon"></span>
+          <span class="wrap-icon">
+            <span class="icon-1plus_in_c secondary-icon"></span>
+          </span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="icon-base">
+          <span class="icon-1all_checks primary-icon"></span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a ng-click="commandBack()">
+        <span class="icon-base">
+          <span class="icon-1reverse_link primary-icon"></span>
+        </span>
+      </a>
+    </li>
+  </ul>
+
+  <style>
+
+    .loaded {
+      color: #85cc27;
+    }
+
+    .load {
+      color: lightblue;
+    }
+
+    .offline {
+      color: lightyellow;
+    }
+
+    .error {
+      color: red;
+    }
+
+  </style>
+
+  <ul class="header-nav float-r">
+    <li class="none-border">
+      <a href="#">
+        <span class="icon-base none-border">
+          <span class="icon-1cloud_1 primary-icon"
+                ng-class="{
+                  'loaded': connect === 'loaded',
+                  'load': connect === 'load',
+                  'offline': connect === 'offline',
+                  'error': connect === 'error'
+                }"></span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="icon-base">
+          <span class="icon-1menu_settings primary-icon"></span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="user-data">
+          <img class="user-ava" ng-src="{{ User.img_url }}" alt="Accaunt Foto">
+          <span class="user-name">{{ User.first_name + " " + User.second_name }}</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a ng-click="logOut()">
+        <span class="icon-base">
+          <span class="icon-1logout primary-icon"></span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</header>
+
+<section class="main-content ui-view:content"></section>

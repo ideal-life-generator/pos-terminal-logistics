@@ -1,0 +1,130 @@
+<style>
+
+  .alphabet-letters.active {
+    background-color: #7fcfe0;
+    color: #fff;
+  }
+
+  .icon-base.active {
+    color: black;
+  }
+
+</style>
+
+<div style="display: table; height: inherit; width: 100%;">
+
+  <div class="wrapper-unit-15 pdg-l-r-5 clear-fix">
+    <div class="search-wrap width-less float-l clear-fix">
+      <input class="search-input"
+             type="text"
+             ng-model="dataToSearch"
+             placeholder="Поиск пользователя"
+             select-on-click>
+      <ul class="icon-box-r">
+        <li class="float-l"
+            ng-click="findBy('name', dataToSearch)">
+          <span class="icon-base"
+                ng-class="{ 'active': activeSearch === 'name' }">
+            <span class="icon-1check primary-icon"></span>
+            <span class="wrap-icon">
+              <span class="icon-1plus_in_c secondary-icon"></span>
+            </span>
+          </span>
+        </li>
+        <li class="float-l"
+            ng-click="findBy('phone', dataToSearch)">
+          <span class="icon-base"
+                ng-class="{ 'active': activeSearch === 'phone' }">
+            <span class="icon-1pr_doc primary-icon"></span>
+            <span class="wrap-icon">
+              <span class="icon-1plus_in_c secondary-icon"></span>
+            </span>
+          </span>
+        </li>
+        <li class="float-l"
+            ng-click="findBy('keeper_id', dataToSearch)">
+          <span class="icon-base"
+                ng-class="{ 'active': activeSearch === 'keeper_id' }">
+            <span class="icon-1check primary-icon"></span>
+            <span class="wrap-icon">
+              <span class="icon-1plus_in_c secondary-icon"></span>
+            </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="btn-create-wr float-l"
+         ng-click="addCommand('menu.type.client.parent.customer.human')">
+      <div class="btn-create">
+        <a class="btn-cr-label">
+          Создать
+        </a>
+        <div class="btn-cr-icon">
+          <div class="icon">
+            <span class="icon-1plus primary-icon"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div style="padding-bottom: 10px;">
+    <div class="pdg-l-r-5 filter clear-fix">
+      <div class="wrap-alphabet width-less">
+        <div class="alphabet-letters"
+             ng-class="{ 'active': !$stateParams.filter }"
+             ng-click="filterActivator()">
+          Все
+        </div>
+        <div class="alphabet-letters"
+             ng-repeat="lattersSector in searchLanguage.sectors"
+             ng-class="{ 'active': $stateParams.filter === lattersSector.title }"
+             ng-click="filterActivator(lattersSector.title)">
+          {{ lattersSector.title[0] + "-" + lattersSector.title[lattersSector.title.length-1] | lowercase }}
+        </div>
+        <div style="float: right; height: 100%; padding: 0px 15px;">
+          <select name="searchLanguage"
+                  ng-model="searchLanguage"
+                  ng-change="changeSearchLanguage(searchLanguage.title)"
+                  ng-options="type as type.title for type in counterLatter">
+          </select>
+        </div>
+      </div>
+      <div class="pdg-l-10 grid-5">
+        <div class="wrap-pagination clear-fix">
+          <div class="pagination-off float-l"
+               ng-click="go(right = false)">
+            <div class="icon-base no-border float-l">
+              <div class="icon-1arl primary-icon"></div>
+            </div>
+            <div class="pagination-off-num float-l">
+              {{ $stateParams.page }}
+            </div>
+          </div>
+          <span class="pagination-caption">
+            из
+          </span>
+          <div class="pagination-on float-l"
+               ng-click="go(right = true)">
+            <div class="icon-base no-border float-r">
+              <div class="icon-1arr primary-icon"></div>
+            </div>
+            <span class="pagination-on-num float-r">
+              {{ count / limit | ceil }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div style="display: table-row;">
+    <div style="display: table-cell; height: 100%; width: 100%; position: relative;">
+      <ul class="sender-list ui-view"
+          ng-class="{ 'left': animation === 'left',
+                      'right': animation === 'right' }"
+          style="width: 100%; height: 100%; position: absolute;"></ul>
+    </div>
+  </div>
+
+</div>  

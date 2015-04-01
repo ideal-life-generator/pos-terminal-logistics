@@ -1,0 +1,35 @@
+<div style="display: table-cell; width: 100%; height: 20%; padding-left: 5px; padding-right: 5px;">
+  <div class="animation-fade"
+       style="position: relative; width: 100%; height: 100%;">
+    <div style="width: 100%; height: 100%; position: absolute; overflow: hidden; padding-bottom: 15px;">
+      <div class="btn-implex grid-2"
+           ng-class="{ 'active-change-dstn': $state.includes('menu.type.destination.switcher.department') }"
+           ng-click="addCommand('menu.type.destination.switcher.department.city.list', { page: 1 })"
+           style="padding: 0 5px 0 0; height: inherit;">
+        <div class="btn-inner"
+             style="height: inherit;">
+          <span class="icon-base no-border dsp-inline-block table-d">
+            <span class="icon-1primary_user primary-icon"></span>
+          </span>
+          <span class="change-dstn-caption dsp-inline-block">
+            Доставка до отделения
+          </span>
+        </div>
+      </div>
+      <div class="btn-implex grid-2"
+           ng-class="{ 'active-change-dstn': $state.includes('menu.type.destination.switcher.door') }"
+           ng-click="addCommand('menu.type.destination.switcher.door.used')"
+           style="padding: 0 0 0 5px; height: inherit;">
+        <div class="btn-inner"
+             style="height: inherit;">
+          <span class=" icon-base no-border dsp-inline-block table-d">
+            <span class="icon-1secondary_user primary-icon"></span>
+          </span>
+          <span class="change-dstn-caption dsp-inline-block">
+            Доставка до двери
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

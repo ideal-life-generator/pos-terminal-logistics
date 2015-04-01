@@ -1,0 +1,35 @@
+<div class="wrapper-unit-5 clear-fix ng-scope">
+  <div class="card-dstn-implex grid-3 ng-scope"
+       ng-repeat="addressee in addresseeList">
+    <div class="card-dstn-inner txt-l clear-fix">
+      <span class="icon-base">
+        <span class="icon-1primary_user primary-icon"></span>
+      </span>
+      <span class="card-dstn-title">
+        Используемые получателем
+      </span>
+      <div class="card-dstn-city">
+        <span class="clr-4 ng-binding">
+          {{ addressee.city_name + ", " }}
+        </span>
+        <span class="clr-1 ng-binding">
+          {{ addressee.post_code }}
+        </span>
+      </div>
+      <div class="card-dstn-info clr-4 float-l">
+        <p class="ng-binding">
+          {{ addressee.street_name + " " + addressee.building + ", " + addressee.flat_or_office }}
+        </p>
+        <p class="ng-binding">
+          {{ addressee.phone }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card-dstn-implex grid-3 create"
+       ng-click="addCommand('menu.type.destination.switcher.door.find.result')">
+    <div class="card-dstn-inner txt-l clear-fix">
+      <div class="icon-1plus primary-icon"></div>
+    </div>
+  </div>
+</div>

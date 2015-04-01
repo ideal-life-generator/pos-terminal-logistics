@@ -1,0 +1,48 @@
+@media screen and (max-width: 1920px) and (max-height: 1200px) {
+  .sender-list li {
+    width: 16.66667%;
+    height: 20%; }
+
+  .cities-list li {
+    width: 16.66667%;
+    height: 12.5%; }
+
+  .postoffices-list li {
+    width: 16.66667%;
+    height: 20%; } }
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
+  .sender-list li {
+    width: 20%;
+    height: 25%; }
+
+  .cities-list li {
+    width: 20%;
+    height: 14.28571%; }
+
+  .postoffices-list li {
+    width: 20%;
+    height: 25%; } }
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .sender-list li {
+    width: 25%;
+    height: 33.33333%; }
+
+  .cities-list li {
+    width: 25%;
+    height: 16.66667%; }
+
+  .postoffices-list li {
+    width: 25%;
+    height: 33.33333%; } }
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+  .sender-list li {
+    width: 33.33333%;
+    height: 33.33333%; }
+
+  .cities-list li {
+    width: 33.33333%;
+    height: 16.66667%; }
+
+  .postoffices-list li {
+    width: 33.33333%;
+    height: 33.33333%; } }

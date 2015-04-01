@@ -1,0 +1,15 @@
+<li class="sender-user float-l"
+    ng-click="changeSender(sender)"
+    ng-repeat="sender in sendersList"
+    style="padding: 5px;">
+  <div style="background-color: white; height: 100%;">
+    <span>
+      {{ sender.name }}
+    </span>
+    <br>
+    <span>
+      {{ sender.phone }}
+    </span>
+  </div>
+<!--   <pre>{{ sender.second_name | json }}</pre> -->
+</li>

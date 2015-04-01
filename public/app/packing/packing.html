@@ -1,0 +1,117 @@
+<div class="pdg-l-r-5 grid1 pkg-tittle mrn-b-5-dell">
+  Новое грузовое место
+</div>
+
+<div class="wrapper-unit-15 clear-fix new-carge-input">
+  <div class="pdg-l-r-5 grid-2">
+    <div class="search-wrap grid-1">
+      <input class="search-input one-icon"
+             type="text"
+             name="firstname"
+             ng-model="cargoName"
+             placeholder="Введите код или наименование груза..." />
+    </div>
+  </div>
+  <div class="pdg-l-r-5 grid-2">
+    <div class="search-wrap grid-1">
+      <input class="search-input one-icon"
+             type="text"
+             ng-model="cargoPrice"
+             placeholder="Оглашенная стоимость, руб." />
+    </div>
+  </div>
+</div>
+
+<div class="pdg-l-r-5 grid1">
+  <h3 class="prc-type">
+    Тип обработки
+  </h3>
+</div>
+
+<ul class="wrapper-unit-15 clear-fix new-cargo-type ui-view:@treatments"></ul>
+
+<ul class="wrapper-unit-15 clear-fix new-cargo-packing">
+  <li class="btn-implex grid-2">
+    <a class="btn-inner pkg"
+       ui-sref="menu.type.packing.treatments.flatrate"
+       ng-class="{ 'active': $state.includes('menu.type.packing.treatments.flatrate') }">
+      Стандартные упаковки
+    </a>
+  </li>
+  <li class="btn-implex grid-2">
+    <a class="btn-inner pkg"
+       ui-sref="menu.type.packing.treatments.custom"
+       ng-class="{ 'active': $state.includes('menu.type.packing.treatments.custom') }">
+      Пользовательские упаковки
+    </a>
+  </li>
+</ul>
+
+<style>
+
+  .content-loader {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(50%);
+    opacity: 0;
+  }
+
+
+  .carousel-scroll {
+    background-color: #7fcfe0;
+    height: 8px;
+    border-radius: 16px;
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+  }
+
+</style>
+
+<div class="wrapper-unit new-cargo-packing"
+     style="position: relative; height: 20.05208vh;">
+  <div class="packs-slider 3d-right-left ui-view"
+       style="height: 100%; position: absolute; overflow: initial;"></div>
+</div>
+
+<div class="pdg-l-r-5 wrapper-unit-15">
+  <ul class="pack-calc">
+    <li class="size_l">
+      <div class="pack-char">
+        Высота, см
+      </div>
+      <input type="text" class="pack-block">
+    </li>
+    <li class="size_l">
+      <div class="pack-char">
+        Ширина, см
+      </div>
+      <input type="text" class="pack-block">
+    </li>
+    <li class="size_l">
+      <div class="pack-char">
+        Глубина, см
+      </div>
+      <input type="text" class="pack-block">
+    </li>
+    <li class="size_l">
+      <div class="pack-char">
+        Вес, кг
+      </div>
+      <input type="text" class="pack-block">
+    </li>
+    <li class="size_r">
+      <div class="pack-char">
+        Объёмный вес
+      </div>
+      <input type="text" class="pack-block" value="342,23" disabled>
+    </li>
+  </ul>
+</div>
+<div class="grid-4 btn-implex save-place">
+  <a href="#" class="btn-inner btn-clr-4">Сохранить</a>
+</div>

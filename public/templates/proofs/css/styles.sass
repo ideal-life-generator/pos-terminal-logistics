@@ -1,0 +1,4157 @@
+@import "reset.css"
+
+// Resize Width columns //
+$col-1: 100%
+.col-1
+  width: $col-1
+$col-2: (100% / 2)
+.col-2
+  width: $col-2
+$col-3: (100% / 3)
+.col-3
+  width: $col-3
+$col-4: (100% / 4)
+.col-4
+  width: $col-4
+$col-5: (100% / 5)
+.col-5
+  width: $col-5
+$col-6: (100% / 6)
+.col-6
+  width: $col-6
+$col-7: (100% / 7)
+.col-7
+  width: $col-7
+$col-8: (100% / 8)
+.col-8
+  width: $col-8
+$col-9: (100% / 9)
+.col-9
+  width: $col-9
+$col-10: (100% / 10)
+.col-10
+  width: $col-10
+$col-11: (100% / 11)
+.col-11
+  width: $col-11
+$col-12: (100% / 12)
+.col-12
+  width: $col-12
+$col-13: (100% / 13)
+.col-13
+  width: $col-13
+$col-14: (100% / 14)
+.col-14
+  width: $col-14
+$col-15: (100% / 15)
+.col-15
+  width: $col-15
+$col-16: (100% / 16)
+.col-16
+  width: $col-16
+// -End- Resize Width columns
+
+// Style Template //
+/* Remove margin
+=mrn-l-dell
+  margin-left: -4px
+.mrn-l-dell
+  +mrn-l-dell
+=mrn-b-5-dell
+  margin-top: -5px
+.mrn-b-5-dell
+  +mrn-b-5-dell
+
+/* Remove border
+=brd-0-t
+  border-top: none
+.brd-0-t
+  +brd-0-t
+=brd-0-r
+  border-right: none
+.brd-0-r
+  +brd-0-r
+=brd-0-b
+  border-bottom: none
+.brd-0-b
+  +brd-0-b
+=brd-0-l
+  border-left: none
+.brd-0-l
+  +brd-0-l
+
+/* Border color
+=brd-clr-1
+  border-width: 1px
+  border-style: solid
+  border-color: #cbd4ee
+.brd-clr-1
+  +brd-clr-1
+=brd-clr-2
+  border-width: 1px
+  border-style: solid
+  border-color: #0ba8ca
+.brd-clr-2
+  +brd-clr-2
+
+$brd-r-3: 3px
+=brd-r-3
+  border-radius: $brd-r-3
+  overflow: hidden
+.brd-r-3
+  +brd-r-3
+=brd-r-left-3
+  border-radius: 3px 0 0 3px
+  overflow: hidden
+.brd-r-left-3
+  +brd-r-left-3
+=brd-r-right-3
+  border-radius: 3px 0 0 3px
+  overflow: hidden
+.brd-r-right-3
+  +brd-r-right-3
+
+/* Button color
+=btn-clr-0
+  background-color: transparent
+  &:active
+    background-color: darken(#0ba8ca, 10%)
+.btn-clr-0
+  +btn-clr-0
+=btn-clr-1
+  background-color: #7fcfe0
+  &:active
+    background-color: darken(#7fcfe0, 10%)
+.btn-clr-1
+  +btn-clr-1
+=btn-clr-2
+  background-color: #0ba8ca
+  &:active
+    background-color: darken(#0ba8ca, 10%)
+.btn-clr-2
+  +btn-clr-2
+=btn-clr-3
+  background-color: #0791b9
+  &:active
+    background-color: darken(#0791b9, 10%)
+.btn-clr-3
+  +btn-clr-3
+=btn-clr-4
+  background-color: #85cc27
+  &:active
+    color: inherit
+    background-color: darken(#85cc27, 10%)
+.btn-clr-4
+  +btn-clr-4
+=btn-clr-5
+  background-color: #ff6e4a
+  &:active
+    background-color: darken(#ff6e4a, 10%)
+.btn-clr-5
+  +btn-clr-5
+=btn-clr-6
+  background-color: #fff
+  &:active
+    background-color: darken(#fff, 10%)
+.btn-clr-6
+  +btn-clr-6
+=btn-clr-7
+  background-color: #588c97
+  &:active
+    background-color: darken(#588c97, 10%)
+.btn-clr-7
+  +btn-clr-7
+=btn-clr-8
+  background-color: #cbd4ee
+  &:active
+    background-color: darken(#cbd4ee, 10%)
+.btn-clr-8
+  +btn-clr-8
+=btn-clr-9
+  background-color: #fff
+  &:active
+    background-color: darken(#7fcfe0, 10%)
+.btn-clr-9
+  +btn-clr-9
+
+/* Color text
+=diff-color
+  color: #85cc27
+.diff-color
+  +diff-color
+=clr-1
+  color: #588c97
+.clr-1
+  +clr-1
+=clr-2
+  color: #fff
+.clr-2
+  +clr-2
+=clr-3
+  color: #7fcfe0
+.clr-3
+  +clr-3
+=clr-4
+  color: #173451
+.clr-4
+  +clr-4
+=clr-5
+  color: #0ba8ca
+.clr-5
+  +clr-5
+=clr-6
+  color: #cbd4ee
+.clr-6
+  +clr-6
+
+/* Padding
+=pdg-0
+  padding: 0
+.pdg-0
+  +pdg-0
+=pdg-5
+  padding: 5px
+.pdg-5
+  +pdg-5
+=pdg-0-5
+  padding: 0 5px
+.pdg-0-5
+  +pdg-0-5
+=pdg-5-0
+  padding: 5px 0
+.pdg-5-0
+  +pdg-5-0
+=pdg-l-2
+  padding-left: 2.5px
+.pdg-l-2
+  +pdg-l-2
+=pdg-r-2
+  padding-right: 2.5px
+.pdg-r-2
+  +pdg-r-2
+=pdg-b-5
+  padding-bottom: 5px
+.pdg-b-5
+  +pdg-b-5
+=pdg-l-5
+  padding-left: 5px
+.pdg-l-5
+  +pdg-l-5
+=pdg-r-5
+  padding-right: 5px
+.pdg-r-5
+  +pdg-r-5
+=pdg-l-10
+  padding-left: 10px
+.pdg-l-10
+  +pdg-l-10
+=pdg-l-r-5
+  padding-left: 5px
+  padding-right: 5px
+.pdg-l-r-5
+  +pdg-l-r-5
+=pdg-l-r-2
+  padding-left: 2.5px
+  padding-right: 2.5px
+.pdg-l-r-2
+  +pdg-l-r-2
+
+
+/* Wrapper
+=wrapper-unit-5
+  margin-bottom: 5px
+.wrapper-unit-5
+  +wrapper-unit-5
+=wrapper-unit
+  margin-bottom: 10px
+.wrapper-unit
+  +wrapper-unit
+=wrapper-unit-15
+  margin-bottom: 15px
+.wrapper-unit-15
+  +wrapper-unit-15
+=wrapper-unit-5-15
+  margin-top: -5px
+  margin-bottom: 15px
+.wrapper-unit-5-15
+  +wrapper-unit-5-15
+
+/*
+=width-20
+  width: 20%
+.width-20
+  +width-20
+=width-60
+  width: 60%
+.width-60
+  +width-60
+=width-less
+  width: 80%
+.width-less
+  +width-less
+=grid-16
+  float: left
+  width: (100% / 16)
+.grid-16
+  +grid-16
+=grid-8
+  float: left
+  width: (100% / 8)
+.grid-8
+  +grid-8
+=grid-6
+  float: left
+  width: (100% / 6)
+.grid-6
+  +grid-6
+=grid-5
+  float: left
+  width: (100% / 5)
+.grid-5
+  +grid-5
+=grid-4
+  float: left
+  width: (100% / 4)
+.grid-4
+  +grid-4
+=grid-3
+  float: left
+  width: (100% / 3)
+.grid-3
+  +grid-3
+=grid-2
+  float: left
+  width: 50%
+.grid-2
+  +grid-2
+=grid-m-2
+  float: left
+  width: 100% - (100% / 3)
+.grid-m-2
+  +grid-m-2
+=grid-1
+  width: 100%
+.grid-1
+  +grid-1
+
+/* Text align
+=txt-l
+  text-align: left !important
+.txt-l
+  +txt-l
+=txt-r
+  text-align: right !important
+.txt-r
+  +txt-r
+=txt-c
+  text-align: center !important
+.txt-c
+  +txt-c
+
+=float-l
+  float: left
+.float-l
+  +float-l
+=float-r
+  float: right
+.float-r
+  +float-r
+
+=table
+  display: table
+.table
+  +table
+=table-r
+  display: table-row
+.table-r
+  +table-r
+=table-d
+  display: table-cell
+  vertical-align: middle
+.table-d
+  +table-d
+
+=dsp-inline-block
+  display: inline-block !important
+  vertical-align: middle
+.dsp-inline-block
+  +dsp-inline-block
+
+// Param Placeholder
+=colorPlaceholder($color)
+  &::-webkit-input-placeholder
+    color: $color
+  &::-moz-placeholder
+    color: $color
+  &:-moz-placeholder
+    color: $color
+  &:-ms-input-placeholder
+    color: $color
+
+=textAlign($align)
+  &::-webkit-input-placeholder
+    text-align: $align
+  &::-moz-placeholder
+    text-align: $align
+  &:-moz-placeholder
+    text-align: $align
+  &:-ms-input-placeholder
+    text-align: $align
+// -End- Param Placeholder
+
+// Cell dell
+=cellDell
+  &::-ms-clear
+    display: none
+    width: 0
+    height: 0
+  &::-webkit-clear-button
+    display: none
+    width: 0
+    height: 0
+.cellDell
+  +cellDell
+// -End- Cell dell
+
+// Clearing content
+=clear-fix
+  position: relative
+  &:after
+    clear: both
+    content: "."
+    visibility: hidden
+    display: block
+    height: 0
+.clear-fix
+  +clear-fix
+// -End- Clearing content
+// Clear float
+=clear
+  clear: both
+.clear
+  +clear
+
+=transition($s)
+  -moz-transition: $s
+  -o-transition: $s
+  -webkit-transition: $s
+  transition: $s
+.transition-04s
+  -moz-transition: 0.4s
+  -o-transition: 0.4s
+  -webkit-transition: 0.4s
+  transition: 0.4s
+=border-left-radius($r)
+  border-radius: $r 0 0 $r
+=border-right-radius($ra)
+  border-radius: 0 $ra $ra 0
+=transform($t)
+  -webkit-transform: $t
+  -moz-transform: $t
+  -ms-transform: $t
+  -o-transform: $t
+  transform: $t
+=opacity($o)
+  opacity: $o
+  -moz-opacity: $o
+
+.font-style2
+  font-family: "Ubuntu Condensed"
+  font-size: 20px
+// -End- Style Template //
+
+// Property for width 1024px
+$correctIconSize: 0.6363076923076923 //Корекция размера шрифта-иконок относительно *1024px*
+$bodyWidth: 1024px
+$bodyHeight: 768px
+$navWidth: 256px
+$convertW: ((100% / 1%) / ($bodyWidth / 1px) * 1vw) / 1px //convert to VW
+$convertH: ((100% / 1%) / ($bodyHeight / 1px) * 1vh) / 1px //convert to VH
+$sectionWidth: $bodyWidth - $navWidth
+$paddingContent: (15px * 100%) / $bodyWidth
+
+// -End- Property for width 1024px
+
+// Resize the Height of the icon
+=iconPrimary($iconFontSize)
+  $iconSize: $iconFontSize * $convertH
+  $realIconSize: $iconSize / $correctIconSize
+  font-size: $realIconSize
+  line-height: $iconSize * $correctIconSize
+// -End- Resize the Height of the icon
+
+// Resize the icon Plus
+=iconSecondary($iconFontSize)
+  $iconSize: $iconFontSize * $convertH
+  $realIconSize: $iconSize / $correctIconSize
+  display: block
+  position: relative
+  width: $realIconSize
+  margin: 0
+  &:before
+    position: absolute
+    font-size: $realIconSize
+    width: $realIconSize
+    height: $realIconSize
+    border-radius: $realIconSize
+    margin: auto
+    color: #0ba8ca
+    right: 0
+    left: 0
+  &:after
+    display: block
+    content: ""
+    color: rgba(0, 0, 0, 0)
+    background: #fff
+    $radius: $iconSize - 4px * $convertH
+    width: $radius
+    height: $radius
+    border-radius: $radius
+    margin: 0 auto
+// -End- Resize the icon Plus
+
+// Font size in VH
+=fontSize($fontSize)
+  font-size: $fontSize * $convertH
+// -End- Font size in VH
+
+// Active item menu
+.activeElMenu
+  .nav-link
+    position: relative
+    display: block
+    color: #fff
+    &:active
+      $color: #ff6e4a
+      color: $color !important
+      .primary-icon
+        color: $color
+      .icon-1plus_in_c
+        &:before
+          color: $color !important
+      .label-menu
+        color: $color !important
+// -End- Active item menu
+
+// Inversion icon and background
+.active-icon-inversion
+  &:active
+    background: #7fcfe0 !important
+    border-color: transparent
+    .icon
+      color: #fff !important
+      border-color: transparent
+    .primary-icon
+      color: #fff !important
+      border-color: transparent
+    .icon-1plus_in_c, .secondary-icon
+      &:before
+        color: #fff !important
+      &:after
+        background: #7fcfe0 !important
+    a
+      color: #fff
+    &+ li span
+      border-color: transparent
+// -End- Inversion icon and background
+
+// Activation icon and background
+.active-nav
+  background: #f2f8f9 !important
+  border-color: transparent
+  .icon
+    display: block
+    color: #173451 !important
+    border-color: transparent
+  .icon-1plus_in_c, .secondary-icon
+    &:after
+      background: #fff !important
+  a
+    color: #fff
+  &+ li span
+    border-color: transparent
+  .label-menu
+    color: #173451 !important
+// -End- Activation icon and background
+
+// Activation icon and background
+=active-change-dstn
+  .btn-inner
+    +btn-clr-1
+  .change-dstn-caption
+    +clr-2
+  .primary-icon
+    +clr-2
+.active-change-dstn
+  +active-change-dstn
+
+=active-change-address
+  .btn-inner
+    +btn-clr-1
+  .change-address-caption
+    +clr-2
+  .primary-icon
+    +clr-2
+.active-change-address
+  +active-change-address
+// -End- Activation icon and background
+
+// Order Return. Activation field for remove
+=active-order-return
+  display: block !important
+.active-order-return
+  +active-order-return
+// -End-Order Return. Activation field for remove
+
+// Prefix "user-select" false and true
+=-user-select
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -o-user-select: none
+  user-select: none
+.-user-select
+  +-user-select
+
+=-user-select-true
+  -webkit-user-select: text
+  -khtml-user-select: text
+  -moz-user-select: text
+  -o-user-select: text
+  user-select: text
+.-user-select-true
+  +-user-select-true
+// -End- Prefix "user-select"  false and true
+
+// Hidden and Show field
+.hidden-field
+  display: none !important
+// -End- Hidden field
+
+// Basic
+body
+  background: #f2f8f9
+  //overflow: hidden
+  min-width: 960px
+body *
+  +-user-select
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+.placeholder
+  font-size: 12px
+  background-color: #fff
+  color: #588c97
+.icon-base
+  +iconPrimary(38px)
+  display: block
+  position: relative
+  color: #7fcfe0
+  cursor: pointer
+  &:before
+    display: block
+    content: ""
+    position: absolute
+    width: 0
+    height: 70%
+    top: 15%
+    border-left: solid 1px #cbd4ee
+    left: 0
+  .primary-icon
+    margin: 9px * $convertH 9px * $convertH
+  .wrap-icon
+    display: block
+    position: absolute
+    margin: 0
+    top: 36px * $convertH
+    left: 50%
+    right: 0
+    bottom: 0
+    .secondary-icon
+      +iconSecondary(23px)
+      &:before
+        line-height: 20px * $convertH !important
+  &.no-border
+    &:before
+      visibility: hidden
+.btn-def-img
+  +brd-r-3
+  width: 100%
+  height: 109px
+  border: solid 1px #0ba8ca
+  font-family: "Ubuntu", Arial, sans-serif
+  font-weight: lighter
+  font-size: 18px * $convertH
+  cursor: pointer
+
+  +clr-5
+  .primary-icon
+    +iconPrimary(44px)
+    +clr-5
+    vertical-align: middle
+
+.btn-implex
+  &.pdg-0
+    padding: 0
+  &.pdg-r-0
+    padding-right: 0
+  &.pdg-l-0
+    padding-left: 0
+  &.pdg-l-r-2
+    padding: 0 2.5px 0 2.5px
+  &.pdg-l-r-2-5
+    padding: 0 5px 0 2.5px
+  &.pdg-l-2
+    padding: 0 0 0 2.5px
+  &.pdg-r-2
+    padding: 0 2.5px 0 0
+  &.pdg-l-r-5
+    padding: 0 5px 0 5px
+  &.pdg-l-r-5-2
+    padding: 0 2.5px 0 5px
+  &.pdg-l-5
+    padding: 0 0 0 5px
+  &.pdg-r-5
+    padding: 0 5px 0 0
+  display: table
+  margin: 0
+  padding: 5px
+  .btn-inner
+    &.no-brd-radius
+      border-radius: 0
+    &.clr-2
+      @extend .clr-2
+    &.clr-3
+      @extend .clr-3
+    @extend .brd-r-3
+    display: table-cell
+    vertical-align: middle
+    +fontSize(24px)
+    border-radius: 3px
+    font-family: 'Ubuntu Condensed', Arial, Tahoma, sans-serif
+    font-weight: normal
+    text-align: center
+    color: #fff
+    height: 60px * $convertH
+    cursor: pointer
+
+.btn-icon
+  border-radius: 3px
+  padding: 5px
+  .inner-btn
+    display: block
+    background: none repeat scroll 0 0 #7FCFE0
+    height: 100px *$convertH
+    border-radius: 3px
+  &:active
+    a
+      background: #65bfd5
+  .icon
+    display: inline-block
+    +iconPrimary(46px)
+    color: #fff
+    position: relative
+    margin-left: 3px * $convertW
+    height: 100%
+    vertical-align: middle
+    line-height: 100px * $convertH
+    .wrap-icon
+      position: absolute
+      margin: 0
+      top: 60px * $convertH
+      right: 0
+      bottom: 0
+      left: 40px * $convertH
+      .icon-1plus_in_c, .secondary-icon
+        +iconSecondary(20px)
+        &:before
+          line-height: 18px * $convertH !important
+  .primary-icon
+    display: inline-block
+    line-height: 100px * $convertH
+  .b-m-elem-name
+    color: #fff
+    font-family: 'Ubuntu Condensed', sans-serif
+    font-size: 24px * $convertH
+    font-weight: normal
+    display: inline-block
+    vertical-align: middle
+    width: 56%
+// -End- Basic
+
+
+//======================ERP======================//
+///////////////////////
+// Header navigation //
+.main-header
+  position: relative
+  float: left
+  margin: 0 0 15px
+  padding: 0 15px
+  height: 80px * $convertH
+  width: 75%
+  min-width: 720px
+
+.header-nav
+  display: block
+  height: 100% !important
+  background: #fff
+  border: solid 1px #cbd4ee
+  border-top: none
+  border-radius: 0 0 $brd-r-3 $brd-r-3
+  li
+    float: left
+    display: block
+    height: 100% !important
+    span
+      display: block
+    @extend .active-icon-inversion
+    &:first-child .icon-base
+      &:before
+        border: none
+  .icon-base
+    +iconPrimary(38px)
+    &:before
+      height: 100%
+      top: 0
+    .wrap-icon
+      top: 36px * $convertH
+      left: 50%
+      .secondary-icon
+        +iconSecondary(23px)
+
+.user-data
+  margin: 10px * $convertH 0 0
+  border-left: solid 1px #cbd4ee
+  padding: 0 0 0 10px * $convertW
+  width: 148px * $convertW
+  min-width: 139px
+
+.user-ava
+  display: inline-block
+  width: 60px * $convertH
+
+.user-name
+  display: inline-block !important
+  overflow: hidden
+  font-weight: 300
+  font-size: 18px * $convertH
+  color: #173451
+  text-overflow: ellipsis
+  min-width: 40px * $convertW
+  width: 38%
+  margin: 10px * $convertH 0 0 10px * $convertW
+
+// -End- Header Navigation //
+/////////////////////////////
+
+//////////////////
+// Left Side Bar//
+.left-side-bar
+  @extend .activeElMenu
+  float: left
+  background: #121f3f
+  width: 25%
+  min-width: 240px
+  text-align: center
+  height: 768px * $convertH
+
+.nav-title
+  font-size: 16px * $convertH
+  font-weight: normal
+  line-height: 39px * $convertH
+  color: #fff
+
+.base-nav-title
+  font-size: 24px * $convertH
+  font-family: "Ubuntu Condensed", Arial, sans-serif
+  line-height: 79px * $convertH
+
+.num-transaction
+  font-family: 'Ubuntu Condensed', Arial, Tahoma, sans-serif
+  font-size: 30px * $convertH
+  font-weight: normal
+  line-height: 36px * $convertH
+  color: #ff6e4a
+  margin-top: -5px * $convertH
+  margin-bottom: 9px * $convertH
+
+// Navigation
+.nav
+  .nav-link
+    @extend .clear-fix
+    position: relative
+    display: block
+    color: #fff
+    &:before
+      display: block
+      content: ""
+      position: absolute
+      width: 78px * $convertH
+      height: 0
+      right: 0
+      left: 0
+      margin: 0 auto
+      border-top: solid 1px rgba(247, 248, 248, 0.2)
+    &:active
+      $color: #ff6e4a
+      color: $color !important
+      .icon-1plus_in_c, .secondary-icon
+        &:before
+          color: #ff6e4a !important
+    .icon
+      display: block
+      position: absolute
+      width: 70px
+      top: 50%
+      margin-top: -37px * $convertH
+      height: 74px * $convertH
+      .wrap-icon
+        position: absolute
+        margin: 0
+        right: 0
+        bottom: 0
+        top: 45px * $convertH
+        left: 51%
+        .icon-1plus_in_c, .secondary-icon
+          +iconSecondary(13px)
+          color: #0ba8ca
+          &:before
+            line-height: 10px * $convertH !important
+    .primary-icon
+      +iconPrimary(36px)
+      display: block
+      line-height: 72px * $convertH
+    .descript-menu
+      display:  table-cell
+      line-height: normal
+      text-align: left
+      padding: 11px * $convertH 0 11px * $convertH 70px
+      vertical-align: middle
+      height: 74px * $convertH
+    .label-menu
+      display: block
+      font-size: 16px * $convertH
+      font-weight: normal
+      color: #fff
+    .title-menu
+      display: block
+      vertical-align: middle
+      font-family: "Ubuntu Condensed", sans-serif
+      font-size: 24px * $convertH
+      font-weight: normal
+      color: #ff6e4a
+    .alignMenu
+      margin-top: 15px * $convertH
+    .product
+      margin-top: 15px * $convertH
+  .el-menu
+    @extend .clear-fix
+    position: relative
+  .small-menu
+    .nav-link
+      height: 74px * $convertH
+    .icon
+      position: relative
+      top: 0
+      margin-top: 0
+      text-align: center
+      width: 100%
+  .base-menu
+    .nav-link
+      height: 133px * $convertH
+    .icon
+      width: 100%
+      .wrap-icon
+        top: 90px * $convertH
+        .icon-1plus_in_c, .secondary-icon
+          +iconSecondary(25px)
+          &:before
+            line-height: 22px * $convertH !important
+    .primary-icon
+      +iconPrimary(72px)
+      line-height: 134px * $convertH
+// -End- Navigation
+
+// Checklist
+.checklist
+  @extend .-user-select
+  position: relative
+  border-top: 1px solid rgba(203, 212, 238, 0.3)
+  border-left: solid 2px #ff6e4a
+  cursor: pointer
+
+  /* Settings Scrollbar for Checklist */
+  .mCSB_inside > .mCSB_container
+    margin-right: 0
+  .scrollableArea
+    width: 254px * $convertW
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+    background-color: rgba(127, 207, 224, 0.6) !important
+    width: 11px !important
+  .mCSB_scrollTools
+    opacity: 1 !important
+  .mCSB_draggerRail
+    display: none
+/* -End- Settings Scrollbar for Checklist */
+
+.checklist.scrollbar
+  height: 190px * $convertH
+  overflow: hidden
+
+.fields-name
+  line-height: normal
+
+.name-f
+  font-size: 12px * $convertH
+  font-weight: normal
+  color: #588c97
+  float: left
+  margin-top: 13px * $convertH
+  line-height: 18px * $convertH
+  text-align: center
+  &:first-child
+    width: 50%
+    text-align: left
+    padding-left: 10px
+  &:nth-child(2)
+    width: 15%
+  &:last-child
+    width: 35%
+
+.field
+  display: block
+  float: left
+  border-bottom: 1px solid rgba(203, 212, 238, 0.3)
+  line-height: 29px * $convertH
+  width: 100%
+  text-align: center
+  &:nth-child(odd)
+    background: #101c39
+  &:nth-child(even)
+    background: #152241
+  .name
+    float: left
+    width: 50%
+    text-align: left
+    padding-left: 10px
+    color: #fff
+  .quantity
+    float: left
+    width: 15%
+    color: #fff
+  .price
+    float: left
+    width: 35%
+    color: #FF6E4A
+  .name,
+  .quantity,
+  .price
+    font-size: 12px * $convertH
+    font-weight: lighter
+
+.checklist-total-title
+  font-weight: lighter
+  font-size: 16px * $convertH
+  color: #fff
+  margin-right: 8px
+
+#checklist-total-price
+  font-family: 'Ubuntu Condensed', sans-serif
+  font-weight: normal
+  font-size: 30px * $convertH
+  color: #ff6e4a
+  line-height: 68px * $convertH
+// -End- Checklist
+
+// Transaction btn
+.transaction-save
+  padding-left: 6px
+  padding-right: 3px
+
+.transaction-discount
+  padding-left: 3px
+  padding-right: 6px
+
+.transaction-pay
+  padding-top: 0
+  padding-left: 6px
+  padding-right: 6px
+  .btn-inner
+    font-family: "Ubuntu", Arial, sans-serif
+    font-weight: normal
+    font-size: 36px * $convertH
+
+.transaction-save,
+.transaction-discount
+  .btn-inner
+    font-family: "Ubuntu", Arial, sans-serif
+    font-size: 18px * $convertH
+    height: 67px * $convertH
+
+.transaction-pay
+  height: 98px * $convertH
+  font-size: 36px * $convertH
+
+.transaction-save,
+.transaction-discount,
+.transaction-pay
+  font-weight: normal
+  color: #fff
+  line-height: 1
+// -End- Transaction btn
+
+// -End- Left Side Bar//
+////////////////////////
+
+//////////////////
+// Main content //
+.main-content
+  position: relative
+  float: left
+  width: 75%
+  min-width: 720px
+  padding: 0 10px 0
+//margin-top: -5px
+
+// Search field
+.inp-caption
+  display: block
+  font-weight: normal
+  font-size: 12px * $convertH
+  color: #588c97
+  line-height: 1
+  margin-top: 1px
+  margin-bottom: 2px
+.search-wrap
+  overflow: hidden
+  background: #fff
+  position: relative
+  border: solid 1px #cbd4ee
+  border-radius: $brd-r-3
+  height: 60px * $convertH
+
+  .icon-base
+    +iconPrimary(36px)
+    color: #7fcfe0
+    height: 58px * $convertH
+    @extend .active-icon-inversion
+    &:before
+      height: 70%
+      top: 15%
+    .primary-icon
+      margin: 9px * $convertH 2px * $convertW
+    .wrap-icon
+      margin: 0
+      top: 36px * $convertH
+      left: 50%
+      .secondary-icon
+        +iconSecondary(20px)
+        &:before
+          line-height: 17px * $convertH !important
+  .search-input
+    height: 100%
+    border-radius: $brd-r-3
+    border: 0
+    padding-left: 10px
+    padding-right: 35%
+    width: 100%
+    font-family: 'Ubuntu Condensed', sans-serif
+    font-size: 24px * $convertH
+    font-weight: 300
+    color: #173451
+    vertical-align: middle
+    +-user-select-true
+    //line-height: 100%
+    +colorPlaceholder(#cbd4ee)
+  .search-input.one-icon
+    padding-right: 10%
+  .icon-box-r
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+// -End- Search field
+
+.btn-create-wr
+  width: 20%
+  padding-left: 10px
+.btn-create
+  @extend .brd-r-3
+  background-color: #7fcfe0
+  height: 60px * $convertH
+  cursor: pointer
+  text-align: right
+  width: 100%
+  &:active
+    background-color: darken(#7fcfe0, 10%) !important
+    .icon
+      background-color: darken(#7fcfe0, 10%) !important
+.btn-cr-label
+  display: inline-block
+  font-family: 'Ubuntu Condensed', sans-serif
+  font-weight: normal
+  font-size: 21px * $convertH
+  line-height: 60px * $convertH
+  color: #fff
+  text-align: center
+  vertical-align: middle
+  width: 50%
+.btn-cr-icon
+  display: inline-block
+  vertical-align: middle
+  margin-right: 10px
+  .icon
+    display: block
+    position: relative
+    color: #fff
+    height: 50px * $convertH
+    background-color: inherit
+  .primary-icon
+    display: block
+    +iconPrimary(32px)
+    line-height: 1
+    height: 0
+    background-color: inherit
+
+// Filter page
+.wrap-alphabet
+  @extend .brd-r-3
+  background-color: #fff
+  border: solid 1px #cbd4ee
+  float: left
+  height: 60px * $convertH
+
+.alphabet-letters
+  font-weight: normal
+  font-size: 18px * $convertH
+  color: #173451
+  overflow: hidden
+  float: left
+  width: 58px * $convertW
+  min-width: 55px
+  text-align: center
+  line-height: 60px * $convertH
+  height: 58px * $convertH
+  cursor: pointer
+  &:before
+    display: block
+    position: absolute
+    content: ""
+    width: 1px
+    height: 50px * $convertH
+    background-color: #cbd4ee
+    float: left
+    margin-top: 5px
+  &:first-child
+    &:before
+      display: none
+  &:active
+    background-color: #7fcfe0
+    color: #fff
+    &:before
+      display: none
+    &+ .box-letters
+      &:before
+        display: none
+// -End- Filter page
+
+// Pagination
+.wrap-pagination
+  display: block
+  position: relative
+  background-color: #FFF
+  width: 100%
+
+  .pagination-off
+    border-radius: 3px 0 0 3px
+    .icon-base
+      //width: 0
+      position: absolute
+      .primary-icon
+        margin: 0
+        height: 0
+
+  .pagination-on
+    border-radius: 0 3px 3px 0
+    .icon-base
+      //width: 0
+      //margin-left: -23.5%
+      //margin-right: 23.5%
+      position: absolute
+      right: 0
+      .primary-icon
+        margin: 0
+        height: 0
+
+  .pagination-off,
+  .pagination-on
+    display: block
+    background-color: #7fcfe0
+    width: 50%
+    $height: 60px * $convertH
+    height: $height
+    padding-right: 5px
+    &:active
+      background-color: darken(#7fcfe0, 10%)
+    .icon-base
+      +iconPrimary(13px)
+      margin-top: 30px * $convertH
+      .primary-icon
+        color: #fff
+        margin: 0
+        line-height: 0
+        display: block
+        height: 0
+
+  .pagination-off-num,
+  .pagination-on-num
+    display: block
+    font-weight: lighter
+    font-size: 30px * $convertH
+    color: #fff
+    line-height: 0
+    margin-top: 30px * $convertH
+    cursor: pointer
+    width: 100%
+    text-align: center
+
+  .pagination-caption
+    position: absolute
+    display: inline
+    vertical-align: middle
+    text-align: center
+    color: #e6f1f3
+    top: 0
+    bottom: 0
+    line-height: 60px * $convertH
+    left: 0
+    right: 0
+    margin: auto
+    width: 0
+    padding-right: 17px
+    &:before
+      position: absolute
+      display: block
+      content: ""
+      height: 10px
+      width: 0
+      border-left: solid 1px #cbd4ee
+      top: 0
+      left: 0
+      right: 0
+      margin: auto
+    &:after
+      position: absolute
+      display: block
+      content: ""
+      height: 10px
+      width: 0
+      border-left: solid 1px #cbd4ee
+      bottom: 0
+      left: 0
+      right: 0
+      margin: auto
+// -End- Pagination
+
+// Card Box
+.card-box
+  padding: 10px
+  margin: 0 5px 10px 5px
+  @extend .brd-r-3
+  border: solid 1px #cbd4ee
+  background-color: #fff
+  .row
+    border-bottom: none
+    padding-top: 4px * $convertH
+    padding-bottom: 4px * $convertH
+    &:first-child
+      padding-top: 0
+    &:last-child
+      padding-bottom: 0
+  .img-unit
+    @extend .brd-r-3
+    float: left
+    border: solid 1px #7fcfe0
+    background-color: #bfe7ef
+    height: 50px * $convertH
+    width: 50px * $convertH
+    text-align: center
+    line-height: 50px * $convertH
+    font-size: 54px * $convertH
+    text-indent: -3px
+    color: #0ba8ca
+  .data-name
+    margin-top: 3px
+    padding-left: 10px
+  .data-name-f,
+  .data-name-l
+    font-family: 'Ubuntu Condensed', sans-serif
+    font-weight: normal
+    font-size: 21px * $convertH
+    color: #173451
+    line-height: 1
+  .label-card
+    font-weight: lighter
+    font-size: 14px * $convertH
+    color: #588c97
+  .data-card
+    font-weight: normal
+    font-size: 18px * $convertH
+    color: #173451
+// -End- Card Box
+
+// Categories
+.title-categories
+  display: block
+  font-family: "Ubuntu Medium", Arial, sans-serif
+  font-weight: 500
+  font-size: 8px
+  line-height: 8px
+  text-transform: uppercase
+  margin-top: 5px
+  margin-bottom: -3px
+
+.btn-categories
+  font-size: 21px * $convertH !important
+// -End- Categories
+
+// Favorites
+.title-favorites
+  clear: both
+  display: block
+  font-family: "Ubuntu Medium", Arial, sans-serif
+  font-weight: 500
+  font-size: 8px
+  line-height: 8px
+  text-transform: uppercase
+  margin-top: -10px * $convertH
+  margin-bottom: 1px
+.wrapper-favorites
+  margin-top: -9px
+
+.favorites-element
+  position: relative
+  float: left
+  width: (100% / 4)
+  padding: 10px 5px 0
+  .rm-goods
+    display: none
+    position: absolute
+    background-image: none
+    background-color: #ff6e4a
+    font-family: 'Ubuntu Condensed', sans-serif
+    font-weight: normal
+    font-size: 24px * $convertH
+    color: #fff
+    width: 53px * $convertH
+    height: 53px * $convertH
+    line-height: 53px * $convertH
+    border-radius: 53px
+    top: 15px
+    right: 10px
+    text-align: center
+    z-index: 1
+    cursor: pointer
+    @extend .-user-select
+    &:active
+      background-color: darken(#ff6e4a, 10%)
+  .add-goods
+    position: relative
+    overflow: hidden
+    display: block
+    background: url(../img/basket.png) 10px 10px no-repeat #9dd652
+    border-radius: 3px
+    line-height: 139px * $convertH
+    height: 139px * $convertH
+    &:active
+      .opacity-ribbon
+        display: block
+  img
+    width: 100%
+  .opacity-ribbon
+    display: none
+    position: absolute
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.2)
+    top: 0
+  .favorites-price-unit
+    display: block
+    background: rgba(0, 0, 0, 0.7)
+    position: absolute
+    bottom: 0
+    height: 60px * $convertH
+    width: 100%
+    line-height: normal
+  .price
+    display: block
+    font-size: 24px * $convertH
+    font-family: "Ubuntu Condensed"
+    font-weight: normal
+    line-height: 24px * $convertH
+    color: #ff6e4a
+    margin-top: 8px
+    margin-left: 10px
+  .name-goods
+    display: block
+    font-size: 16px * $convertH
+    font-weight: lighter
+    line-height: 16px * $convertH
+    color: #fff
+    margin-top: 3px
+    margin-left: 10px
+// -End- Favorites
+
+// Crumbs
+.crumbs
+  .btn-implex
+    padding: 0 5px
+    .btn-inner
+      font-size: 20px * $convertH
+  .btn-implex:first-child
+    .btn-inner
+      background-color: #fff
+
+  .btn-implex:last-child
+    .btn-inner
+      text-align: right
+    padding-right: 0
+  .icon-base
+    +iconPrimary(36px)
+    color: #fff
+    display: inline-block
+    vertical-align: middle
+    text-align: right !important
+    &:before
+      display: block
+      content: ""
+      position: absolute
+      width: 0
+      height: 70%
+      top: 15%
+      border-left: solid 1px #cbd4ee
+      left: 0
+    &:active
+      background-color: inherit
+      &:before
+        border-left: solid 1px #cbd4ee !important
+    .primary-icon
+      //margin: 0
+      margin: 0px * $convertH 3px * $convertW
+  .crumbs-point
+    display: inline-block
+    width: 61%
+    text-align: center
+// -End- Crumbs
+
+// Order base
+.order
+  padding: 0 5px
+  .title
+    background-color: #0ba8ca
+    font-family: 'Ubuntu Condensed', sans-serif
+    font-weight: normal
+    font-size: 30px * $convertH
+    line-height: 52px * $convertH
+    padding-left: 15px
+    cursor: pointer
+  .order-unit
+    max-height: 427px * $convertH
+    height: 427px * $convertH
+  .order-unit.base
+    max-height: 351px * $convertH
+    height: 351px * $convertH
+  .order-unit.returning
+    max-height: 357px * $convertH
+    height: 357px * $convertH
+
+  /* Settings Scrollbar
+  .mCSB_inside > .mCSB_container
+    margin-right: 0
+
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+    background-color: rgba(127, 207, 224, 0.6) !important
+    width: 11px !important
+
+  .mCSB_scrollTools
+    opacity: 1 !important
+
+  .mCSB_draggerRail
+    display: none
+  /* -End- Settings Scrollbar
+
+  .field
+    display: table
+    border-bottom: solid 1px #cbd4ee
+    height: 50px * $convertH
+    position: relative
+    overflow: hidden
+    &:first-child
+      border-top: none
+    &:nth-child(even)
+      background-color: #e5f5f9
+    &:nth-child(odd)
+      background-color: #fff
+  .active-field
+    &:nth-child(odd),
+    &:nth-child(even)
+      background-color: darken(#e5f5f9, 5%)
+    .order-goods-name
+      color: #0ba8ca
+  .order-goods-unit
+    display: table-cell
+    vertical-align: middle
+    text-align: left
+    padding-left: 15px
+    width: 55%
+  .order-goods-name
+    display: block
+    font-weight: normal
+    font-size: 18px * $convertH
+    color: #173451
+    line-height: 1
+  .order-goods-discount
+    display: block
+    font-weight: normal
+    font-size: 12px * $convertH
+    line-height: 1
+  .order-operations-unit
+    display: inline-block
+    vertical-align: middle
+    width: 100%
+  .order-goods-minus
+    display: inline-block
+    vertical-align: middle
+    font-weight: normal
+    font-size: 30px * $convertH
+    text-align: center
+    width: 49px * $convertH
+    cursor: pointer
+    visibility: hidden
+    .icon
+      display: block
+      position: relative
+      color: #fff
+      height: 49px * $convertH
+      padding-top: 4px * $convertH
+    .primary-icon
+      display: block
+      +iconPrimary(25px)
+      line-height: 1
+      height: 0
+  .order-goods-quantity
+    display: inline-block
+    vertical-align: middle
+    font-weight: normal
+    font-size: 18px * $convertH
+    color: #173451
+    text-align: center
+    width: 50px * $convertH
+  .order-goods-plus
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    width: 49px * $convertH
+    cursor: pointer
+    visibility: hidden
+    .icon
+      display: block
+      position: relative
+      color: #fff
+      height: 49px * $convertH
+      padding-top: 4px * $convertH
+    .primary-icon
+      display: block
+      +iconPrimary(25px)
+      line-height: 1
+      height: 0
+  .order-goods-unit-price
+    display: inline-block
+    vertical-align: middle
+    line-height: 1
+    width: 35%
+    margin-left: -4px
+  .order-goods-price
+    display: block
+    font-weight: normal
+    font-size: 18px * $convertH
+    color: #ff6e4a
+  .order-goods-discount-result
+    display: block
+    font-weight: normal
+    font-size: 12px
+    color: #ff6e4a
+  .order-goods-dell
+    display: inline-block
+    vertical-align: middle
+    width: 49px * $convertH
+    cursor: pointer
+    &:active
+      background-color: darken(#7fcfe0, 10%)
+      .icon
+        color: #fff
+    .icon
+      display: block
+      position: relative
+      color: #588c97
+      height: 49px * $convertH
+      padding-top: 4px * $convertH
+      text-align: center
+    .primary-icon
+      display: block
+      +iconPrimary(25px)
+      line-height: 1
+      height: 0
+// -End- Order Base
+
+// Order Saved
+.order.saved,
+.order.returnered
+  .order-goods-data
+    display: table-cell
+    vertical-align: middle
+    font-weight: normal
+    font-size: 18px * $convertH
+    color: #173451
+    line-height: 1
+    text-align: center
+    width: 20%
+    &:nth-child(4)
+      width: 25%
+    &.width-20
+      width: 20%
+    &.width-60
+      width: 60%
+    &.txt-l
+      padding-left: 10px
+  .order-goods-unit-price
+    display: table-cell
+    width: 20%
+.returned-icon
+  display: block
+  font-family: 'Ubuntu Condensed', Arial, Tahoma, sans-serif
+  font-weight: normal
+  font-size: 12px * $convertH
+  color: #fff
+  line-height: 1
+  text-transform: uppercase
+  background-color: #ff6e4a
+  width: 52px * $convertH
+  height: 13px * $convertH
+  margin-left: auto
+  margin-right: auto
+.returnered
+  .returned-icon
+    margin: 0
+.btn-order-date
+  .btn-implex
+    width: (100% / 6)
+    float: left
+    padding-left: 5px
+    &:last-child
+      padding-right: 0px
+  .btn-inner
+    +btn-clr-1
+    font-size: 18px * $convertH
+    height: 84px * $convertH
+// -End- Order Saved
+
+// Order Returning
+.order-goods-unit.return
+  padding-left: 60px
+  position: relative
+  .btn-implex
+    position: absolute
+    border-right: solid 1px #cbd4ee
+    left: 0
+    top: 0
+    bottom: 0
+    padding: 0
+    .btn-inner
+      width: 50px
+      text-align: center
+      margin: auto
+      line-height: 45px
+      height: 48px * $convertH
+    .icon
+      display: none
+    .primary-icon
+      font-size: 50px * $convertH
+      +iconPrimary(26px)
+      color: #588c97
+      position: absolute
+      top: 0
+      bottom: 0 !important
+      left: 0
+      right: 0
+      margin: auto
+      height: 10px * $convertH
+.message-paid
+  .grid-1
+    width: 101%
+  .message-caption
+    display: block
+    font-family: "Ubuntu Condensed", Arial, Tahoma, sans-serif
+    font-weight: normal
+    font-size: 24px * $convertH
+    color: #85cc27
+    line-height: 50px * $convertH
+    text-align: center
+    border-bottom: solid 1px #cbd4ee
+  .date
+    display: table
+    color: #588c97
+    text-align: center
+    height: 62px * $convertH
+    width: 100%
+  .btn-implex
+    padding: 0
+  .btn-inner
+    color: #fff
+    border-radius: 0
+    +btn-clr-5
+    padding: 0
+    font-family: "Ubuntu", Arial, sans-serif
+    font-weight: normal
+    font-size: 18px * $convertH
+    &.btn-clr-1
+      +btn-clr-1
+  .icon
+    display: inline-block
+    vertical-align: middle
+    width: 23%
+  .primary-icon
+    +iconPrimary(28px)
+    display: block
+// -End- Order Returning
+
+// Orders views
+.orders
+  .orderWrap
+    width: (100% / 3)
+    float: left
+  .orderBox
+    background-color: #fff
+    border-radius: 3px
+    border: solid 1px #7fcfe0
+    padding-top: 10px * $convertH
+  .orderHead
+    padding-right: 10px
+  .orderInfo
+    border-bottom: solid 1px #cbd4ee
+    line-height: 1
+    width: 70%
+    padding-bottom: 3px * $convertH
+  .orderNum
+    font-family: 'Ubuntu Condensed', sans-serif
+    font-weight: normal
+    font-size: 20px * $convertH
+    color: #173451
+  .orderPlace
+    font-weight: normal
+    font-size: 12px * $convertH
+    color: #173451
+  .boxImg
+    width: 30%
+    height: 47px * $convertH
+    text-align: center
+    line-height: 70px * $convertH
+  .customerName
+    font-weight: normal
+    font-size: 12px * $convertH
+    color: #173451
+    width: 70%
+    text-align: right
+    padding-right: 10px
+
+  .dateWrap
+    line-height: 1
+    font-weight: normal
+    font-size: 12px * $convertH
+    color: #588c97
+    padding-right: 10px
+
+.orders.V1
+  .checklistWrap
+    display: none
+  .dateWrap
+    width: 50%
+    text-align: left
+    float: left
+    padding-left: 10px
+    margin-top: 10px * $convertH
+  .check-total
+    width: 50%
+    padding-bottom: 5px
+    padding-top: 10px * $convertH
+    text-align: right
+    padding-right: 10px
+  .total-caption
+    display: none
+  .total-num
+    font-size: 24px * $convertH
+    color: #ff6e4a
+
+.orders.V2
+  .dateWrap
+    width: 50%
+    text-align: right
+    float: right
+  .checklistWrap
+    &:after
+      display: block
+      content: ""
+      border-bottom: solid 1px #cbd4ee
+      width: 90%
+      margin: auto
+    width: 100%
+    clear: both
+    /* Settings Scrollbar */
+    .scrollbar
+      height: 350px * $convertH
+      overflow: hidden
+    .mCSB_inside > .mCSB_container
+      margin-right: 0
+    .scrollableArea
+      width: 254px * $convertW
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+      background-color: rgba(127, 207, 224, 0.6) !important
+      width: 11px !important
+    .mCSB_scrollTools
+      opacity: 1
+    .mCSB_draggerRail
+      display: none
+    /* -End- Settings Scrollbar */
+
+    .fieldsName
+      line-height: normal
+    .nameF
+      font-size: 12px * $convertH
+      font-weight: normal
+      color: #588c97
+      float: left
+      margin-top: 13px * $convertH
+      line-height: 18px * $convertH
+      text-align: center
+      &:first-child
+        width: 50%
+        text-align: left
+        padding-left: 8px
+      &:nth-child(2)
+        width: 15%
+      &:last-child
+        width: 35%
+    .checklist
+      border-bottom: solid 2px #cbd4ee
+      +-user-select
+      position: relative
+      border-top: 1px solid rgba(203, 212, 238, 0.3)
+      border-left: solid 0 #ff6e4a
+      cursor: pointer
+      width: 100%
+    .field
+      float: left
+      border-bottom: 1px solid rgba(203, 212, 238, 1)
+      line-height: 29px * $convertH
+      width: 100%
+      text-align: center
+      height: 29px * $convertH
+      &:nth-child(odd)
+        background: #e5f5f9
+      &:nth-child(even)
+        background: #fff
+      & *
+        display: block
+        float: left
+      .name
+        width: 50%
+        text-align: left
+        padding-left: 8px
+        color: #173451
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+      .quantity
+        width: 15%
+        color: #173451
+      .price
+        width: 35%
+        color: #ff6e4a
+      .name,
+      .quantity
+        color: #173451
+      .name,
+      .quantity,
+      .price
+        font-size: 12px * $convertH
+        font-weight: lighter
+  .check-pre-total
+    width: 100%
+    height: 72px * $convertH
+  .subtotal-caption,
+  .tax-caption
+    display: inline-block
+    font-size: 16px * $convertH
+    color: #588c97
+    text-align: right
+    width: 50%
+  .subtotal-caption
+    text-transform: uppercase
+  .subtotal-num,
+  .tax-num
+    display: inline-block
+    font-size: 21px * $convertH
+    color: #173451
+    text-align: left
+  .check-total
+    width: 100%
+    text-align: center
+    color: #ff6e4a
+    height: 49px * $convertH
+  .total-caption
+    font-size: 16px * $convertH
+    margin-right: 5px
+    line-height: 1
+  .total-num
+    font-family: 'Ubuntu Condensed', Arial, Tahoma, sans-serif
+    font-weight: normal
+    font-size: 30px * $convertH
+    line-height: 1
+// Orders views
+
+// Footer paging views
+.footer-bar
+  float: left
+  position: absolute
+  bottom: 0
+  right: 0
+  width: 75%
+  border-top: solid 1px #cbd4ee
+  height: 80px * $convertH
+  display: table
+  .paging
+    font-weight: lighter
+    font-size: 24px * $convertH
+    color: #588c97
+    width: 80%
+    display: table-cell
+    vertical-align: middle
+    text-align: center
+  .box-view
+    display: table-cell
+    width: 10%
+    vertical-align: middle
+    text-align: center
+    border-left: solid 1px #cbd4ee
+  .primary-icon
+    +iconPrimary(42px)
+    color: #cbd4ee
+    cursor: pointer
+  .icon-v2
+    +iconPrimary(55px)
+  .primary-icon.v1
+    color: #ff6e4a
+
+// -End- Footer paging views
+
+// Button Discount on order base
+.btn-grid-hidden
+  display: none
+
+.btn-grid
+  float: left
+  padding-left: 2.5px
+
+.button-wrap
+  @extend .brd-r-3
+  float: left
+  padding-right: 2.5px * $convertH
+  padding-left: 2.5px * $convertH
+  margin-bottom: 5px
+  font-weight: normal
+  font-size: 24px * $convertH
+  color: #fff
+  text-align: center
+  line-height: 85px * $convertH
+  height: 85px * $convertH
+
+#event-Order-2
+  .button-wrap:first-child
+    height: 175px * $convertH
+  .button-warning
+    @extend .brd-r-3
+    background-color: #0791b9
+    height: 175px * $convertH
+    line-height: 175px * $convertH
+    padding-top: 20px
+    cursor: pointer
+    &:active
+      background-color: darken(#0791b9, 10%)
+  .icon
+    display: block
+    position: relative
+    color: #fff
+    padding-top: 4px * $convertH
+    text-align: center
+  .primary-icon
+    display: block
+    +iconPrimary(68px)
+    line-height: 1
+  .description
+    font-weight: normal
+    font-size: 18px * $convertH
+    color: #fff
+    text-align: center
+    width: 100%
+    margin-top: -10px * $convertH
+
+.button-action
+  @extend .brd-r-3
+  background-color: #7fcfe0
+  height: 85px * $convertH
+  cursor: pointer
+  &:active
+    background-color: darken(#7fcfe0, 10%)
+
+.btn-cancel,
+.btn-ok
+  @extend .brd-r-3
+  background-color: #0ba8ca
+  cursor: pointer
+  &:active
+    background-color: darken(#0ba8ca, 10%)
+
+.sign
+  font-weight: lighter
+  font-size: 14px * $convertH
+  line-height: 1
+  margin-top: -30px * $convertH
+
+.result
+  background-color: #fff
+  padding-left: 8px
+  padding-right: 5px
+
+.wrap-row
+  @extend .brd-r-3
+  padding-left: 26px
+  padding-right: 26px
+  border: solid 1px #85cc27
+  border-bottom-width: 5px * $convertH
+  .row
+    border-bottom: dashed 1px #9dd652
+    font-weight: normal
+    font-size: 14px * $convertH
+    width: 100%
+    &:last-child
+      border: none
+    &:nth-last-child(3)
+      border: none
+
+.description
+  float: left
+  text-align: left
+  color: #121f3f
+
+.var-description
+  float: left
+  color: #588c97
+  text-align: right
+
+.description,
+.var-description
+  line-height: 21px * $convertH
+
+.dashed
+  display: block
+  border-top: solid 1px #9dd652
+  margin-top: 9px * $convertH
+  margin-right: -26px
+  margin-left: -26px
+
+.desc-total
+  float: left
+  font-size: 16px * $convertH
+  color: #ff6e4a
+  text-align: left
+
+.var-total
+  float: right
+  font-size: 36px * $convertH
+  color: #ff6e4a
+  text-align: right
+
+.var-total,
+.desc-total
+  line-height: 49px * $convertH
+  margin-bottom: 1px * $convertH
+// -End- Button Discount on order base
+
+// Button change destination
+.change-dstn
+  .btn-implex
+    padding-top: 0
+    padding-bottom: 0
+  .btn-inner
+    border: solid 1px #7fcfe0
+    height: 63px
+    &:active
+      background-color: darken(#7fcfe0, 10%)
+      .change-dstn-caption,
+      .primary-icon
+        @extend .clr-2
+.change-dstn-caption
+  @extend .clr-3
+// -End- Button change destination
+
+// Card-destination
+.card-dstn-implex
+  position: relative
+  padding-right: 5px
+  padding-left: 5px
+  padding-bottom: 10px
+.card-dstn-inner
+  padding: 5px 5px 10px 10px
+  +brd-clr-1
+  +btn-clr-6
+  +brd-r-3
+  +-user-select
+  cursor: pointer
+  .icon-base
+    +iconPrimary(45px)
+    float: left
+    margin-top: -5px
+    margin-left: -10px
+    margin-bottom: -5px
+    &:before
+      visibility: hidden
+  .primary-icon
+    margin: 0
+.card-dstn-implex.create
+  display: table
+  .card-dstn-inner
+    display: table-cell
+    vertical-align: middle
+    text-align: center !important
+    height: 108px * $convertH
+    padding: 0
+    .primary-icon
+      +iconPrimary(30px)
+      color: #7FCFE0
+.card-dstn-title
+  display: block
+  font-family: "Ubuntu Medium", Arial, sans-serif
+  font-weight: normal
+  font-size: 10px * $convertH
+  line-height: 12px * $convertH
+  margin-top: 5px * $convertH
+  margin-right: 5px
+  @extend .clr-1
+.card-dstn-city
+  font-family: "Ubuntu Condensed", Arial, Tahoma, sans-serif
+  font-weight: normal
+  font-size: 21px * $convertH
+  line-height: 20px * $convertH
+  margin-bottom: 10px * $convertH
+.card-dstn-info
+  //clear: both
+  display: block
+  font-family: "Ubuntu", Arial, sans-serif
+  font-weight: normal
+  font-size: 14px * $convertH
+  line-height: 17px * $convertH
+  @extend .clr-4
+// Card-destination
+
+// Categories city
+.categories-city-title
+  font-family: "Ubuntu Medium", Arial, sans-serif
+  font-weight: normal
+  font-size: 8px
+  text-transform: uppercase
+  line-height: 15px
+  padding-left: 5px
+  height: 15px
+  margin-bottom: -5px
+  @extend .clr-1
+// -End- Categories city
+
+// Nuw Customer
+.new-cust-title
+  font-family: "Ubuntu Condensed", Arial, Tahoma, sans-serif
+  font-weight: normal
+  font-size: 30px * $convertH
+  line-height: 30px * $convertH
+
+.btn-def-img.active-btn-def-img,
+.btn-def-img:active
+  +btn-clr-2
+  +clr-2
+  .primary-icon
+    +clr-2
+.btn-def-img.btn-radius-l
+  border-radius: 3px 0 0 3px
+  border-right: none
+.btn-def-img.btn-radius-r
+  border-radius: 0 3px 3px 0
+  border-left: none
+
+.new-cust-inf
+  +clr-1
+  font-size: 12px * $convertH
+  &select
+    height: 50px * $convertH
+.new-cust-date
+  position: relative
+  select
+    height: 50px
+    width: 100%
+    border: none
+    +brd-r-3
+    font-weight: normal
+    font-size: 18px * $convertH
+    color: #173451
+  .popup-err
+    width: 50%
+.birthday-caption
+  position: absolute
+  display: block
+  margin-top: -15px * $convertH
+.slct-st
+  height: 50px
+  border: none
+  line-height: 50px * $convertH
+  vertical-align: middle
+  width: 100%
+  +-user-select-true
+  &.placeholder
+    font-size: 12px * $convertH
+    background-color: #fff
+    color: #588c97
+.slct-st, .in-st
+  font-weight: normal
+  font-size: 18px * $convertH
+  +clr-4
+  background-color: #fff
+.in-st
+  +colorPlaceholder(#cbd4ee)
+  +-user-select-true
+  vertical-align: middle
+  padding-left: 10px
+  border: none
+  height: 50px
+  line-height: 50px * $convertH
+  width: 100%
+.base-select
+  position: relative
+  overflow: hidden
+  +brd-clr-1
+  +brd-r-3
+.base-input
+  position: relative
+  overflow: hidden
+  +brd-clr-1
+  +brd-r-3
+  display: table
+  width: 100%
+  background-color: #fff
+.popup-err
+  display: table-cell
+  vertical-align: middle
+  background-color: #ff6e4a
+  font-weight: normal
+  font-size: 10px * $convertH
+  width: 33.33%
+  text-align: center
+  color: #fff
+
+.dst-1
+  margin-top: 15px * $convertH
+form[name="contactsForm"]
+  .btn-operation
+    clear: both
+    padding-top: 10px * $convertH
+    input
+      height: 86px * $convertH
+      font-weight: normal
+      font-size: 16px * $convertH
+      color: #fff
+  .btn-def-img
+    .primary-icon
+      display: inline-block
+      margin-left: -15px
+    .btn-name
+      display: inline-block
+// -End- Nuw Customer
+
+//Dell
+//.title-location
+//  display: block
+//  font-family: 'Ubuntu Condensed', sans-serif
+//  font-weight: normal
+//  font-size: 30px * $convertH
+//  color: #0ba8ca
+//  border-bottom: solid 1px #0ba8ca
+//  margin-top: -11px
+//  line-height: 42px * $convertH
+
+// Button change address
+.change-address
+  .btn-implex
+    padding-top: 0
+    padding-bottom: 0
+  .btn-inner
+    border: solid 1px #7fcfe0
+    height: 50px * $convertH
+    &:active
+      background-color: darken(#7fcfe0, 10%)
+      .change-address-caption,
+      .primary-icon
+        @extend .clr-2
+.change-address-caption
+  @extend .clr-3
+  font-weight: lighter
+  font-size: 18px * $convertH
+  color: #0ba8ca
+  width: 182px * $convertW
+  float: left
+  text-align: center
+  cursor: pointer
+// -End- Button change destination
+
+.dell-icon,
+.save-icon
+  float: right
+  border-radius: 3px
+  border: solid 1px #0ba8ca
+  width: 51px * $convertH
+  cursor: pointer
+  &:active
+    background-color: darken(#0ba8ca, 10%)
+    .icon
+      color: #fff
+  .icon
+    display: block
+    position: relative
+    color: #0ba8ca
+    height: 48px * $convertH
+  .primaryIcon
+    display: block
+    +iconPrimary(32px)
+    line-height: 1
+    height: 0
+
+.dell-icon
+  margin-right: 8px
+
+.location
+  .btn-inner
+    font-family: Ubuntu, sans-serif
+    font-weight: normal
+    font-size: 16px * $convertH
+    color: #fff
+    line-height: 85px * $convertH
+    text-align: center
+    +brd-r-3
+    cursor: pointer
+
+// Page Add new product Variations
+.btn-go-to-root
+  display: table-cell
+  text-align: center
+  width: 82px
+  cursor: pointer
+  .point
+    display: block
+    font-size: 50px * $convertH
+    color: #fff
+    margin-top: -13px * $convertH
+
+.variations
+  .content-box
+    border: solid 1px #cbd4ee
+    height: 141px * $convertH
+    +brd-r-3
+  .imgBox
+    overflow: hidden
+    height: 100%
+    width: 100%
+  .specification-img
+    overflow: hidden
+    border-radius: 3px 0 0 3px
+    width: 100%
+    height: 100%
+  .product-name
+    font-family: 'Ubuntu Condensed', sans-serif
+    font-weight: normal
+    font-size: 21px * $convertH
+    color: #173451
+    margin-top: 5px * $convertH
+  .manufacturer
+    font-weight: lighter
+    font-size: 14px * $convertH
+    color: #588c97
+  .manufacturer-name
+    font-weight: normal
+    font-size: 18px * $convertH
+    color: #173451
+  .product-name,
+  .manufacturer,
+  .manufacturer-name
+    padding-left: 2.5px
+  .pr
+    position: relative
+    height: 100%
+  .btn-green
+    top: 0
+  .btn-salmon
+    bottom: 0
+  .btn-green,
+  .btn-salmon
+    position: absolute
+    width: 100%
+    right: 0
+    font-weight: normal
+    font-size: 18px * $convertH
+    color: #fff
+    height: 68px * $convertH
+    margin-left: 5px
+    text-align: center
+    line-height: 68px * $convertH
+    cursor: pointer
+
+  .navigation
+    .dimension-wrapper
+      width: (100% / 16) * 12
+    .add-wrapper
+      position: relative
+      padding-right: 5px
+      padding-left: 5px
+      width: (100% / 3)
+      margin-bottom: 10px * $convertH
+    .add
+      +brd-r-3
+      border: solid 1px #cbd4ee
+      height: 102px * $convertH
+      cursor: pointer
+      &:active
+        background-color: #7fcfe0
+        .dimension
+          color: #fff
+    .price
+      font-family: 'Ubuntu Condensed', sans-serif
+      font-weight: normal
+      font-size: 24px * $convertH
+      color: #ff6e4a
+      margin-top: 25px * $convertH
+    .dimension
+      font-weight: lighter
+      font-size: 16px * $convertH
+      color: #173451
+    .price,
+    .dimension
+      text-align: center
+    .rm
+      display: none
+      background-color: #ff6e4a
+      position: absolute
+      font-family: 'Ubuntu Condensed', sans-serif
+      font-weight: normal
+      font-size: 24px * $convertH
+      color: #fff
+      text-align: center
+      line-height: 53px * $convertH
+      top: -5px * $convertH
+      right: 0
+      height: 53px * $convertH
+      width: 53px * $convertH
+      border-radius: 60px
+      cursor: pointer
+      &:active
+        background-color: darken(#ff6e4a, 10%)
+    .row
+      position: relative
+      border-top: solid 1px #cbd4ee
+      border-left: solid 1px #cbd4ee
+      border-right: solid 1px #cbd4ee
+      border-bottom: none
+      width: 100%
+      &:first-child
+        border-top-left-radius: 3px
+        border-top-right-radius: 3px
+        background-color: #e6f1f3
+      &:nth-child(2)
+        background-color: #fff
+      &:nth-child(4)
+        background-color: #e6f1f3
+      &:last-child
+        overflow: hidden
+        border-radius: 0 0 3px 3px
+        border-bottom: solid 1px #cbd4ee
+    .label-menu
+      font-weight: lighter
+      font-size: 14px * $convertH
+      color: #173451
+      text-align: center
+      line-height: 40px * $convertH
+    .num
+      font-weight: lighter
+      font-size: 30px * $convertH
+      color: #173451
+      text-align: center
+      line-height: 53px * $convertH
+    .dimension
+      color: #cbd4ee
+      font-size: 16px * $convertH
+    .total
+      font-weight: lighter
+      font-size: 14px * $convertH
+      color: #173451
+      text-align: center
+      line-height: 39px * $convertH
+      width: (100% / 3)
+    .total-num
+      font-family: 'Ubuntu Condensed', sans-serif
+      font-weight: normal
+      font-size: 24px * $convertH
+      color: #ff6e4a
+      text-align: center
+      line-height: 39px * $convertH
+      width: 100% - (100% / 3)
+    .btn-azure
+      width: 50%
+      position: relative
+      background-color: #7fcfe0
+      font-weight: lighter
+      font-size: 24px * $convertH
+      color: #fff
+      text-align: center
+      line-height: 74px * $convertH
+      cursor: pointer
+      +btn-clr-1
+      &:first-child
+        &:after
+          display: block
+          position: absolute
+          background-color: #fff
+          width: 1px
+          height: 58px * $convertH
+          top: 8px * $convertH
+          right: 0
+          content: ""
+// -End- Page Add new product Variations
+
+// Cash management
+.cash
+  .in-st
+    line-height: normal
+    height: 56px * $convertH
+    text-align: right
+    padding-right: 10px
+    font-family: "Ubuntu Condensed", Arial, sans-serif
+    font-weight: normal
+    font-size: 30px * $convertH
+    color: #cbd4ee
+  .in-st::-webkit-input-placeholder,
+  .in-st::-moz-placeholder,
+  .in-st:-moz-placeholder,
+  .in-st:-ms-input-placeholder
+    text-align: center
+  .amount
+    .btn-implex
+      padding-top: 2px
+      height: 82px * $convertH
+      text-align: center
+    .primary-icon
+      +iconPrimary(32px)
+
+  .btn-implex
+    padding-top: 15px
+    height: 95px * $convertH
+.title-cash
+  font-family: "Ubuntu Condensed", Arial, sans-serif
+  font-weight: normal
+  font-size: 30px * $convertH
+  color: #0ba8ca
+  margin-top: -5px
+.available-caption
+  font-size: 12px * $convertH
+  color: #588c97
+.outlet-unit
+  display: block
+  border: solid 1px #86d1e1
+  +brd-r-3
+  .icon
+    display: table-cell
+    vertical-align: middle
+    line-height: normal
+    text-align: center
+    width: 66px * $convertW
+  .primary-icon
+    +iconPrimary(37px)
+    line-height: normal
+    color: #86d1e1
+  .date
+    display: table-cell
+    vertical-align: middle
+    font-size: 12px * $convertH
+    color: #588c97
+    text-align: right
+    padding-right: 10px
+
+  // Settings Scrollbar
+  .scrollbar
+    height: 390px * $convertH
+    overflow: hidden
+  .mCSB_inside > .mCSB_container
+    margin-right: 0
+  .scrollableArea
+    width: 254px * $convertW
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+    background-color: rgba(127, 207, 224, 0.6) !important
+    width: 11px !important
+  .mCSB_scrollTools
+    opacity: 1
+  .mCSB_draggerRail
+    display: none
+  // -End- Settings Scrollbar
+
+  .checklist
+    border-bottom: solid 2px #cbd4ee
+    +-user-select
+    position: relative
+    border-top: 1px solid rgba(203, 212, 238, 1)
+    border-left: solid 0 #ff6e4a
+    cursor: pointer
+    width: 100%
+    .field
+      float: left
+      border-bottom: 1px solid rgba(203, 212, 238, 1)
+      line-height: 29px * $convertH
+      width: 100%
+      text-align: center
+      height: 29px * $convertH
+      &:nth-child(odd)
+        background: #e5f5f9
+      &:nth-child(even)
+        background: #fff
+      & *
+        display: block
+        float: left
+      .name
+        width: 65%
+        text-align: left
+        padding-left: 8px
+        color: #173451
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+      .price
+        width: 35%
+        color: #ff6e4a
+      .name,
+      .quantity
+        color: #173451
+      .name,
+      .quantity,
+      .price
+        font-size: 12px * $convertH
+        font-weight: lighter
+
+.outlet
+  display: table-cell
+  vertical-align: middle
+  font-family: "Ubuntu Condensed", Arial, sans-serif
+  font-weight: normal
+  font-size: 20px * $convertH
+  color: #173451
+  line-height: 1
+  width: 65%
+  .outlet-caption
+    font-family: "Ubuntu", Arial, sans-serif
+    font-size: 12px
+
+.cash-total
+  display: table
+  vertical-align: middle
+  height: 62px * $convertH
+  width: 100%
+.cash-total-caption
+  display: table-cell
+  vertical-align: middle
+  font-size: 16px * $convertH
+  color: #588c97
+  text-align: left
+  padding-left: 10px
+  width: 50%
+.cash-total-num
+  display: table-cell
+  vertical-align: middle
+  font-family: "Ubuntu Condensed", Arial, sans-serif
+  font-weight: normal
+  font-size: 30px * $convertH
+  color: #ff6e4a
+  text-align: right
+  padding-right: 10px
+  width: 50%
+
+// -End- Cash management
+
+// Modal PopUp Order
+.modal.hidden
+  display: none
+.modal.cash
+  position: absolute
+  background-color: rgba(0, 0, 0, 0.4)
+  padding-left: 256px * $convertH
+  width: 100%
+  height: 100%
+  z-index: 1
+  .in-st
+    +textAlign(center)
+  .btn-implex
+    height: 80px * $convertH
+  .btn-implex.pdg-r-1
+    padding: 0 1px 0 0
+  .btn-implex.pdg-l-1
+    padding: 0 0 0 1px
+  .btn-inner
+    line-height: normal
+    +btn-clr-1
+    border-radius: 0
+    height: 60px * $convertH
+  .wrapper-modal
+    position: relative
+    height: 100%
+    width: 100%
+  .wrapper-modal-inner
+    display: block
+    position: absolute
+    border: solid 1px #cbd4ee
+    background-color: #fff
+    +brd-r-3
+    width: 360px * $convertH
+    height: 274px * $convertH
+    margin: auto
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+  .base-input
+    border-radius: 0px
+    border-left: none
+    border-right: none
+
+  .cash-caption
+    font-family: "Ubuntu Condensed", Arial, Tahoma, sans-serif
+    font-weight: normal
+    font-size: 24px * $convertH
+    color: #173451
+    text-align: center
+    border-bottom: solid 1px #cbd4ee
+    height: 50px * $convertH
+    line-height: 50px * $convertH
+    .num
+      color: #ff6e4a
+  .total-caption
+    font-family: "Ubuntu", Arial, sans-serif
+    font-weight: normal
+    font-size: 18px * $convertH
+    color: #588c97
+    text-align: center
+    height: 70px * $convertH
+    line-height: 70px * $convertH
+    .num
+      font-size: 24px * $convertH
+      color: #ff6e4a
+  .left
+    position: absolute
+    left: 0
+    bottom: 0
+  .right
+    position: absolute
+    right: -1px
+    bottom: 0
+// -End- Modal PopUp
+
+
+// Modal PopUp Order
+.modal
+  position: absolute
+  background-color: rgba(0, 0, 0, 0.4)
+  padding-left: 256px * $convertH
+  width: 100%
+  height: 100%
+  z-index: 1
+.wrapper-modal
+  position: relative
+  height: 100%
+  width: 100%
+.wrapper-modal-inner
+  display: block
+  position: absolute
+  border: solid 1px #cbd4ee
+  background-color: #fff
+  +brd-r-3
+  width: 360px * $convertH
+  height: 203px * $convertH
+  margin: auto
+  //margin-top: 50%
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+.order-caption
+  font-family: "Ubuntu Condensed", Arial, Tahoma, sans-serif
+  font-weight: normal
+  font-size: 24px * $convertH
+  color: #173451
+  text-align: center
+  border-bottom: solid 1px #cbd4ee
+  height: 50px * $convertH
+  line-height: 50px * $convertH
+  .num
+    color: #ff6e4a
+.total-caption
+  font-family: "Ubuntu", Arial, sans-serif
+  font-weight: normal
+  font-size: 18px * $convertH
+  color: #588c97
+  text-align: center
+  height: 70px * $convertH
+  line-height: 70px * $convertH
+  .num
+    font-size: 24px * $convertH
+    color: #ff6e4a
+.modal.order
+  .btn-implex.pdg-r-1
+    padding: 0 1px 0 0
+  .btn-implex.pdg-l-1
+    padding: 0 0 0 1px
+  .btn-inner
+    font-size: 24px * $convertH
+    height: 80px * $convertH
+    +btn-clr-1
+    border-radius: 0
+// -End- Modal PopUp
+
+// Customer Address
+.customer-address
+  padding: 0 5px 0
+  .wrapper-unit-15
+    padding-right: 10px
+  .btn-implex
+    padding-top: 0
+    padding-bottom: 0
+    width: (100% / 3)
+    float: left
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+  .btn-inner
+    +btn-clr-9
+    border: solid 1px #d7def2
+    padding: 10px * $convertH 0
+    &:active
+      .primary-icon
+        color: #fff
+  .primary-icon
+    font-size: 68px * $convertH
+    line-height: 38px * $convertH
+    float: left
+    width: 30%
+    color: #7fcfe0
+  .primary-icon.null
+    margin-left: 35%
+  .payment,
+  .address-name
+    float: left
+    width: 70%
+    text-align: left
+  .payment
+    font-family: "Ubuntu", Arial, sans-serif
+    font-weight: normal
+    font-size: 12px * $convertH
+    color: #588c97
+  .address-name
+    font-family: "Ubuntu Condensed", Arial, sans-serif
+    font-weight: normal
+    font-size: 21px * $convertH
+    color: #173451
+  .address
+    font-family: Ubuntu, Arial, sans-serif
+    font-weight: normal
+    font-size: 14px * $convertH
+    color: #173451
+    text-align: left
+    padding: 0 12px * $convertH 0
+
+  &.save
+    .btn-implex
+      width: (100% / 4)
+    .btn-inner
+      +btn-clr-4
+      height: 85px * $convertH
+      border: none
+// -End- Customer Address
+
+// -End- Main content //
+////////////////////////
+// -End-======================ERP======================//
+
+//======================LOGIN======================//
+.outer-layout
+  left: 50%
+  margin-left: -380px
+  margin-top: -150px
+  min-height: 300px
+  position: absolute
+  text-align: center
+  top: 50%
+  width: 760px
+  z-index: 100
+.login-title
+  color: #173451
+  font-size: 36px
+  font-weight: 500
+  line-height: 34px
+.input-st
+  height: 67px
+  width: 502px
+  margin-top: 8px
+  line-height: 65px
+  font-size: 22px
+  background: rgba(255, 253, 238, 0.9)
+  border: 1px solid #cbd4ee
+  padding: 5px 10px
+  border-radius: 3px
+  -moz-border-radius: 3px
+  -webkit-border-radius: 3px
+  &.normal
+    border-color: blue
+  &.warning
+    border-color: gray
+  &.error
+    border-color: red
+.login-bt
+  margin-top: 20px
+
+.button-st
+  display: inline-block
+  height: 63px
+  line-height: 60px
+  text-align: center
+  color: #fff
+  background-color: #173451
+  font-size: 24px
+  letter-spacing: 1.5px
+  text-decoration: none
+  min-width: 185px
+  padding: 0 35px
+  border: none
+  font-weight: normal
+  cursor: pointer
+  border-radius: 2px
+  -moz-border-radius: 2px
+  -webkit-border-radius: 2px
+// -End- ======================LOGIN======================//
+
+
+//======================CARGO======================//
+.prc-brd, .btn-inner.pkg
+  border: 1px solid #7fcfe0
+  +brd-r-3
+  color: #0ba8ca
+  .primary-icon
+    +iconPrimary(25px)
+    display: block
+    margin: 0
+    line-height: 60px
+    width: 60px
+.new-carge-input
+  .search-wrap
+    display: table
+    height: 50px * $convertH
+  .icon-box-r
+    .primary-icon,
+    .icon-base
+      +iconPrimary(26px)
+      height: 50px * $convertH
+      line-height: 50px * $convertH
+  .search-input
+    display: table-cell
+    vertical-align: middle
+    height: 50px * $convertH
+    line-height: 50px * $convertH
+    &::-webkit-input-placeholder
+      font-size: 12px * $convertH
+    &::-moz-placeholder
+      font-size: 12px * $convertH
+    &:-moz-placeholder
+      font-size: 12px * $convertH
+    &:-ms-input-placeholder
+      font-size: 12px * $convertH
+.new-cargo-type
+  .btn-implex
+    float: left
+    padding-top: 0
+    padding-bottom: 0
+    .btn-inner
+      height: 62px
+.new-cargo-packing
+  .mCSB_horizontal.mCSB_inside>.mCSB_container
+    margin-bottom: 0
+  .mCSB_container
+    height: 154px * $convertH
+  .btn-implex,
+  .favorites-element
+    padding-top: 0
+    padding-bottom: 0
+  .favorites-element
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+.prc-brd.active, .btn-inner.pkg.active
+  border: 1px solid #0ba8ca
+  color: #fff
+  background: #7fcfe0
+.pkg:active,.pkg.active:active,.prc-brd:active
+  background: #7fcfe0*0.9
+  color: #fff
+.pkg-tittle
+  color: #0ba8ca
+  @extend .font-style2
+  font-size: 3.125vh
+  font-weight: 300
+  line-height: 1
+  margin-top: -3px
+.prc-type
+  color: #588c97
+  font-size: 1.5625vh
+  font-weight: 400
+  margin-top: -4px
+.packs-slider
+  width: 100%
+  overflow: hidden
+.packs-slider li
+  width: 18.3vw
+.packs-slider .mCSB_draggerContainer
+  margin: 0!important
+.packs-slider #mCSB_2_scrollbar_horizontal
+  bottom: 0px
+.packs-slider .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger
+  width: 25%!important
+.packs-slider .mCSB_scrollTools .mCSB_draggerRail
+  background: none
+.packs-slider	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar
+  width: 100%
+  background: #7fcfe0
+  height: 11px
+  margin-top: 3px
+.pack-calc
+  display: block
+  width: 100%
+  overflow: hidden
+.size_l
+  float: left
+  width: 19%
+.size_r
+  float: left
+  width: 24%
+.pack-char
+  width: 100%
+  text-align: center
+  color: #588c97
+  font-size: 2vh
+.pack-block
+  border: 1px solid #88d2e2
+  color: #173451
+  display: block
+  font-size: 3vh
+  padding: 3vh 1vw
+  text-align: center
+  width: 100%
+  border-right: none
+.pack-calc li:first-child .pack-block
+  border-radius: 3px 0 0 3px
+.pack-calc li:last-child .pack-block
+  border-right: 1px solid #88d2e2
+  border-radius: 0 3px 3px 0
+  background: #7fcfe0
+.save-place
+  margin-top: -5px
+.btn-implex.save-place .btn-inner
+  font-family: "Ubuntu",Arial,Tahoma,sans-serif
+  font-size: 2.34375vh
+.service
+  .favorites-element
+    padding: 0 5px 10px
+.service .name-goods
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+.service a.add-goods
+  background: #0ba8ca
+.pkg-places
+  margin-top: 10px
+.pkg-place-wrap
+  display: block
+  float: left
+  padding: 0 5px 10px
+  width: 33.33%
+.pkg-place
+  padding: 1vh 1vw
+  position: relative
+.pkg-place, .add-pkg-place
+  background: none repeat scroll 0 0 #fff
+  border: 1px solid #d4dcf1
+  +brd-r-3
+  height: 26vh
+.pkg-place span
+  display: block
+  margin: 0.8vh auto
+  text-align: center
+.pkg-price i,.pkg-dimensions i
+  color: #62939d
+  display: inline-block
+  margin: 2px -4px 0 0
+  vertical-align: top
+.pkg-labels
+  overflow: hidden
+.pkg-labels i
+  border: 1px solid #cbd4ee
+  border-radius: 2px
+  display: inline-block
+  font-family: "iconsCosmonova"
+  font-size: 3vh
+  height: 3vh
+  margin-bottom: 0.7vh
+  vertical-align: top
+  color: #0ba8ca
+  line-height: 3vh
+.pkg-barcode
+  display: block
+  height: 5vh
+  margin-left: -1vw
+  width: 100%
+  position: absolute
+  bottom: 0.7vh
+  text-align: center
+.pkg-barcode img
+  display: block
+  max-height: 100%
+  max-width: 90%
+  position: absolute
+  margin: auto
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+.pkg-name
+  color: #173451
+  @extend .font-style2
+  font-size: 3vh
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+.pkg-price, .pkg-dimensions
+  font-size: 2.1vh
+
+.add-pkg-place a
+  display: block
+  font-size: 12vh
+  line-height: 26vh
+  height: 26vh
+  text-align: center
+  width: 100%
+  color: #7fcfe0
+  font-weight: 300
+.add-pkg-place a:active
+  color: #fff
+  background: #7fcfe0
+.backward-services
+  .btn-implex
+    padding: 0
+  .btn-inner
+    padding: 0 10px
+.backward-services a.btn-inner
+  height: 12vh
+
+/*----------location-----------*/
+.location-title
+  color: #0ba8ca
+  @extend .font-style2
+  font-size: 4.1vh
+  line-height: 4.1vh
+  font-weight: 300
+  margin-top: -6px
+  margin-bottom: 10px
+.list-gradient
+  overflow: hidden
+.list-gradient li
+  background: #ccc
+  +brd-r-3
+  display: inline-block
+  float: left
+  margin-right: 0.5vw
+  @extend .font-style2
+  color: #fff
+.list-gradient li a
+  line-height: 7.8125vh
+  display: inline-block
+  font-size: 3.125vh
+  height: 7.8125vh
+  padding: 0 2vw
+.list-gradient li:first-child
+  background: #37415a
+.list-gradient li:last-child
+  background: #0ba8ca
+.list-gradient span
+  font-size: 7vh
+  vertical-align: middle
+.select-section,.input-section
+  background: #fff
+  width: 100%
+  border: 1px solid #d9dff3
+  +brd-r-3
+  height: 7.8125vh
+  position: relative
+.grid-75per
+  float: left
+  width: 75%
+
+.input-section input,.select-section input
+  border: none
+  height: 100%
+  padding: 0 0.5vw
+  color: #173451
+  position: relative
+  z-index: 5
+  background: none
+  font-size: 2.3vh
+.select-section input
+  width: 75%
+  float: left
+.input-section input
+  width: 100%
+.input-section label
+  height: 100%
+  top: 0
+  left: 0
+  padding: 0 1vw
+  position: absolute
+  text-align: right
+  vertical-align: middle
+  min-width: 50px
+  +transition(0.2s)
+  line-height: 7.8125vh
+  color: #588c97
+  font-size: 1.7vh
+
+.input-section input:focus+label
+  min-width: 100%!important
+  +transition(0.2s)
+
+.select-input-block
+  float: left
+  height: 100%
+  width: 25%
+  position: relative
+.select-text
+  display: block
+  height: 100%
+  position: relative
+  line-height: 7.8125vh
+  padding: 0 2vw
+  width: 100%
+  color: #588c97
+  font-size: 1.7vh
+  text-align: right
+.select-text:before
+  content: ""
+  display: block
+  border-left: 0.5vw solid transparent
+  border-right: 0.5vw solid transparent
+  border-top: 1vh solid #cbd4ee
+  top: 50%
+  right: 0.5vw
+  position: absolute
+.lcn.select-drop
+  top: 62px * $convertH
+  left: 0
+  right: 61px * $convertH
+.select-drop
+  background: #fff
+  position: absolute
+  top: 73px * $convertH
+  left: 5px
+  right: 66px * $convertH
+  z-index: 10
+  border: 1px solid #d9dff3
+.drop-block1
+  background: #fff
+  border-top: none
+
+.select-drop a
+  display: block
+  padding: 1.5vh 1vw
+  color: #173451
+  font-size: 2vh
+.select-drop a:hover
+  background: #7fcfe0
+  color: #fff
+.select-block
+  float: left
+  height: 100%
+  width: 100%
+  position: relative
+.drop
+  overflow: visible!important
+.drop .select-drop
+  z-index: 20
+  margin: -4px -1px 0
+.separator
+  display: block
+  background: #cbd4ee
+  margin: 0 1vw
+  height: 1px
+.drop-block2 span
+  font-size: 4vh
+  vertical-align: middle
+  color: #7fcfe0
+.select-drop a:hover span
+  color: #fff
+.from
+  color: #588c97
+  font-size: 1.5vh
+  margin-left: 0.5vw
+
+.option-radios
+  overflow: hidden
+  margin-top: 1vh
+
+.option-radio
+  display: none
+
+.radio-adress,.radio-pay
+  display: block
+  float: left
+.radio-adress label,.radio-pay label
+  border: 1px solid #0ba8ca
+  color: #0ba8ca
+  display: table-cell
+  height: 14vh
+  text-align: center
+  vertical-align: middle
+  width: 18vw
+  cursor: pointer
+  position: relative
+
+.option-radio:checked + label
+  background: #0ba8ca
+  color: #fff
+.radio-name i
+  font-size: 10vh
+  vertical-align: middle
+  display: inline-block
+  margin: 0 -0.8vw 0 -2vw
+
+.radio-text
+  font-size: 1.85vh
+.radio-adress label
+  +border-left-radius(3px)
+
+.radio-pay label
+  border-radius: 0 3px 3px 0
+
+.option-radios label:before
+  background: #fff
+  content: "\e6b7"
+  min-width: 10px * $convertH
+  min-height: 10px * $convertH
+  display: inline-block
+  position: absolute
+  right: 1vw
+  top: 1vh
+  color: #fff
+  font-family: "iconsCosmonova"
+  font-size: 3.6vh
+  border: 1px solid #cbd4ee
+  +brd-r-3
+
+.option-radio:checked + label:before
+  content: "\e6b7"
+  color: #cbd4ee
+
+
+/*=======waybill======*/
+.bill-tbl-wrap
+  background: #fff
+  border: 1px solid #cbd4ee
+  +brd-r-3
+  width: 100%
+.bill-name-wrap
+  background: #7fcfe0
+  overflow: hidden
+  width: 100%
+  color: #fff
+.bill-name
+  font-size: 3vh
+  line-height: 5vh
+  padding: 0 1vw
+  @extend .font-style2
+.tbl
+  border-spacing: 0
+  width: 100%
+  color: #173451
+.tbl td,.tbl th
+  border-top: 1px solid #cbd4ee
+  padding: 0.175vh 1vw
+.tbl th
+  font-size: 1.9vh
+  font-weight: 500
+  text-align: left
+.tbl td
+  font-size: 1.63vh
+.waybill-section
+  display: table
+  width: 100%
+  margin-bottom: 1.5vh
+.bill-l
+  display: table-cell
+  float: none
+.waybill-wrap
+  padding-right: 5px
+.tbl td:first-child
+  text-align: left
+  color: #588c97
+  width: 67%
+.tbl td:nth-child(2)
+  text-align: center
+  width: 14%
+.tbl td:last-child
+  text-align: right
+.radio-separator
+  background: #fff
+  border-bottom: 2vh solid #7fcfe0
+  border-top: 2vh solid #7fcfe0
+  display: table-cell
+  margin: 0
+  width: 0.2%
+.bill-radio-small,.bill-radio-big
+  display: table-cell
+  width: 12.5%
+  background: #7fcfe0
+  //border: 1px solid #cbd4ee
+  +brd-r-3
+  cursor: pointer
+  text-align: center
+  vertical-align: middle
+.bill-radio-small
+  width: 12.5%
+.bill-radio-big
+  width: 25%
+.waybill-wrap input
+  display: none
+.waybill-wrap input:checked + label
+  background: #006fa0
+.waybill-wrap label
+  color: #fff
+.waybill-wrap label:active
+  background: #173451
+.bill-radio-icon
+  display: inline-block
+  font-size: 9vh
+  text-align: center
+  vertical-align: middle
+  position: relative
+  &:after
+    background-color: #7fcfe0
+    display: block
+    position: absolute
+    width: 17px * $convertH
+    height: 17px * $convertH
+    content: ""
+    bottom: 7px * $convertH
+    right: 16%
+    border-radius: 30px
+.bill-radio-icon i
+  bottom: 0
+  display: block
+  font-size: 4vh
+  position: absolute
+  right: 6%
+  z-index: 1
+.bill-radio-small.r-radio
+  border-radius: 0 3px 3px 0
+  border-left: none
+.bill-radio-small.l-radio
+  border-right: none
+  border-radius: 3px 0 0 3px
+
+.big-h
+  padding: 2vh 0
+.bill-tbl.checklist
+  border: none
+
+.about-total
+  font-size: 2.4vh
+  font-weight: 400
+
+.butt-separ
+  background: #fff
+  display: inline-block
+  height: 10vh
+  margin: 0 1vw
+  vertical-align: middle
+  width: 1px
+
+.btn-part
+  display: inline-block
+  text-align: center
+  vertical-align: middle
+  width: 45%
+
+.grid-1.pdg-l-r-5.calc-area
+  height: 85vh
+
+.calc-l-bl
+  float: left
+  height: 100%
+  width: 48%
+
+.calc-r-bl
+  float: left
+  height: 100%
+  margin-left: 1%
+  width: 51%
+
+.calc-btn,.calc-btn-top
+  +brd-r-3
+  color: #fff
+  display: inline-block
+  float: left
+  font-size: 6vh
+  height: 19%
+  line-height: 16vh
+  margin-left: 1%
+  text-align: center
+  vertical-align: middle
+  width: 32.3333%
+  cursor: pointer
+.calc-btn
+  background: #7fcfe0
+  margin-top: 1%
+.calc-btn-top
+  background: #60a6b5
+  margin-bottom: 1%
+.calc-btn:active
+  background: #7fcfe0*0.8
+.calc-btn-top:active,.calc-btn-top.active
+  background: #60a6b5*0.8
+.calc-btn span,.calc-btn-top span
+  font-size: 12vh
+  line-height: 16vh
+.calc-display-area
+  background: #fff
+  border: 1px solid #cbd4ee
+  +brd-r-3
+  height: 79%
+  margin-bottom: 1%
+  width: 100%
+  overflow: hidden
+.calc-small-bl
+  width: 100%
+  height: 11%
+  padding: 0 1vw
+.calc-big-bl
+  width: 100%
+  height: 22%
+  background: #efefef
+.calc-head
+  background: #0ba8ca
+  color: #fff
+  @extend .font-style2
+  font-size: 4.5vh
+  font-weight: 300
+  line-height: 7vh
+
+.calc-display
+  height: 45%
+  width: 100%
+  border-top: 1px solid #cbd4ee
+  border-bottom: 1px solid #cbd4ee
+  position: relative
+
+.display-sum
+  color: #ff6e4a
+  display: block
+  float: right
+  @extend .font-style2
+  font-size: 5vh
+  height: 100%
+  line-height: 7vh
+  vertical-align: middle
+
+.calc-label
+  color: #173451
+  display: block
+  float: left
+  font-size: 2.5vh
+  line-height: 7vh
+.pdg-l-1
+  padding-left: 1px
+.pdg-l-05per
+  padding-left: 0.5%
+.pdg-r-05per
+  padding-right: 0.5%
+.calc-clear-btn,.calc-main-btn
+  float: left
+  height: 100%
+  width: 50%
+.calc-clear-btn a,
+.calc-main-btn a
+  color: #fff
+  display: block
+  height: 100%
+  line-height: 15vh
+  text-align: center
+  width: 100%
+.calc-clear-btn a
+  font-size: 3vh
+.calc-main-btn a
+  font-size: 4vh
+  +brd-r-3
+.calc-main-btn a:active
+  color: #fff
+.calc-clear-btn span
+  font-size: 9vh
+  vertical-align: middle
+
+.calc-main-btns
+  background: #efefef
+  height: 19%
+  width: 100%
+
+.calc-add-tip
+  bottom: 1vh
+  display: block
+  font-size: 3.5vh
+  height: 5vh
+  left: 1vw
+  position: absolute
+  vertical-align: middle
+  color: #588c97
+.calc-add-tip span
+  font-size: 5vh
+  vertical-align: middle
+
+.calc-info
+  color: #ff6e4a
+  display: table
+  float: right
+  font-size: 3vh
+  margin: 0 1vw
+
+.calc-info li
+  display: table-row
+
+.calc-info span
+  display: table-cell
+  margin-left: 2vw
+  padding: 1vh 0 0 1vw
+  text-align: right
+.calc-inf-label
+  color: #588c97
+  font-size: 2.3vh
+/*-------framed-note--------*/
+.deliv-status-bl-wrap
+  border: 1px solid #cbd4ee
+  +brd-r-3
+  overflow: hidden
+  background: #fff
+.deliv-status-bl
+  color: #173451
+  border-bottom: 0.5vh solid #cbd4ee
+  border-top: 1.6vh solid #cbd4ee
+  overflow: hidden
+  padding: 1vh 0
+  height: 14vh
+.deliv-status-bl.complete
+  border-color: #588c97
+.deliv-label
+  color: #7fcfe0
+  display: block
+  float: left
+  font-size: 9vh
+  height: 8vh
+.deliv-date-label
+  color: #588c97
+  font-size: 1.5vh
+.deliv-info
+  float: left
+.deliv-date
+  font-size: 1.9vh
+  font-weight: 400
+  span
+    color: #7fcfe0
+.deliv-city
+  @extend .font-style2
+  font-size: 2.6vh
+  span
+    color: #7fcfe0
+.deliv-street
+  float: left
+  font-size: 1.9vh
+  padding: 0 2vw
+  width: 100%
+.deliv-status-bl.en-route
+  text-align: center
+  width: 100%
+  .deliv-info
+    width: 100%
+.en-route
+  cursor: pointer
+.en-route .deliv-date-label
+  height: 3vh
+.deliv-city .icon-1dropdown
+  display: inline-block
+  @extend .transition-04s
+  font-size: 4vh
+  vertical-align: middle
+.deliv-detal-info
+  float: left
+  height: 2vh
+.deliv-table-wrapp
+  position: relative
+.deliv-detal-table
+  position: absolute
+  width: 100%
+  z-index: 20
+  border: 1px solid #cbd4ee
+  border-bottom: 0.5vh solid #588c97
+  +brd-r-3
+  margin: 0.5vh 0 1.5vh
+  height: 0vh
+  overflow: hidden
+  @extend .transition-04s
+  table
+    border-spacing: 0
+    overflow: hidden
+    width: 100%
+    font-size: 2vh
+    td
+      border-bottom: 1px solid #cbd4ee
+      line-height: 3.32vh
+      color: #173451
+      padding-left: 4vw
+      background: #fff
+    th
+      border-bottom: 1px solid #cbd4ee
+      line-height: 3.32vh
+      background: #f2f8f9
+      color: #588c97
+      font-weight: 400
+      padding-left: 2vw
+      text-align: left
+    td:first-child
+      width: 30%
+    td:nth-child(2)
+      width: 40%
+    td:nth-child(3)
+      width: 30%
+.tbl-show
+  height: 56vh
+  @extend .transition-04s
+.arrow-up
+  +transform(rotate(180deg))
+  @extend .transition-04s
+/*-------bill-blocks--------*/
+.bill-block
+  background: #fff
+  border: 1px solid #cbd4ee
+  +brd-r-3
+  width: 100%
+  margin-bottom: 1vh
+  overflow: hidden
+.bill-barcode
+  height: 5vh
+  position: relative
+  width: 100%
+.bill-barcode img
+  display: block
+  left: 0
+  margin: auto
+  max-height: 100%
+  max-width: 90%
+  position: absolute
+  right: 0
+  top: 0
+.bill-icon
+  text-align: center
+.bill-icon span
+  color: #7fcfe0
+  font-size: 7vh
+.bill-body
+  height: 13vh
+.bill-title
+  display: block
+  @extend .font-style2
+  font-size: 2.7vh
+  text-align: center
+  padding: 0 10px
+.bill-param-block
+  color: #173451
+  font-size: 2vh
+  line-height: 2.9vh
+  overflow: hidden
+  padding: 0.5vh 15%
+.bill-param-icon
+  color: #60919c
+  float: left
+  font-size: 2.5vh
+  width: 20%
+.bill-param-text
+  float: left
+  text-align: right
+  width: 80%
+.bill-paid-block
+  border-top: 1px solid #cbd4ee
+  padding: 0 0.5vw
+  text-align: center
+  height: 6vh
+.paid-title
+  color: #60919c
+  display: block
+  font-size: 1.65vh
+.bill-sum
+  @extend .font-style2
+  font-size: 3vh
+.bill-status
+  border-top: 2px solid #d7dff1
+  color: #fff
+  font-family: "Ubuntu",Arial,sans-serif
+  font-size: 1.8vh
+  font-weight: 400
+  padding-bottom: 0.3vh
+  text-align: center
+.druft .bill-status
+  background: #cbd4ee
+.waiting .bill-status
+  background: #0ba8ca
+.performed .bill-status
+  background: #7fcfe0
+.made .bill-status
+  background: #e6f1f3
+  color: #60919c
+.canceled .bill-status
+  background: #e6f1f3
+  color: #60919c
+.bill-block.canceled
+  +opacity(0.45)
+.no-paid .bill-paid-block
+  background: #ff6e4a
+  color: #fff
+.no-paid .bill-paid-block .paid-title
+  color: #fff
+.bill-block.current
+  border-color: #173451
+.current .bill-icon span
+  color: #173451
+.do-not-paid .paid-status
+  color: #60919c
+  font-size: 1.8vh
+  display: block
+  margin-top: 0.4vh
+.current	.bill-param-icon
+  color: #173451
+.bill-block.current .paid-title,.bill-block.current .paid-status
+  color: #173451
+.bill-param-title
+  color: #60919c
+  font-size: 1.7vh
+  text-align: center
+  margin-top: -0.8vh
+  padding-top: 3px * $convertH
+  line-height: 1
+.bill-param-cont
+  font-size: 1.6vh
+  margin-top: -0.9vh
+  text-align: center
+  padding-top: 10px * $convertH
+  line-height: 1
+.bill-param-sum
+  color: #ff6e4a
+  @extend .font-style2
+  font-size: 3vh
+  text-align: center
+.btn-clr-6
+  background: #cbd4ee
+.deliv-butt a.btn-inner
+  height: 12vh
+  font-size: 2.5vh
+// -End- ======================CARGO======================//
+
+
+
+
+
+
+
+
+@media (min-width: 1279px) and (max-height: 601px), (min-width: 1365px)
+  .table-d.order-goods-unit
+    width: 65%
+
+@media (min-width: 1366px)
+  .base-nav-title
+    font-size: 38px * $convertH
+  .btn-icon
+    .inner-btn
+      height: 139px *$convertH
+    .icon
+      +iconPrimary(84px)
+      margin-left: 3px * $convertW
+      line-height: 150px * $convertH
+      .wrap-icon
+        margin: 0
+        top: 90px * $convertH
+        left: 70px * $convertH
+        .icon-1plus_in_c, .secondary-icon
+          +iconSecondary(30px)
+          &:before
+            line-height: 27px * $convertH !important // +iconSecondary - 3px
+    .b-m-elem-name
+      font-size: 30px * $convertH
+  .btn-implex
+    .btn-inner
+      font-size: 36px * $convertH
+      height: 88px * $convertH
+
+  // Crumbs
+  .crumbs
+    .btn-implex
+      .btn-inner
+        height: 60px * $convertH
+  // -End- Crumbs
+
+  // Categories
+  .btn-inner.btn-categories
+    height: 60px * $convertH
+  // -End- Categories
+
+  // Transaction
+  .transaction-save,
+  .transaction-discount
+    .btn-inner
+      font-size: 20px * $convertH
+      height: 67px * $convertH
+  .transaction-pay
+    .btn-inner
+      height: 98px * $convertH
+      font-size: 38px * $convertH
+  // -End- Transaction
+
+  // Locations
+  .location
+    .btn-inner
+      font-size: 16px * $convertH
+  // -End- Locations
+
+  // Order Returning
+  .message-paid
+    .message-caption
+      font-size: 24px * $convertH
+      line-height: 50px * $convertH
+    .date
+      height: 62px * $convertH
+    .btn-inner
+      font-size: 18px * $convertH
+      height: 58px * $convertH
+  // -End- Order Returning
+
+  // Order
+  .orders
+    .customerName
+      padding-top: 2px * $convertW
+  // -End- Order
+
+  // Button Discount on order base
+  .button-wrap
+    +brd-r-3
+    float: left
+    padding-right: 2.5px * $convertH
+    padding-left: 2.5px * $convertH
+    margin-bottom: 5px
+    font-weight: normal
+    font-size: 24px * $convertH
+    color: #fff
+    text-align: center
+    line-height: 85px * $convertH
+    height: 85px * $convertH
+
+  .button-action
+    height: 83px * $convertH
+    &:active
+      background-color: darken(#7fcfe0, 10%)
+
+  #event-Order-2
+    .button-wrap:first-child
+      height: 175px * $convertH
+    .button-warning
+      +brd-r-3
+      background-color: #0791b9
+      height: 173px * $convertH
+      line-height: 173px * $convertH
+      padding-top: 20px
+      cursor: pointer
+      &:active
+        background-color: darken(#0791b9, 10%)
+
+  // Cash management
+  .cash
+    .btn-inner
+      font-size: 32px * $convertH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======================INDEX=========================//
+// Index page
+.index-header *
+  +-user-select-true
+
+.index-header
+  div
+    width: 10%
+    background-color: #CCC
+    margin-top: 5px
+    display: inline-block
+    margin-left: -4px
+    text-align: center
+    vertical-align: bottom
+    padding: 2px
+    border: solid 1px #FFF
+  img
+    width: 100%
+// -End- ======================INDEX=========================//

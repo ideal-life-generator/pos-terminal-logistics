@@ -1,0 +1,58 @@
+<div flexible='{ "minWidth": 200, "maxWidth": 300, "minHeight": 130, "maxHeight": 230, "marginLeft": 10, "marginTop": 10 }'
+     length="300"
+     pages="postOfficesPages"
+     limit="postOfficesLimit"
+     items-width="postOfficeWidth"
+     items-height="postOfficeHeight"
+     style="position: relative;">
+  <div class="wrapper-unit crumbs clear-fix">
+    <div class="pdg-l-10 grid-5">
+      <a class="wrap-pagination clear-fix">
+        <span class="pagination-off float-l"
+              ng-click="go()">
+          <span class="test icon-base no-border float-l">
+            <span class="icon-1arl primary-icon"></span>
+          </span>
+          <span class="pagination-off-num float-l">
+            {{ $stateParams.page }}
+          </span>
+        </span>
+        <span class="pagination-caption">
+          of
+        </span>
+        <span class="pagination-on float-l"
+              ng-click="go(true)">
+          <span class="icon-base no-border float-r">
+            <span class="icon-1arr primary-icon"></span>
+          </span>
+          <span class="pagination-on-num float-r">
+            {{ postOfficesPages }}
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="wrapper-unit-15 clear-fix flexible-container"
+       style="outline: 1px solid red; overflow: hidden;">
+    <div class="card-dstn-implex grid-3"
+         ng-click="changeSelect(postOffice)"
+         ng-style="{ 'width': postOfficeWidth, 'height': postOfficeHeight }"
+         ng-repeat="postoffice in postOffices"
+         style="background-color: white; margin: 5px;">
+<!--       <div class="card-dstn-inner txt-l clear-fix">
+        <span class="icon-base">
+          <span class="icon-1primary_user primary-icon"></span>
+        </span>
+        <span class="card-dstn-title">Последнее используемое получателем</span>
+        <div class="card-dstn-city">
+          <span class="clr-4">Минск,</span>
+          <span class="clr-1">1214766</span>
+        </div>
+        <div class="card-dstn-info clr-4 float-l">
+          <p>ул. Гринченка 2/1, оф. 123</p>
+          <p>+380921239101</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+<div class="new-cust-title wrapper-unit-5-15 pdg-l-r-5 clr-5">
+  New customer
+</div>
+
+<form name="contactsForm"
+      novalidate>
+
+  <div class="new-cust-inf pdg-0-5">
+    Personal info
+  </div>
+
+  <div class="ui-view"></div>
+
+  <div class="clear-fix">
+    <div class="grid-4 pdg-l-5">
+      <button class="clr-5 btn-radius-l btn-def-img"
+              type="button"
+              ng-class="{ 'active-btn-def-img': currentTab === baseUrl.operator.waybill.customer.create.human.url }"
+              ng-click="addCommand(baseUrl.operator.waybill.customer.create.human.state)">
+        <span class="icon-1menu_human primary-icon"></span>
+        <span>
+          Human
+        </span>
+      </button>
+    </div>
+    <div class="grid-4 pdg-r-5">
+      <button  class="clr-5 btn-def-img btn-radius-r"
+               type="button"
+               ng-class="{ 'active-btn-def-img': currentTab === baseUrl.operator.waybill.customer.create.business.url }"
+               ng-click="addCommand(baseUrl.operator.waybill.customer.create.business.state)">
+        <span class="icon-1menu_organization primary-icon"></span>
+      <span>
+        Business
+      </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="new-cust-inf dst-1 pdg-l-r-5">
+    Contacts
+  </div>
+
+  <div class="grid-2" ng-repeat="contact in contacts">
+    <ng-form name="$index">
+      <label>
+        <span ng-if="contact.required"
+              ng-show="contactsForm.$submitted && $index.$invalid">
+          Обязательное поле
+        </span>
+        <span ng-if="contact.setting.pattern"
+              ng-show="contactsForm.$submitted && $index.$invalid">
+          Должен быть вида some@some.some 
+        </span>
+
+        <div class="pdg-l-r-5 pdg-b-5">
+          <span class="brd-r-3 brd-clr-1 base-input">
+            <span class="grid-2">
+              <input class="contacts-field in-st"
+                     type="text"
+                     name="contact"
+                     ng-model="contact.value"
+                     ui-mask="{{ contact.setting.mask }}"
+                     ng-pattern="contact.setting.pattern"
+                     ng-required="contact.required"
+                     select-on-click>
+            </span>
+
+            <span class="grid-2">
+              <select  class="slct-st"
+                       ng-if="!contact.selectOff"
+                       ng-model="contact.setting"
+                       ng-options="type.title for type in contactsTypes"
+                       ng-change="contact.value = ''">
+              </select>
+            </span>
+          </span>
+
+        </div>
+      </label>
+    </ng-form>
+  </div>
+
+  <div class="btn-operation clear-fix">
+    <div class="grid-4 pdg-l-r-5">
+      <input class="btn-clr-5 brd-r-3"
+             type="button"
+             ng-click="cancel()"
+             value="Cancel">
+    </div>
+
+    <div class="grid-4 pdg-l-r-5">
+      <input class="btn-clr-4 brd-r-3"
+             type="submit"
+             ng-click="submit(contactsForm)"
+             value="Next step">
+    </div>
+  </div>
+
+</form>
+
+<br>
+<br>

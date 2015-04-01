@@ -1,0 +1,468 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+body {
+	font-size: 14px;
+	font-family: 'Ubuntu', Arial, Tahoma, sans-serif;
+	width: 100%;
+	height: 100%;
+	line-height: 1.4;
+	background-color: #faffee;
+}
+
+body * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body.bg_color {
+	background: #fff;
+}
+
+#wrapper {
+	margin: 0 auto;
+	position: relative;
+	min-height: 100%;
+	height: 100%;
+	width: 100%;
+}
+#login_wrapp {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+#login_bg {
+	position: absolute;
+	display: block;
+}
+.login_form {
+	display: none;
+}
+.noise:before {
+	display: block;
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("../images/main/elements/noise.png") repeat scroll 0 0 transparent;
+	z-index: 1;
+}
+.outer_layout {
+	left: 50%;
+	margin-left: -380px;
+	margin-top: -150px;
+	min-height: 300px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 760px;
+	z-index: 100;
+}
+#logo {
+	width: 500px;
+}
+.welcome_txt {
+	width: 82%;
+	margin: 10px auto 15px;
+	color: #e6f1f3;
+	font-size: 24px;
+	font-weight: lighter;
+	letter-spacing: 1.5px;
+	line-height: 30px;
+}
+.button_st {
+	display: inline-block;
+	height: 63px;
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	letter-spacing: 1.5px;
+	text-decoration: none;
+	min-width: 185px;
+	padding: 0 35px;
+	border: none;
+	font-weight: normal;
+	cursor: pointer;
+	font-family: 'Ubuntu', Arial, Tahoma, sans-serif;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	transition: all 0.3s linear 0s;
+	-moz-transition: all 0.3s linear 0s;
+	-webkit-transition: all 0.3s linear 0s;
+}
+.button_st:hover {
+	box-shadow: 0px 0px 150px 10px #fff inset;
+	-moz-box-shadow: 0px 0px 150px 10px #fff inset;
+	-webkit-box-shadow: 0px 0px 150px 10px #fff inset;
+	color:#173451;
+}
+.button_st.light_bt:hover {
+	color:#588c97;
+}
+/*.button_st:active {
+	transition: all 0.3s linear 0s;
+	-moz-transition: all 0.3s linear 0s;
+	-webkit-transition: all 0.3s linear 0s;
+	-webkit-animation-name: button_st;
+	animation-name: button_st;
+	-webkit-animation-duration: 0.1s;
+	animation-duration: 0.1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+@-webkit-keyframes button_st {
+	0% {
+		box-shadow:  0px 0px 150px 10px #fff inset, 0 0 0 0 #fff;
+		-moz-box-shadow:  0px 0px 150px 10px #fff inset, 0 0 0 0 #fff;
+		-webkit-box-shadow:   0px 0px 150px 10px #fff inset, 0 0 0 0 #fff;
+	}
+	100% {
+		box-shadow: 0px 0px 0px 0px #fff inset, 0 0px 65px 30px rgba(255,255,255,0);
+		-moz-box-shadow: 0px 0px 0px 0px #fff inset, 0 0px 65px 30px rgba(255,255,255,0);
+		-webkit-box-shadow: 0px 0px 0px 0px #fff inset, 0 0px 65px 30px rgba(255,255,255,0);
+	}
+}
+
+@keyframes button_st {
+	0% {
+		box-shadow:  0px 0px 150px 10px #fff inset, 0 0 0 0 #fff;
+		-moz-box-shadow:  0px 0px 150px 10px #fff inset, 0 0 0 0 #fff;
+		-webkit-box-shadow:   0px 0px 150px 10px #fff inset, 0 0 0 0 #fff;
+	}
+	100% {
+		box-shadow: 0px 0px 0px 0px #fff inset, 0 0px 65px 30px rgba(255,255,255,0);
+		-moz-box-shadow: 0px 0px 0px 0px #fff inset, 0 0px 65px 30px rgba(255,255,255,0);
+		-webkit-box-shadow: 0px 0px 0px 0px #fff inset, 0 0px 65px 30px rgba(255,255,255,0);
+	}
+}
+*/
+.dark_bt {
+	background-color: #173451;
+}
+.light_bt {
+	background-color: #588c97;
+}
+.input_st {
+	font-family: 'Ubuntu', Arial, Tahoma, sans-serif;
+	height: 67px;
+	width: 502px;
+	margin-top: 8px;
+	line-height: 65px;
+	font-size: 22px;
+	background: rgba(255,253,238,0.9);
+	border: 1px solid #cbd4ee;
+	padding: 5px 10px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.field-loginform-rememberme {
+	margin: 5px 0;
+}
+.login_bt{
+	margin-top: 20px;
+}
+input[type="checkbox"] {
+	position: absolute;
+	left: -9999px;
+}
+
+input[type="checkbox"] + label {
+	background: url("../images/main/icon/checkbox.png") no-repeat 0 3px transparent;
+	padding-left: 24px;
+	cursor: pointer;
+	font-weight: lighter;
+}
+
+input[type="checkbox"]:checked + label {
+	background-position: 0 -43px;
+}
+.back {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 500;
+	height: 32px;
+	letter-spacing: 2px;
+	line-height: 34px;
+	padding-left: 0px;
+	position: absolute;
+	left: -80px;
+	top: 65px;
+	cursor: pointer;
+	opacity: 0;
+	background: url("../images/main/icon/arr_left.png") no-repeat 0 3px transparent;
+	/*transition: all 0.3s linear 0s;*/
+	/*-moz-transition: all 0.3s linear 0s;*/
+	/*-webkit-transition: all 0.3s linear 0s;*/
+}
+.visible .back {
+	-webkit-animation-name: backBt;
+	animation-name: backBt;
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.wrapp_login_form.hidden,.wrapp_welcome.hidden {
+	opacity: 0;
+	z-index: 0;
+	position: absolute;
+	top:60px;
+}
+.wrapp_login_form.visible, .wrapp_welcome.visible {
+	opacity: 1;
+	z-index: 1;
+	position: relative;
+}
+.hidden .welcome_txt {
+	opacity: 0;
+}
+.visible .welcome_txt {
+	-webkit-animation-name: scaleIn;
+	animation-name: scaleIn;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.wrapp_welcome.hidden .button_st {
+	-webkit-animation-name: bounceOutRight;
+	animation-name: bounceOutRight;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.wrapp_welcome.visible .button_st {
+	-webkit-animation-name: fadeInRight;
+	animation-name: fadeInRight;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.wrapp_login_form.visible .input_st {
+	-webkit-animation-name: scaleOutIn;
+	animation-name: scaleOutIn;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.wrapp_login_form.visible .login_bt,
+.wrapp_login_form.visible .field-loginform-rememberme {
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@-webkit-keyframes backBt {
+	0% {
+
+		padding-left: 0;
+		opacity: 0;
+	}
+	100% {
+
+		padding-left: 54px;
+		opacity: 1;
+	}
+}
+@keyframes backBt {
+	0% {
+
+		padding-left: 0;
+		opacity: 0;
+	}
+	100% {
+
+		padding-left: 54px;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes scaleIn {
+	0% {
+		-webkit-transform: scale3d(2, 2, 2);
+		transform: scale3d(2, 2, 2);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+		opacity: 1;
+	}
+}
+@keyframes scaleIn {
+	0% {
+		-webkit-transform: scale3d(2, 2, 2);
+		transform: scale3d(2, 2, 2);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+		opacity: 1;
+	}
+}
+
+
+
+@-webkit-keyframes scaleOutIn {
+	0% {
+		-webkit-transform: scale3d(0, 0, 0);
+		transform: scale3d(0, 0, 0);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+		opacity: 1;
+	}
+}
+@keyframes scaleOutIn {
+	0% {
+		-webkit-transform: scale3d(0, 0, 0);
+		transform: scale3d(0, 0, 0);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+		opacity: 1;
+	}
+}
+
+
+
+@-webkit-keyframes bounceOutRight {
+	20% {
+		opacity: 1;
+		-webkit-transform: translate3d(-20px, 0, 0);
+		transform: translate3d(-20px, 0, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(2000px, 0, 0);
+		transform: translate3d(2000px, 0, 0);
+	}
+}
+@keyframes bounceOutRight {
+	20% {
+		opacity: 1;
+		-webkit-transform: translate3d(-20px, 0, 0);
+		transform: translate3d(-20px, 0, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(2000px, 0, 0);
+		transform: translate3d(2000px, 0, 0);
+	}
+}
+
+
+
+
+
+@-webkit-keyframes bounceOutLeft {
+	20% {
+		opacity: 1;
+		-webkit-transform: translate3d(20px, 0, 0);
+		transform: translate3d(20px, 0, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(-2000px, 0, 0);
+		transform: translate3d(-2000px, 0, 0);
+	}
+}
+@keyframes bounceOutLeft {
+	20% {
+		opacity: 1;
+		-webkit-transform: translate3d(20px, 0, 0);
+		transform: translate3d(20px, 0, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(-2000px, 0, 0);
+		transform: translate3d(-2000px, 0, 0);
+	}
+}
+
+
+
+
+
+@-webkit-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+
+@-webkit-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,400 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Product</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--<link rel="stylesheet" href="css/styles.css" type="text/css"/>-->
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.sass" type="text/css"/>
+		<link rel="stylesheet" href="css/font.css" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<script src="/js/libs/jquery/jquery.js"></script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+	</head>
+	<body>
+		<div class="left-side-bar">
+			<div class="nav-title">Transaction #:</div>
+			<div class="num-transaction">08376488-987</div>
+
+			<ul class="nav">
+				<li class="el-menu">
+					<a href="#" class="nav-link">
+							<span class="icon">
+								<span class="icon-1menu_human primary-icon"></span>
+								<span class="wrap-icon">
+									<span class="icon-1plus_in_c secondary-icon"></span>
+								</span>
+							</span>
+							<span class="descript-menu">
+								<span class="label-menu">Customer</span>
+								<span class="title-menu">Victor Victorenko</span>
+							</span>
+					</a>
+				</li>
+				<li class="el-menu active-nav">
+					<a href="#" class="nav-link">
+							<span class="icon">
+								<span class="icon-1table primary-icon"></span>
+								<span class="wrap-icon">
+									<span class="icon-1plus_in_c secondary-icon"></span>
+								</span>
+							</span>
+							<span class="descript-menu">
+								<span class="title-menu">Add Table</span>
+							</span>
+					</a>
+				</li>
+				<li class="el-menu">
+					<a href="#" class="nav-link">
+							<span class="icon">
+								<span class="icon-1menu_product primary-icon"></span>
+								<span class="wrap-icon">
+									<span class="icon-1plus_in_c secondary-icon"></span>
+								</span>
+							</span>
+							<span class="descript-menu">
+								<span class="title-menu">Add Product</span>
+							</span>
+					</a>
+				</li>
+			</ul>
+			<div class="fields-name clear-fix">
+				<span class="name-f">Name</span>
+				<span class="name-f">Q</span>
+				<span class="name-f">Price</span>
+			</div>
+			<div class="clear-fix checklist scrollbar mCustomScrollbar " id="smooth">
+				<div class="field hidden-field txt-l">
+					<span class="name txt-l"></span>
+					<span class="quantity txt-c"></span>
+					<span class="price txt-c"></span>
+				</div>
+				<div class="field">
+					<span class="name float-l">LLorem ipsum</span>
+					<span class="quantity float-l">25</span>
+					<span class="price float-l">125.00$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Dolor sit amet</span>
+					<span class="quantity float-l">3</span>
+					<span class="price float-l">45$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Consectetuer</span>
+					<span class="quantity float-l">7</span>
+					<span class="price float-l">1.00$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Lorem ipsum</span>
+					<span class="quantity float-l">25</span>
+					<span class="price float-l">125.00$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Dolor sit amet</span>
+					<span class="quantity float-l">3</span>
+					<span class="price float-l">45$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Consectetuer</span>
+					<span class="quantity float-l">7</span>
+					<span class="price float-l">1.00$</span>
+				</div>
+				<div class="field">
+					<span class="name float-l">Dolor sit amet</span>
+					<span class="quantity float-l">3</span>
+					<span class="price float-l">45$</span>
+				</div>
+			</div>
+			<div class="checklist-total">
+				<span class="checklist-total-title">Total:</span>
+				<span id="checklist-total-price">170.00 $</span>
+			</div>
+			<div class="grid-2 btn-implex transaction-save">
+				<a href="" class="btn-inner btn-clr-1">Save order</a>
+			</div>
+			<div class="grid-2 btn-implex transaction-discount">
+				<a href="" class="btn-inner btn-clr-1">Discount</a>
+			</div>
+			<div class="grid-1 btn-implex transaction-pay">
+				<a href="" class="btn-inner btn-clr-4">Pay</a>
+			</div>
+		</div>
+
+		<header class="main-header">
+			<ul class="header-nav float-l">
+				<li>
+					<a href="menu.html">
+						<span class="icon-base">
+							<span class="icon-1home_1 primary-icon"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon-base">
+							<span class="icon-1check primary-icon"></span>
+							<span class="wrap-icon">
+								<span class="icon-1plus_in_c secondary-icon"></span>
+							</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon-base">
+							<span class="icon-1all_checks primary-icon"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon-base">
+							<span class="icon-1reverse_link primary-icon"></span>
+						</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="header-nav float-r">
+				<li class="none-border">
+					<a href="#">
+						<span class="icon-base none-border">
+							<span class="icon-1cloud_1 diff-color primary-icon"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon-base">
+							<span class="icon-1menu_settings primary-icon"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="user-data">
+							<img class="user-ava"
+									 src="img/userFoto.png"
+									 alt="Accaunt Foto"/>
+							<span class="user-name">Ярослава Бондаренко</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="/">
+						<span class="icon-base">
+							<span class="icon-1logout primary-icon"></span>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</header>
+
+		<section class="main-content">
+			<ul class="wrapper-unit-15 crumbs clear-fix">
+				<li class="btn-implex grid-8">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						<span class="icon-base no-border">
+							<span class="icon-1beet primary-icon"></span>
+						</span>
+					</a>
+				</li>
+				<li class="btn-implex grid-16">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						1
+					</a>
+				</li>
+				<li class="btn-implex grid-16">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						2
+					</a>
+				</li>
+				<li class="btn-implex grid-16">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						3
+					</a>
+				</li>
+				<li class="btn-implex grid-16">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						4
+					</a>
+				</li>
+				<li class="btn-implex grid-8">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						Root
+					</a>
+				</li>
+				<li class="btn-implex grid-4">
+					<a class="btn-inner btn-clr-2"
+						 href="#">
+						Medical
+					</a>
+				</li>
+				<li class="btn-implex grid-4">
+					<a class="btn-inner btn-clr-2 "
+						 href="#">
+						<span class="crumbs-point">
+							Accessories
+						</span>
+						<span class="icon-base">
+							<span class="icon-1menu_search primary-icon"></span>
+						</span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="wrapper-unit-15 pdg-l-r-5">
+				<div class="search-wrap  grid-1 table clear-fix">
+					<a class="btn-go-to-root btn-clr-1">
+						<span class="point">...</span>
+					</a>
+					<div class="table-d">
+						<input class="search-input one-icon float-l" value type="text" placeholder="Enter location ..." />
+					</div>
+					<ul class="icon-box-r">
+						<li class="float-l">
+						<span class="icon-base">
+							<span class="icon-1menu_search primary-icon"></span>
+						</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="variations">
+				<div class="wrapper-unit grid-1 pdg-l-r-5">
+					<div class="grid-1 clear-fix content-box">
+						<div class="grid-4">
+							<div class="img-unit">
+								<img class="specification-img" src="img/productsImg.png" alt="Garlic"/>
+							</div>
+						</div>
+						<div class="grid-2 pdg-l-5">
+							<div class="product-name">Lorem ipsum</div>
+							<div class="manufacturer">Manufacturer</div>
+							<div class="manufacturer-name">Cannabis Mart LTD</div>
+						</div>
+						<div class="pr grid-4">
+							<div class="btn-green btn-clr-4">Ok</div>
+							<div class="btn-salmon btn-clr-5">Cancel</div>
+						</div>
+					</div>
+				</div>
+				<div class="navigation clear-fix">
+					<div class="dimension-wrapper float-l">
+						<div class="add-wrapper float-l clear-fix">
+							<div class="add">
+								<div class="price">15 $</div>
+								<div class="dimension">1 gr</div>
+							</div>
+							<div class="rm" style="display: block">2</div>
+						</div>
+						<div class="add-wrapper float-l clear-fix">
+							<div class="add">
+								<div class="price">35 $</div>
+								<div class="dimension">3 gr</div>
+							</div>
+							<div class="rm">0</div>
+						</div>
+						<div class="add-wrapper float-l clear-fix">
+							<div class="add">
+								<div class="price">105 $</div>
+								<div class="dimension">10 gr</div>
+							</div>
+							<div class="rm">0</div>
+						</div>
+						<div class="add-wrapper float-l">
+							<div class="add">
+								<div class="price">200 $</div>
+								<div class="dimension">20 gr</div>
+							</div>
+							<div class="rm">0</div>
+						</div>
+						<div class="add-wrapper float-l">
+							<div class="add">
+								<div class="price">300 $</div>
+								<div class="dimension">30 gr</div>
+							</div>
+							<div class="rm">0</div>
+						</div>
+						<div class="add-wrapper float-l">
+							<div class="add">
+								<div class="price">400 $</div>
+								<div class="dimension">40 gr</div>
+							</div>
+							<div class="rm">0</div>
+						</div>
+					</div>
+					<div class="grid-4 pdg-l-r-5 float-l">
+						<div class="row">
+							<div class="label-menu">custom: 15$ for 1 gr</div>
+						</div>
+						<div class="row">
+							<div class="num">32 <span class="dimension">gr</span></div>
+						</div>
+						<div class="row clear-fix">
+							<div class="total grid-2 float-l">total:</div>
+							<div class="total-num grid-2 float-r">1945000 $</div>
+						</div>
+						<div class="row clear-fix">
+							<div class="btn-azure float-l" id="up">-</div>
+							<div class="btn-azure float-r" id="down">+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="/js/libs/jquery/jquery-ui-1.10.4.custom.min.js"></script>
+		<script src="/js/libs/jquery.mCustomScrollbar.min.js"></script>
+		<script src="/js/knplink.js"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var rgb = [0, 73, 127]; /*Basic color*/
+				var canRgb = [2, 9, 9]; /*Color concatonation*/
+				var actRgb = [0, 55, 109]; /*Color for active btn*/
+				var setRgb = []; /*Sets the color*/
+				var elements = document.querySelectorAll(".crumbs .btn-inner");
+
+				function color(val) {
+					return "rgb(" + val + ")";
+				}
+				function canColor(val) {
+					val.forEach(function (val, i, ar) {
+						setRgb[i] = ar[i] + canRgb[i];
+					});
+					return setRgb
+				}
+
+				for (var i = 0; i < elements.length; i++) {
+					elements[i].style.backgroundColor = color(rgb);
+					rgb  = canColor(rgb);
+					var val;
+					elements[i].addEventListener("mousedown", function() {
+						val = this.style.backgroundColor;
+						this.style.backgroundColor = color(canColor(actRgb));
+						return val
+					});
+					elements[i].addEventListener("mouseup", function() {
+						this.style.backgroundColor = val;
+					});
+				}
+
+				
+			});
+		</script>
+
+	</body>
+</html>

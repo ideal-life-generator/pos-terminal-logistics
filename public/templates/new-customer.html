@@ -1,0 +1,137 @@
+<div class="new-cust-title wrapper-unit-5-15 pdg-l-r-5 clr-5">New customer</div>
+
+<div class="grid-4 pdg-l-r-5"
+     ng-class="{ 'active': contactsForm.childFormName === 'human' }">
+  <button class="clr-5 btn-def-img"
+          ng-click="formSwitcher(contactsForm, 'human')">
+    <span class="icon-1menu_human primary-icon"></span>
+    <span>Human</span>
+  </button>
+</div>
+<div class="grid-4 pdg-l-r-5"
+     ng-class="{ 'active': contactsForm.childFormName === 'business' }">
+  <button class="clr-5 btn-def-img"
+          ng-click="formSwitcher(contactsForm, 'business')">
+    <span class="icon-1menu_organization primary-icon"></span>
+    <span>Business</span>
+  </button>
+</div>
+
+<form name="contactsForm"
+      novalidate>
+
+  <h1 ng-init="contactsForm.childFormName = 'human'">
+    Personal info
+  </h1>
+
+  <ng-form name="childForm"
+           ng-if="contactsForm.childFormName === 'human'"
+           ng-controller="registrationHumanController">
+    
+    <select name="title"
+            ng-model="human.title"
+            ng-options='title for title in labels.title'>
+    </select>
+
+    <select name="gender"
+            ng-model="human.gender"
+            ng-options='gender for gender in labels.gender'></select>
+    
+    <label>
+      <span ng-show="contactsForm.$submitted && childForm.first_name.$invalid">
+        Обязательное поле
+      </span>
+      <input type="text"
+             name="first_name"
+             ng-model="human.first_name"
+             required>
+    </label>
+    
+    <label>
+      <span ng-show="contactsForm.$submitted && childForm.last_name.$invalid">
+        Обязательное поле
+      </span>
+      <input type="text"
+             name="last_name"
+             ng-model="human.last_name"
+             required>
+    </label>
+    
+    <input type="text"
+           name="middle_name"
+           ng-model="human.middle_name">
+
+    <basic-date name="birthday"
+                date="human.birthday"></basic-date>
+  
+  </ng-form>
+
+  <ng-form name="childForm"
+           ng-if="contactsForm.childFormName === 'business'"
+           novalidate>
+    
+    <label>
+      <span ng-show="contactsForm.$submitted && childForm.full_name.$invalid">
+        Обязательное поле
+      </span>
+      <input type="text"
+             name="full_name"
+             ng-model="business.full_name"
+             required>
+    </label>
+    
+    <label>
+      <span ng-show="contactsForm.$submitted && childForm.legal_form.$invalid">
+        Обязательное поле
+      </span>
+      <input type="text"
+             name="legal_form"
+             ng-model="business.legal_form"
+             required>
+    </label>
+  
+  </ng-form>
+
+  <h1>
+    Contacts
+  </h1>
+
+  <div ng-repeat="contact in contacts">
+    <ng-form name="$index">
+      <label>
+        <span ng-if="contact.required"
+              ng-show="contactsForm.$submitted && $index.$invalid">
+          Обязательное поле
+        </span>
+        <span ng-if="contact.setting.pattern"
+              ng-show="contactsForm.$submitted && $index.$invalid">
+          Должен быть вида some@some.some 
+        </span>
+        <input class="contacts-field"
+               type="text"
+               name="contact"
+               ng-model="contact.value"
+               ui-mask="{{ contact.setting.mask }}"
+               ng-pattern="contact.setting.pattern"
+               ng-required="contact.required">
+        <select ng-if="!contact.selectOff"
+                ng-model="contact.setting"
+                ng-options="type.title for type in someTitle"
+                ng-change="contact.value = ''">
+        </select>
+      </label>
+    </ng-form>
+  </div>
+
+  <input type="button"
+         ng-click="cancel()"
+         value="Cancel">
+
+  <input type="submit"
+         ng-click="submit(contactsForm, childForm)"
+         value="Next step">
+
+</form>
+
+<br>
+<br>
